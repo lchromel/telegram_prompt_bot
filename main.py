@@ -1,5 +1,6 @@
 import os
 import json
+import openai
 from telegram import Update, ReplyKeyboardMarkup
 from telegram.ext import ApplicationBuilder, CommandHandler, MessageHandler, filters, ConversationHandler, ContextTypes
 
@@ -39,20 +40,35 @@ async def enter_specificity(update: Update, context: ContextTypes.DEFAULT_TYPE):
     context.user_data['specificity'] = update.message.text
     return await generate_prompts(update, context)
 
+# Add a helper to call OpenAI
+async def get_chatgpt_prompts(service, country, specificity, style_guide):
+    system_prompt = f"""
+    Ты — генератор промтов для фотосессий. Используй следующий стиль:
+    Основные принципы: {', '.join(style_guide['style']['core_principles'])}
+    Композиция: углы — {', '.join(style_guide['style']['composition']['angles'])}; свет — {', '.join(style_guide['style']['composition']['lighting'])}; детали — {', '.join(style_guide['style']['composition']['details'])}
+    Форматы: крупный план — {style_guide['style']['formats']['close_up']}; средний — {style_guide['style']['formats']['medium']}; широкий — {style_guide['style']['formats']['wide']}
+    """
+    user_prompt = f"Сгенерируй 5 промтов для сервиса '{service}' в стране '{country}'" + (f" со спецификой: {specificity}" if specificity else "") + ". Каждый промт — отдельной строкой."
+    response = openai.ChatCompletion.create(
+        model="gpt-3.5-turbo",
+        messages=[
+            {"role": "system", "content": system_prompt},
+            {"role": "user", "content": user_prompt}
+        ],
+        max_tokens=500,
+        n=1,
+        temperature=0.8
+    )
+    return response.choices[0].message.content.strip()
+
+# Update generate_prompts to use ChatGPT
 async def generate_prompts(update: Update, context: ContextTypes.DEFAULT_TYPE):
     service = context.user_data['service']
     country = context.user_data['country']
     specificity = context.user_data.get('specificity')
-
-    prompts = []
-    for i in range(1, 6):
-        if specificity:
-            text = f"{i}. [{service}] [{country}] — сценарий: {specificity}"
-        else:
-            text = f"{i}. [{service}] [{country}] — универсальный промт"
-        prompts.append(text)
-
-    response = "Вот 5 промтов:\n" + "\n".join(prompts)
+    # Get prompts from ChatGPT
+    prompts = await get_chatgpt_prompts(service, country, specificity, STYLE_GUIDE)
+    response = "Вот 5 промтов:\n" + prompts
     await update.message.reply_text(response)
     return ConversationHandler.END
 
