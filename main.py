@@ -1,6 +1,7 @@
 import os
 import json
 import openai
+import asyncio
 from telegram import Update, ReplyKeyboardMarkup
 from telegram.ext import ApplicationBuilder, CommandHandler, MessageHandler, filters, ConversationHandler, ContextTypes
 
@@ -67,9 +68,16 @@ async def generate_prompts(update: Update, context: ContextTypes.DEFAULT_TYPE):
     service = context.user_data['service']
     country = context.user_data['country']
     specificity = context.user_data.get('specificity')
-    # Get prompts from ChatGPT
-    prompts = await get_chatgpt_prompts(service, country, specificity, STYLE_GUIDE)
-    response = "Вот 5 промтов:\n" + prompts
+    # Notify user that generation is in progress
+    await update.message.reply_text("Генерирую промты, подождите...")
+    try:
+        # Set a timeout for the OpenAI call (e.g., 20 seconds)
+        prompts = await asyncio.wait_for(get_chatgpt_prompts(service, country, specificity, STYLE_GUIDE), timeout=20)
+        response = "Вот 5 промтов:\n" + prompts
+    except asyncio.TimeoutError:
+        response = "Извините, генерация заняла слишком много времени. Попробуйте ещё раз."
+    except Exception as e:
+        response = f"Произошла ошибка при генерации: {e}"
     await update.message.reply_text(response)
     return ConversationHandler.END
 
