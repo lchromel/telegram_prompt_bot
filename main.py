@@ -1,4 +1,3 @@
-
 import os
 import json
 from telegram import Update, ReplyKeyboardMarkup
@@ -53,9 +52,7 @@ async def generate_prompts(update: Update, context: ContextTypes.DEFAULT_TYPE):
             text = f"{i}. [{service}] [{country}] — универсальный промт"
         prompts.append(text)
 
-    response = "Вот 5 промтов:
-" + "
-".join(prompts)
+    response = "Вот 5 промтов:\n" + "\n".join(prompts)
     await update.message.reply_text(response)
     return ConversationHandler.END
 
