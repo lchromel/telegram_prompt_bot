@@ -40,7 +40,7 @@ async def enter_specificity(update: Update, context: ContextTypes.DEFAULT_TYPE):
     context.user_data['specificity'] = update.message.text
     return await generate_prompts(update, context)
 
-# Add a helper to call OpenAI
+# Add a helper to call OpenAI (new v1.x async API)
 async def get_chatgpt_prompts(service, country, specificity, style_guide):
     system_prompt = f"""
     Ты — генератор промтов для фотосессий. Используй следующий стиль:
@@ -49,7 +49,8 @@ async def get_chatgpt_prompts(service, country, specificity, style_guide):
     Форматы: крупный план — {style_guide['style']['formats']['close_up']}; средний — {style_guide['style']['formats']['medium']}; широкий — {style_guide['style']['formats']['wide']}
     """
     user_prompt = f"Сгенерируй 5 промтов для сервиса '{service}' в стране '{country}'" + (f" со спецификой: {specificity}" if specificity else "") + ". Каждый промт — отдельной строкой."
-    response = openai.ChatCompletion.create(
+    client = openai.AsyncOpenAI()
+    response = await client.chat.completions.create(
         model="gpt-3.5-turbo",
         messages=[
             {"role": "system", "content": system_prompt},
