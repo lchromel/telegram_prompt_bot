@@ -1,13 +1,36 @@
 {
     "style": {
         "core_principles": [
-            "Репортажность, без позирования",
-            "Заваленные горизонты, необычные ракурсы",
-            "Эклектичная мода с локальным колоритом",
-            "Яркие ногти, аксессуары, ожерелья, повязки",
-            "Гиперлокальные улицы, не туристические места",
-            "Контрастный свет, вспышка, без глянца"
+              "Candid, unstaged scenes with authentic emotions.",
+              "Photographer is an observer, not a director.",
+              "Unusual angles and motion blur to show action.",
+              "Use of flash for contrast; natural color tones.",
+              "Hyperlocal, realistic locations over tourist clichés.",
+              "Characters have stylish, eclectic looks with local elements.",
+              "Focus on charisma, not perfection in models.",
+              "Diverse framing: wide, medium, and detail shots."
+            ],
+        "name": "Prompt Writing Instructions",
+        "language_guidelines": "Use English for better model results.",
+        "prompt_structure": [
+          "Main subject and action",
+          "Character appearance and clothing",
+          "Location and setting details",
+          "Time of day and lighting mood",
+          "Background elements",
+          "Style and camera angle"
         ],
+        "style_terms": [
+          "candid photo",
+          "documentary style",
+          "Dutch angle",
+          "low-angle shot",
+          "flash photography",
+          "natural colors"
+        ],
+        "character_description": "Include personality, style, age, ethnicity respectfully.",
+        "scene_detailing": "Specify local features, weather, architecture, lighting.",
+        "global_adaptation": "Adjust for regional specifics without breaking brand style.",
         "composition": {
             "angles": [
                 "low angle",
