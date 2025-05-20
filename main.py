@@ -2,6 +2,7 @@ import os
 import json
 import openai
 import asyncio
+import logging
 from telegram import Update, ReplyKeyboardMarkup
 from telegram.ext import ApplicationBuilder, CommandHandler, MessageHandler, filters, ConversationHandler, ContextTypes
 
@@ -43,6 +44,9 @@ async def enter_specificity(update: Update, context: ContextTypes.DEFAULT_TYPE):
 
 # Add a helper to call OpenAI (new v1.x async API)
 async def get_chatgpt_prompts(service, country, specificity, style_guide):
+    api_key = os.getenv("OPENAI_API_KEY")
+    if not api_key:
+        raise RuntimeError("OpenAI API key is not set. Please set the OPENAI_API_KEY environment variable.")
     system_prompt = f"""
     Ты — генератор промтов для фотосессий. Используй следующий стиль:
     Основные принципы: {', '.join(style_guide['style']['core_principles'])}
@@ -50,7 +54,7 @@ async def get_chatgpt_prompts(service, country, specificity, style_guide):
     Форматы: крупный план — {style_guide['style']['formats']['close_up']}; средний — {style_guide['style']['formats']['medium']}; широкий — {style_guide['style']['formats']['wide']}
     """
     user_prompt = f"Сгенерируй 5 промтов для сервиса '{service}' в стране '{country}'" + (f" со спецификой: {specificity}" if specificity else "") + ". Каждый промт — отдельной строкой."
-    client = openai.AsyncOpenAI()
+    client = openai.AsyncOpenAI(api_key=api_key)
     response = await client.chat.completions.create(
         model="gpt-3.5-turbo",
         messages=[
@@ -58,7 +62,6 @@ async def get_chatgpt_prompts(service, country, specificity, style_guide):
             {"role": "user", "content": user_prompt}
         ],
         max_tokens=500,
-        n=1,
         temperature=0.8
     )
     return response.choices[0].message.content.strip()
@@ -68,16 +71,15 @@ async def generate_prompts(update: Update, context: ContextTypes.DEFAULT_TYPE):
     service = context.user_data['service']
     country = context.user_data['country']
     specificity = context.user_data.get('specificity')
-    # Notify user that generation is in progress
     await update.message.reply_text("Генерирую промты, подождите...")
     try:
-        # Set a timeout for the OpenAI call (e.g., 20 seconds)
         prompts = await asyncio.wait_for(get_chatgpt_prompts(service, country, specificity, STYLE_GUIDE), timeout=20)
         response = "Вот 5 промтов:\n" + prompts
     except asyncio.TimeoutError:
         response = "Извините, генерация заняла слишком много времени. Попробуйте ещё раз."
     except Exception as e:
-        response = f"Произошла ошибка при генерации: {e}"
+        logging.exception("Error generating prompts:")
+        response = "Произошла ошибка при генерации промтов. Пожалуйста, попробуйте позже."
     await update.message.reply_text(response)
     return ConversationHandler.END
 
