@@ -1,0 +1,34 @@
+{
+    "style": {
+        "core_principles": [
+            "Репортажность, без позирования",
+            "Заваленные горизонты, необычные ракурсы",
+            "Эклектичная мода с локальным колоритом",
+            "Яркие ногти, аксессуары, ожерелья, повязки",
+            "Гиперлокальные улицы, не туристические места",
+            "Контрастный свет, вспышка, без глянца"
+        ],
+        "composition": {
+            "angles": [
+                "low angle",
+                "Dutch tilt",
+                "over-the-shoulder",
+                "from inside vehicle"
+            ],
+            "lighting": [
+                "flash photography",
+                "natural light with hard shadows"
+            ],
+            "details": [
+                "hand holding a phone",
+                "visible driver",
+                "rings, nails, earrings"
+            ]
+        },
+        "formats": {
+            "close_up": "hands with accessories, food, phones",
+            "medium": "upper body + interaction with environment",
+            "wide": "character + full background story"
+        }
+    }
+}
