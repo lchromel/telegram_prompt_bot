@@ -53,9 +53,10 @@ async def generate_prompts(update: Update, context: ContextTypes.DEFAULT_TYPE):
             text = f"{i}. [{service}] [{country}] — универсальный промт"
         prompts.append(text)
 
-    await update.message.reply_text("Вот 5 промтов:\n" + "\n".join(prompts))
+    response = "Вот 5 промтов:
 " + "
-".join(prompts))
+".join(prompts)
+    await update.message.reply_text(response)
     return ConversationHandler.END
 
 async def cancel(update: Update, context: ContextTypes.DEFAULT_TYPE):
