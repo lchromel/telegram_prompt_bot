@@ -9,9 +9,9 @@ from telegram.ext import ApplicationBuilder, CommandHandler, MessageHandler, fil
 # States
 SELECT_SERVICE, SELECT_COUNTRY, ASK_SPECIFICITY, ENTER_SPECIFICITY = range(4)
 
-# Load style guide
+# Load style guide from Markdown
 with open("guide.md", "r", encoding="utf-8") as f:
-    STYLE_GUIDE = json.load(f)
+    STYLE_GUIDE_MD = f.read()
 
 services = ["Taxi", "Food", "Delivery"]
 
@@ -42,30 +42,16 @@ async def enter_specificity(update: Update, context: ContextTypes.DEFAULT_TYPE):
     context.user_data['specificity'] = update.message.text
     return await generate_prompts(update, context)
 
-# Update the system prompt to use the style guide and country
-async def get_chatgpt_prompts(service, country, specificity, style_guide):
+# Update the system prompt to use the Markdown style guide
+async def get_chatgpt_prompts(service, country, specificity, style_guide_md):
     api_key = os.getenv("OPENAI_API_KEY")
     if not api_key:
         raise RuntimeError("OpenAI API key is not set. Please set the OPENAI_API_KEY environment variable.")
     system_prompt = f"""
-You are a prompt generator for photoshoots. Always generate prompts in English. Use the following style guide and instructions:
+You are a prompt generator for photoshoots. Always generate prompts in English.
+Use the following style guide and instructions (in Markdown):
 
-Core principles: {', '.join(style_guide['core_principles'])}
-Prompt writing instructions:
-- Language guidelines: {style_guide['language_guidelines']}
-- Prompt structure: {', '.join(style_guide['prompt_structure'])}
-- Style terms: {', '.join(style_guide['style_terms'])}
-- Character description: {style_guide['character_description']}
-- Scene detailing: {style_guide['scene_detailing']}
-- Global adaptation: {style_guide['global_adaptation']}
-Composition:
-- Angles: {', '.join(style_guide['composition']['angles'])}
-- Lighting: {', '.join(style_guide['composition']['lighting'])}
-- Details: {', '.join(style_guide['composition']['details'])}
-Formats:
-- Close up: {style_guide['formats']['close_up']}
-- Medium: {style_guide['formats']['medium']}
-- Wide: {style_guide['formats']['wide']}
+{style_guide_md}
 
 Always consider the target country and scenario when generating prompts.
 """
@@ -88,7 +74,7 @@ async def generate_prompts(update: Update, context: ContextTypes.DEFAULT_TYPE):
     specificity = context.user_data.get('specificity')
     await update.message.reply_text("Generating prompts, please wait...")
     try:
-        prompts = await asyncio.wait_for(get_chatgpt_prompts(service, country, specificity, STYLE_GUIDE['style']), timeout=20)
+        prompts = await asyncio.wait_for(get_chatgpt_prompts(service, country, specificity, STYLE_GUIDE_MD), timeout=20)
         response = "Here are 5 prompts:\n" + prompts
     except asyncio.TimeoutError:
         response = "Sorry, generation took too long. Please try again."
