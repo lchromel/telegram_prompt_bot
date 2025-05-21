@@ -10,7 +10,7 @@ from telegram.ext import ApplicationBuilder, CommandHandler, MessageHandler, fil
 SELECT_SERVICE, SELECT_COUNTRY, ASK_SPECIFICITY, ENTER_SPECIFICITY = range(4)
 
 # Load style guide
-with open("guide.json", "r", encoding="utf-8") as f:
+with open("guide.md", "r", encoding="utf-8") as f:
     STYLE_GUIDE = json.load(f)
 
 services = ["Taxi", "Food", "Delivery"]
