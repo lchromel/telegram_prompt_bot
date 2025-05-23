@@ -55,7 +55,7 @@
 - Overdone smiles or unnatural emotion
 
 ### Characters and Fashion Style
-**Eclectic fashion**: Stylish but not generic. Mix local, sporty, and designer pieces. Formal clothes with quirky twists are welcome. Avoid bland looks.
+**Eclectic fashion**: Stylish but not generic. Mix sporty, and designer pieces. Formal clothes with quirky twists are welcome. Avoid bland looks.
 
 **Accessories and styling**: Bold accessories elevate a character – e.g., pink caps, avant-garde glasses, nail art. Hairstyles and expressive elements add narrative depth.
 
