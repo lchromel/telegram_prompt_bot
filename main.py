@@ -1,4 +1,3 @@
-
 import os
 import json
 import openai
@@ -73,15 +72,15 @@ Each prompt must include:
 - Variations in framing or composition
 """
 
-    response = openai.ChatCompletion.create(
+    client = openai.AsyncOpenAI()
+    response = await client.chat.completions.create(
         model="gpt-4",
         messages=[
             {"role": "system", "content": system_prompt},
             {"role": "user", "content": "Generate prompts."}
         ]
     )
-
-    prompts = response["choices"][0]["message"]["content"]
+    prompts = response.choices[0].message.content
     await update.message.reply_text(prompts)
     return ConversationHandler.END
 
