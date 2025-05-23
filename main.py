@@ -20,27 +20,19 @@ with open("guide.pdf", "rb") as f:
 services = ["Taxi", "Food", "Delivery"]
 
 async def start(update: Update, context: ContextTypes.DEFAULT_TYPE):
+    await update.message.reply_text("For which country should the prompts be generated?")
+    return SELECT_COUNTRY
+
+async def select_country(update: Update, context: ContextTypes.DEFAULT_TYPE):
+    context.user_data['country'] = update.message.text
     reply_markup = ReplyKeyboardMarkup([[s] for s in services], one_time_keyboard=True, resize_keyboard=True)
     await update.message.reply_text("Choose a service:", reply_markup=reply_markup)
     return SELECT_SERVICE
 
 async def select_service(update: Update, context: ContextTypes.DEFAULT_TYPE):
     context.user_data['service'] = update.message.text
-    await update.message.reply_text("For which country should the prompts be generated?")
-    return SELECT_COUNTRY
-
-async def select_country(update: Update, context: ContextTypes.DEFAULT_TYPE):
-    context.user_data['country'] = update.message.text
-    reply_markup = ReplyKeyboardMarkup([["Specify scenario"], ["No specifics"]], one_time_keyboard=True, resize_keyboard=True)
-    await update.message.reply_text("Would you like to specify a scenario?", reply_markup=reply_markup)
-    return ASK_SPECIFICITY
-
-async def ask_specificity(update: Update, context: ContextTypes.DEFAULT_TYPE):
-    if update.message.text == "Specify scenario":
-        await update.message.reply_text("Please describe the specific scenario.")
-        return ENTER_SPECIFICITY
-    else:
-        return await generate_prompts(update, context)
+    await update.message.reply_text("Please describe the situation (e.g., 'trip to the airport', 'only about burgers', etc.)")
+    return ENTER_SPECIFICITY
 
 async def enter_specificity(update: Update, context: ContextTypes.DEFAULT_TYPE):
     context.user_data['specificity'] = update.message.text
@@ -72,7 +64,7 @@ Each prompt must include:
 - Variations in framing or composition
 """
 
-    client = openai.AsyncOpenAI()
+    client = openai.AsyncOpenAI(timeout=60)
     response = await client.chat.completions.create(
         model="gpt-4",
         messages=[
@@ -90,9 +82,8 @@ def main():
     conv_handler = ConversationHandler(
         entry_points=[CommandHandler("start", start)],
         states={
-            SELECT_SERVICE: [MessageHandler(filters.TEXT & ~filters.COMMAND, select_service)],
             SELECT_COUNTRY: [MessageHandler(filters.TEXT & ~filters.COMMAND, select_country)],
-            ASK_SPECIFICITY: [MessageHandler(filters.TEXT & ~filters.COMMAND, ask_specificity)],
+            SELECT_SERVICE: [MessageHandler(filters.TEXT & ~filters.COMMAND, select_service)],
             ENTER_SPECIFICITY: [MessageHandler(filters.TEXT & ~filters.COMMAND, enter_specificity)],
         },
         fallbacks=[]
