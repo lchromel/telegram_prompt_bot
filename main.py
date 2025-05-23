@@ -81,6 +81,8 @@ def main():
         .token(os.getenv("TELEGRAM_BOT_TOKEN"))\
         .read_timeout(60)\
         .write_timeout(60)\
+        .connect_timeout(60)\
+        .pool_timeout(60)\
         .build()
 
     conv_handler = ConversationHandler(
