@@ -42,6 +42,16 @@ async def generate_prompts(update: Update, context: ContextTypes.DEFAULT_TYPE):
 
     await update.message.reply_text("Generating prompts, please wait...")
 
+    # Custom rules based on service
+    extra_rules = ""
+    if service and service.lower() in ["food"]:
+        extra_rules += "\n- The scene must always take place indoors, at home."
+    if service and service.lower() in ["ride-hailing", "ride-hail", "taxi"]:
+        extra_rules += "\n- Use only medium or wide shots."
+    # Clothing and outdoor adjustments
+    extra_rules += "\n- Clothing should be modern street fashion, not hyperlocal or traditional."
+    extra_rules += ("\n- For outdoor scenes, focus on buildings: avoid trees, minimize visible sky, and emphasize walls, entrances, stairwells, and doorways.")
+
     system_prompt = f"""
 You are a Midjourney/Google Imagine prompt generator. Use the style described below:
 {STYLE_GUIDE_MD}
@@ -52,6 +62,7 @@ Always follow these rules:
 3. Use detailed actions, fashion attitude, confident or emotionally grounded energy.
 4. Vary camera angles: low, high, tilted, cropped, through glass.
 5. Use real lighting: flash, sunlight, haze. Avoid filters or artificial softness.
+{extra_rules}
 
 Generate 3 unique English prompts for the {service} service in {country} with {scenario}
 Each prompt must feature a different framing scale: wide shot, medium shot, and close-up — with a description that matches the chosen scale.
