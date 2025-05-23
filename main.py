@@ -48,14 +48,14 @@ async def get_chatgpt_prompts(service, country, specificity, style_guide_md):
     if not api_key:
         raise RuntimeError("OpenAI API key is not set. Please set the OPENAI_API_KEY environment variable.")
     system_prompt = f"""
-You are a prompt generator for photoshoots. Always generate prompts in English.
+You are a prompt generator for midjourney or google imagine 3/4. Always generate prompts in English.
 Use the following style guide and instructions (in Markdown):
 
 {style_guide_md}
 
 Always consider the target country and scenario when generating prompts.
 """
-    user_prompt = f"Generate 5 creative, detailed photoshoot prompts for the '{service}' service in {country}." + (f" Scenario: {specificity}." if specificity else "") + " Each prompt should be on a new line."
+    user_prompt = f"Generate 5 creative, detailed midjourney prompts for the '{service}' service in {country}." + (f" Scenario: {specificity}." if specificity else "") + " Each prompt should be on a new line."
     client = openai.AsyncOpenAI(api_key=api_key)
     response = await client.chat.completions.create(
         model="gpt-3.5-turbo",
