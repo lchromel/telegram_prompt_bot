@@ -54,9 +54,9 @@ Always follow these rules:
 4. Vary camera angles: low, high, tilted, cropped, through glass.
 5. Use real lighting: flash, sunlight, haze. Avoid filters or artificial softness.
 
-Generate 5 unique English prompts for the {service} service in {country}.
-{"The scene should involve: " + scenario if scenario else ""}
+Generate 3 unique English prompts for the {service} service in {country} with {scenario}
 Each prompt must include:
+- Description of framing and documentary style
 - A vivid, well-styled character
 - An action that fits the scene
 - A specific urban or interior environment
@@ -77,7 +77,11 @@ Each prompt must include:
     return ConversationHandler.END
 
 def main():
-    app = ApplicationBuilder().token(os.getenv("TELEGRAM_BOT_TOKEN")).build()
+    app = ApplicationBuilder()\
+        .token(os.getenv("TELEGRAM_BOT_TOKEN"))\
+        .read_timeout(60)\
+        .write_timeout(60)\
+        .build()
 
     conv_handler = ConversationHandler(
         entry_points=[CommandHandler("start", start)],
