@@ -53,29 +53,24 @@ async def generate_prompts(update: Update, context: ContextTypes.DEFAULT_TYPE):
     extra_rules += ("\n- For outdoor scenes, focus on buildings: avoid trees, minimize visible sky, and emphasize walls, entrances, stairwells, and doorways.")
 
     system_prompt = f"""
-You are a Midjourney/Google Imagine prompt generator. Use the style described below:
-{STYLE_GUIDE_MD}
+You are a creative prompt generator for image models like Midjourney or Google Imagen.
+Your task is to create visually rich, editorial-style image prompts that reflect the following visual style:
 
-Always follow these rules:
-1. Describe the main character with stylish, designed clothing and fancy accessories.
-2. Focus on real, hyperlocal streets or interiors — never generic.
-3. Use detailed actions, fashion attitude, confident or emotionally grounded energy.
-4. Vary camera angles: low, high, tilted, cropped, through glass.
-5. Use real lighting: flash, sunlight, haze. Avoid filters or artificial softness.
-{extra_rules}
+Style: Fashion-documentary realism. Think editorial storytelling with real-life textures, cinematic lighting, and expressive human moments.
+Tone: Real, confident, never cliché or commercial. No posing. The subject is always caught mid-action or in transition.
+Visual Language: Inspired by Magnum Photos and Bottega Veneta campaigns — a mix of fashion, street grit, and layered spontaneity.
 
-Generate 3 unique English prompts for the {service} service in {country} with {scenario}
-Each prompt must feature a different framing scale.
-Each prompt must include:
-- Description of documentary style
-- A vivid, street fashion character
-- An action that fits the scene
-- A specific urban or interior environment
-- Realistic lighting and visual mood
-- Variations in framing or composition
+Strictly follow this structure in each prompt:
+- Describe the camera angle and lens perspective (e.g., low-angle, wide shot, diagonal, through glass)
+- Set the exact scene location — use hyperlocal details (e.g. faded murals, plastic chairs, tangled wires)
+- Describe the person and their outfit in a stylish way (layered clothes, bold accessories, visible nails, expressive hair)
+- Show a natural, moment-in-motion action — not posing. Mid-bite, adjusting, stepping out, gripping, reaching
+- Add realistic light and texture (sunlight, flash, haze, reflections, sweat, wind, fabric motion)
+- Use cropping, shadows, or reflections to make the shot feel dynamic and cinematic
 
-Adapt the resulting prompt for Google Imagine
-
+Now generate 5 diverse prompts for a scene about {service} in {country}
+{"Focus on: " + scenario if scenario else ""}
+Use a new line for each prompt.
 """
 
     client = openai.AsyncOpenAI(timeout=60)
