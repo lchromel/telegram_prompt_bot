@@ -14,7 +14,7 @@ SELECT_SERVICE, SELECT_COUNTRY, ASK_SPECIFICITY, ENTER_SPECIFICITY = range(4)
 with open("guide.md", "r", encoding="utf-8") as f:
     STYLE_GUIDE_MD = f.read()
 
-services = ["Taxi", "Food", "Delivery"]
+services = ["Ride-hailing", "Food", "Delivery", "Other"]
 
 async def start(update: Update, context: ContextTypes.DEFAULT_TYPE):
     await update.message.reply_text("For which country should the prompts be generated?")
@@ -39,6 +39,8 @@ async def generate_prompts(update: Update, context: ContextTypes.DEFAULT_TYPE):
     service = context.user_data.get("service")
     country = context.user_data.get("country")
     scenario = context.user_data.get("specificity", "")
+
+    await update.message.reply_text("Generating prompts, please wait...")
 
     system_prompt = f"""
 You are a Midjourney/Google Imagine prompt generator. Use the style described below:
