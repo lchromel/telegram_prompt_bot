@@ -1,3 +1,4 @@
+
 import os
 import json
 import openai
@@ -37,79 +38,55 @@ async def select_country(update: Update, context: ContextTypes.DEFAULT_TYPE):
 
 async def ask_specificity(update: Update, context: ContextTypes.DEFAULT_TYPE):
     if update.message.text == "Specify scenario":
-        await update.message.reply_text("Please describe the scenario (e.g., 'trip to the airport' or 'only about burgers')")
+        await update.message.reply_text("Please describe the specific scenario.")
         return ENTER_SPECIFICITY
-    context.user_data['specificity'] = None
-    return await generate_prompts(update, context)
+    else:
+        return await generate_prompts(update, context)
 
 async def enter_specificity(update: Update, context: ContextTypes.DEFAULT_TYPE):
     context.user_data['specificity'] = update.message.text
     return await generate_prompts(update, context)
 
-# Update the system prompt to use the PDF style guide
-async def get_chatgpt_prompts(service, country, specificity, style_guide_pdf):
-    api_key = os.getenv("OPENAI_API_KEY")
-    if not api_key:
-        raise RuntimeError("OpenAI API key is not set. Please set the OPENAI_API_KEY environment variable.")
+async def generate_prompts(update: Update, context: ContextTypes.DEFAULT_TYPE):
+    service = context.user_data.get("service")
+    country = context.user_data.get("country")
+    scenario = context.user_data.get("specificity", "")
+
     system_prompt = f"""
-You are a Midjourney and Google Imagine prompt generator, trained to follow a detailed visual style guide {style_guide_pdf}.  
-All prompts must reflect the Super App aesthetic — a mix of documentary realism (Magnum Photos) and fashion-forward street style (Bottega Veneta).  
-Always write in English.
+You are a Midjourney/Google Imagine prompt generator. Use the style described below:
+{STYLE_GUIDE_PDF}
 
-Before generating, follow these rules:
+Always follow these rules:
+1. Describe the main character with stylish, localized clothing and strong accessories.
+2. Focus on real, hyperlocal streets or interiors — never generic.
+3. Use detailed actions, fashion attitude, confident or emotionally grounded energy.
+4. Vary camera angles: low, high, tilted, cropped, through glass.
+5. Use real lighting: flash, sunlight, haze. Avoid filters or artificial softness.
 
-1. Include a clearly described main character — real, stylish, charismatic. Avoid generic clothing. Use layered, eclectic street fashion with accessories, bold manicures (for women), and modern hairstyles.
-2. Describe what the character is doing (in action, not posing). Always show motion or interaction.
-3. Use hyperlocal urban locations: real streets, messy interiors, cultural textures. Add specific local elements (e.g., danfo buses in Lagos, graffiti in Medellín).
-4. Lighting should be realistic: flash, sunlight, haze — never filtered or artificial.
-5. Use varied angles: Dutch tilt, low, high, through glass. Imperfection is good.
-6. Never describe the driver. Always use a clean white modern economy car typical for the region (Toyota Yaris or Kia Picanto).
-
-Now, generate 5 diverse and detailed prompts for the {service} service in {country}. Each prompt must include:
-- A vivid character with stylish local clothing and accessories
-- Specific action (e.g. stepping in, exiting, walking to the car)
-- Realistic, local street or neighborhood context
-- Light/atmosphere
-- Composition and angle
-Each prompt on a new line
+Generate 5 unique English prompts for the {service} service in {country}.
+{"The scene should involve: " + scenario if scenario else ""}
+Each prompt must include:
+- A vivid, well-styled character
+- An action that fits the scene
+- A specific urban or interior environment
+- Realistic lighting and visual mood
+- Variations in framing or composition
 """
-    user_prompt = f"Generate 5 creative, detailed midjourney prompts for the '{service}' service in {country}." + (f" Scenario: {specificity}." if specificity else "") + " Each prompt should be on a new line."
-    client = openai.AsyncOpenAI(api_key=api_key)
-    response = await client.chat.completions.create(
-        model="gpt-3.5-turbo",
+
+    response = openai.ChatCompletion.create(
+        model="gpt-4",
         messages=[
             {"role": "system", "content": system_prompt},
-            {"role": "user", "content": user_prompt}
-        ],
-        max_tokens=500,
-        temperature=0.8
+            {"role": "user", "content": "Generate prompts."}
+        ]
     )
-    return response.choices[0].message.content.strip()
 
-async def generate_prompts(update: Update, context: ContextTypes.DEFAULT_TYPE):
-    service = context.user_data['service']
-    country = context.user_data['country']
-    specificity = context.user_data.get('specificity')
-    await update.message.reply_text("Generating prompts, please wait...")
-    try:
-        prompts = await asyncio.wait_for(get_chatgpt_prompts(service, country, specificity, STYLE_GUIDE_PDF), timeout=20)
-        response = "Here are 5 prompts:\n" + prompts
-    except asyncio.TimeoutError:
-        response = "Sorry, generation took too long. Please try again."
-    except Exception as e:
-        logging.exception("Error generating prompts:")
-        response = "An error occurred while generating prompts. Please try again later."
-    await update.message.reply_text(response)
-    return ConversationHandler.END
-
-async def cancel(update: Update, context: ContextTypes.DEFAULT_TYPE):
-    await update.message.reply_text("Conversation ended.")
+    prompts = response["choices"][0]["message"]["content"]
+    await update.message.reply_text(prompts)
     return ConversationHandler.END
 
 def main():
-    from telegram.ext import ApplicationBuilder
-    TOKEN = os.getenv("BOT_TOKEN")
-    app = ApplicationBuilder().token(TOKEN).build()
+    app = ApplicationBuilder().token(os.getenv("TELEGRAM_BOT_TOKEN")).build()
 
     conv_handler = ConversationHandler(
         entry_points=[CommandHandler("start", start)],
@@ -119,7 +96,7 @@ def main():
             ASK_SPECIFICITY: [MessageHandler(filters.TEXT & ~filters.COMMAND, ask_specificity)],
             ENTER_SPECIFICITY: [MessageHandler(filters.TEXT & ~filters.COMMAND, enter_specificity)],
         },
-        fallbacks=[CommandHandler("cancel", cancel)],
+        fallbacks=[]
     )
 
     app.add_handler(conv_handler)
