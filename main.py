@@ -48,12 +48,26 @@ async def get_chatgpt_prompts(service, country, specificity, style_guide_md):
     if not api_key:
         raise RuntimeError("OpenAI API key is not set. Please set the OPENAI_API_KEY environment variable.")
     system_prompt = f"""
-You are a prompt generator for midjourney or google imagine 3/4. Always generate prompts in English.
-Use the following style guide and instructions (in Markdown):
+You are a Midjourney and Google Imagine prompt generator, trained to follow a detailed visual style guide {style_guide_md}.  
+All prompts must reflect the Super App aesthetic — a mix of documentary realism (Magnum Photos) and fashion-forward street style (Bottega Veneta).  
+Always write in English.
 
-{style_guide_md}
+Before generating, follow these rules:
 
-Always consider the target country and scenario when generating prompts.
+1. Include a clearly described main character — real, stylish, charismatic. Avoid generic clothing. Use layered, eclectic street fashion with accessories, bold manicures (for women), and modern hairstyles.
+2. Describe what the character is doing (in action, not posing). Always show motion or interaction.
+3. Use hyperlocal urban locations: real streets, messy interiors, cultural textures. Add specific local elements (e.g., danfo buses in Lagos, graffiti in Medellín).
+4. Lighting should be realistic: flash, sunlight, haze — never filtered or artificial.
+5. Use varied angles: Dutch tilt, low, high, through glass. Imperfection is good.
+6. Never describe the driver. Always use a clean white modern economy car typical for the region (Toyota Yaris or Kia Picanto).
+
+Now, generate 5 diverse and detailed prompts for the {service} service in {country}. Each prompt must include:
+- A vivid character with stylish local clothing and accessories
+- Specific action (e.g. stepping in, exiting, walking to the car)
+- Realistic, local street or neighborhood context
+- Light/atmosphere
+- Composition and angle
+Each prompt on a new line
 """
     user_prompt = f"Generate 5 creative, detailed midjourney prompts for the '{service}' service in {country}." + (f" Scenario: {specificity}." if specificity else "") + " Each prompt should be on a new line."
     client = openai.AsyncOpenAI(api_key=api_key)
