@@ -65,10 +65,10 @@ Always follow these rules:
 {extra_rules}
 
 Generate 3 unique English prompts for the {service} service in {country} with {scenario}
-Each prompt must feature a different framing scale: wide shot, medium shot, and close-up — with a description that matches the chosen scale.
+Each prompt must feature a different framing scale.
 Each prompt must include:
 - Description of documentary style
-- A vivid, well-styled character
+- A vivid, street fashion character
 - An action that fits the scene
 - A specific urban or interior environment
 - Realistic lighting and visual mood
