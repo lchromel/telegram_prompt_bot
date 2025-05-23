@@ -5,13 +5,17 @@ import asyncio
 import logging
 from telegram import Update, ReplyKeyboardMarkup
 from telegram.ext import ApplicationBuilder, CommandHandler, MessageHandler, filters, ConversationHandler, ContextTypes
+import PyPDF2
 
 # States
 SELECT_SERVICE, SELECT_COUNTRY, ASK_SPECIFICITY, ENTER_SPECIFICITY = range(4)
 
-# Load style guide from Markdown
-with open("guide.md", "r", encoding="utf-8") as f:
-    STYLE_GUIDE_MD = f.read()
+# Load style guide from PDF
+with open("guide.pdf", "rb") as f:
+    pdf_reader = PyPDF2.PdfReader(f)
+    STYLE_GUIDE_PDF = ""
+    for page in pdf_reader.pages:
+        STYLE_GUIDE_PDF += page.extract_text()
 
 services = ["Taxi", "Food", "Delivery"]
 
@@ -42,13 +46,13 @@ async def enter_specificity(update: Update, context: ContextTypes.DEFAULT_TYPE):
     context.user_data['specificity'] = update.message.text
     return await generate_prompts(update, context)
 
-# Update the system prompt to use the Markdown style guide
-async def get_chatgpt_prompts(service, country, specificity, style_guide_md):
+# Update the system prompt to use the PDF style guide
+async def get_chatgpt_prompts(service, country, specificity, style_guide_pdf):
     api_key = os.getenv("OPENAI_API_KEY")
     if not api_key:
         raise RuntimeError("OpenAI API key is not set. Please set the OPENAI_API_KEY environment variable.")
     system_prompt = f"""
-You are a Midjourney and Google Imagine prompt generator, trained to follow a detailed visual style guide {style_guide_md}.  
+You are a Midjourney and Google Imagine prompt generator, trained to follow a detailed visual style guide {style_guide_pdf}.  
 All prompts must reflect the Super App aesthetic — a mix of documentary realism (Magnum Photos) and fashion-forward street style (Bottega Veneta).  
 Always write in English.
 
@@ -88,7 +92,7 @@ async def generate_prompts(update: Update, context: ContextTypes.DEFAULT_TYPE):
     specificity = context.user_data.get('specificity')
     await update.message.reply_text("Generating prompts, please wait...")
     try:
-        prompts = await asyncio.wait_for(get_chatgpt_prompts(service, country, specificity, STYLE_GUIDE_MD), timeout=20)
+        prompts = await asyncio.wait_for(get_chatgpt_prompts(service, country, specificity, STYLE_GUIDE_PDF), timeout=20)
         response = "Here are 5 prompts:\n" + prompts
     except asyncio.TimeoutError:
         response = "Sorry, generation took too long. Please try again."
