@@ -10,12 +10,9 @@ import PyPDF2
 # States
 SELECT_SERVICE, SELECT_COUNTRY, ASK_SPECIFICITY, ENTER_SPECIFICITY = range(4)
 
-# Load style guide from PDF
-with open("guide.pdf", "rb") as f:
-    pdf_reader = PyPDF2.PdfReader(f)
-    STYLE_GUIDE_PDF = ""
-    for page in pdf_reader.pages:
-        STYLE_GUIDE_PDF += page.extract_text()
+# Load style guide from Markdown
+with open("guide.md", "r", encoding="utf-8") as f:
+    STYLE_GUIDE_MD = f.read()
 
 services = ["Taxi", "Food", "Delivery"]
 
@@ -45,7 +42,7 @@ async def generate_prompts(update: Update, context: ContextTypes.DEFAULT_TYPE):
 
     system_prompt = f"""
 You are a Midjourney/Google Imagine prompt generator. Use the style described below:
-{STYLE_GUIDE_PDF}
+{STYLE_GUIDE_MD}
 
 Always follow these rules:
 1. Describe the main character with stylish, designed clothing and fancy accessories.
