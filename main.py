@@ -73,6 +73,9 @@ Each prompt must include:
 - A specific urban or interior environment
 - Realistic lighting and visual mood
 - Variations in framing or composition
+
+Adapt the resulting prompt for Google Imagine
+
 """
 
     client = openai.AsyncOpenAI(timeout=60)
