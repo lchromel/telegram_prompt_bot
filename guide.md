@@ -25,6 +25,49 @@
 - Must-have: Accessories — nails, glasses, jewelry, standout elements  
 - Avoid: Plain outfits, "office" looks, over-polished styling  
 
+
+### Clothing
+[keywords: street fashion, layered, textured, accessories, visual hooks]
+## Women’s Looks — Local Street Fashion
+
+**Goal:** Convey personality through a **modern, eclectic look** with cultural accents.
+
+Note: This is **street fashion**, not mass-market. Combinations should be bold but authentic. Accessories should be present, but not overdone.
+
+**What works:**
+
+- **Layers and textures:** mesh, leather, denim, knitwear, sheer fabrics
+- **Modern hairstyles:** braids, buns, loose waves, flyaways
+- **Hair accessories:** bright clips, metallic beads, scarves, wraps
+- **Nails:** long, designed nails — a key visual element
+- **Clothing:** a mix of athletic, ethnic, and casual wear
+- **Shoes:** chunky sneakers, platforms, open sandals
+
+**Examples:**
+
+- *Wearing a cropped mesh top under a loose denim jacket, layered beaded necklaces, yellow acrylic nails with cartoon decals*
+- *Braided hair with colorful clips and silver beads, scarf tied as a headband, glossy lips and bold hoop earrings*
+
+---
+
+## Men’s Looks — Local Street Fashion
+
+**Goal:** Express confidence and style through a **fashion blended street look**. Never overloaded — but there must be a statement. Accessories should be present, but minimal.
+
+**What works:**
+
+- **Cultural fusion:** traditional patterns in modern cuts, southern tunics with sneakers
+- **Modern haircuts:** shaved sides, curls, color accents, neat braids
+- **Headwear and scarves:** skullcaps, wraps, bucket hats, bandanas
+- **Jewelry:** chains, earrings, rings, belt bags
+- **Clothing:** open shirts, vintage tees, sporty pants with flair
+- **Shoes:** sneakers, bulky trainers, sandals with socks
+
+**Example Phrases:**
+
+- *Wearing a patterned tunic over jogger pants, layered with a bomber, gold ring on one hand and beaded bracelet on the other*
+- *Short fade haircut with dyed tips, wraparound shades, and a silk scarf tied around the neck*
+
 ### Emotion & Posing  
 [keywords: natural emotion, movement, walking, glancing, no eye contact]
 
@@ -38,9 +81,9 @@
 [keywords: urban, context, street, interior, real places]
 
 ### Urban Context  
-[keywords: buildings, kiosks, wires, graffiti, homes]
+[keywords: buildings, kiosks, wires, , homes]
 
-- Exterior: Real streets — kiosks, wires, buses, graffiti  
+- Exterior: Real streets — kiosks, wires, buses,  
 - Interior: Cozy homes — mismatched items, posters, natural light  
 - Avoid: Parks, sterile showrooms, overly minimal or rural scenes  
 
@@ -89,13 +132,8 @@
 ### Ride-Hail 
 [keywords: car, tuk tuk, motorcycle, red vehicle, Yaris, Picanto]
 
-We create three prompts:
-1. The subject is exiting the vehicle (medium shot, with a building in the background).
-2. The subject is in the back seat of the vehicle (close-up with a wide-angle lens; outside the window, both buildings and people are visible).
-3. The subject is walking away from the vehicle (our subject is in focus; in the foreground, slightly blurred, is a person or structure; in the background — passersby).
-
 - Use white compact cars common and respectful for the country (Yaris, Picanto)  
-- Driver is seated — not described  
+- Driver is seated 
 - Tuk-tuks and motorcycles should always be red  
 - Passengers always sit in the back seat of the car  
 
