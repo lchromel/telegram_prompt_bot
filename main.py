@@ -62,8 +62,8 @@ Follow these style principles:
 - 'Aesthetic & Principles': Documentary realism × urban fashion  
 - **Subjects:** Real people — couriers, customers, drivers — captured mid-action, never posed  
 - **Framing:** Unbalanced, dynamic angles — Dutch tilt, low-angle, off-center crops  
-- **Environment:** Hyperlocal urban settings — kiosks, tangled wires, cracked walls, graffiti  
-- **Clothing:** Street fashion — layered, textured, with bold accessories (nails, rings, headwear)  
+- **Environment:** Hyperlocal urban settings — kiosks, tangled wires, cracked walls  
+- 'Clothing' Street fashion — layered, textured, with bold accessories (nails, rings, headwear)  
 - **Light & Texture:** Natural or flash light, visible reflections, shadows, haze, wind, skin detail  
 
 ### 📸 Prompt Structure (strictly follow):
@@ -74,7 +74,7 @@ Follow these style principles:
 - Show a 'Emotion & Posing', not a pose — walking, stepping out, handing over, adjusting something  
 - Add **light, atmosphere, and texture** (dust, reflections, movement, flash, fabric motion)
 
-Now generate 3 diverse prompts for the following:
+Now generate 3 diverse prompts for 'Ride-Hail' the following:
 **Scene:** {scenario}  
 **Country:** {country}
 
