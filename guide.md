@@ -174,6 +174,32 @@ Too wide. Too cinematic.
 “A woman stepping out of a car as harsh sunlight flares across the road.”
 Avoid stylized sunlight. Keep light natural and unremarkable.
 
+### Background Activity 
+
+The street should never feel empty. There should always be other people present — pedestrians, vendors, cyclists, seated figures — naturally integrated into the environment.
+
+These background characters should appear:
+in the background, walking, selling, talking, riding
+or in the foreground, out of focus (blurred), cropped, partially visible
+
+They should always be busy with their own tasks — not looking at the camera, not posing, and not interacting directly with the main character.
+
+Use everyday street elements to support realism: benches, bicycles, crates, plants, laundry, handcarts, roadside chairs.
+
+**Good Examples:**
+“A woman walking toward a parked Yaris, while a cyclist passes by in the background. Farther behind, a vendor arranges mangoes on a wooden cart.”
+
+“A man getting out of a car as a blurred figure crosses the frame in the foreground, holding plastic bags. Behind him, people sit on a bench under a shop awning.”
+
+“A girl stepping into a tuk tuk. On the sidewalk behind her: an older man reads a newspaper near a cluster of potted plants. A boy walks a bicycle past the camera, slightly out of focus.”
+
+**Bad Examples:**
+“A man standing on an empty street, no one else around.”
+Feels artificial and staged.
+
+“A woman walking alone on a clean, symmetrical sidewalk.”
+Too sterile. Missing texture and life.
+
 
 ---
 
