@@ -21,15 +21,18 @@
 Always specify the character’s nationality — for example, Colombian woman, Senegalese man, Zambian girl, Peruvian courier, Nigerian teenager etc.
 
 Use precise present-tense verbs:
-*Stepping into, Biting into, Reaching for, Glancing toward, Holding, Fixing, Adjusting, Carrying, Offering, Zipping, Tapping, Squinting, Laughing, Waiting, Handing over*
 
-**Use:***Caught mid-step, In the act of handing over, Glancing sideways while chewing, Mid-laugh*
+**The character should always perform only one action**
+Good example: A girl walking parallel to the car
+Bad example: A girl zipping her backpack, holding a phone
 
-**Avoid:***Posing, Standing still, Smiling at the camera, Portrait of*
+**Use precise present-tense verbs:** Stepping into, Biting into, Reaching for, Glancing toward, Holding, Fixing, Adjusting, Carrying, Offering, Zipping, Tapping, Squinting, Laughing, Waiting, Handing over
+
+**Avoid:** *Posing, Standing still, Smiling at the camera, Portrait of*
 
 **Examples (Do):**
 
-- *A woman stepping out of a white Toyota Yaris, adjusting her sunglasses...*
+- *A woman stepping out of a white Toyota Yaris*
 - *A courier knocking on a gate with a delivery box under his arm...*
 - *A young girl zipping her backpack*
 
@@ -206,6 +209,7 @@ Locations must be **urban**, **realistic**, with **texture and personality**.
 ### Walking to the car
 Rules:
 – The passenger is walking to or from the rear door of a white car
+- The passenger can be walking parallel to the car
 - The driver is already behind the wheel
 - The shot captures only one side of the street (side view): building façades, storefronts, gates, textured walls — not a full street overview
 
