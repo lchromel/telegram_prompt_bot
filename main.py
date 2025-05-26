@@ -66,13 +66,7 @@ Follow these style principles:
 - 'Clothing' Street fashion — layered, textured, with bold accessories (nails, rings, headwear)  
 - **Light & Texture:** Natural or flash light, visible reflections, shadows, haze, wind, skin detail  
 
-### 📸 Prompt Structure (strictly follow):
-
-- Start with the 'Framing & Composition' (e.g., Dutch tilt, low angle, wide crop, close-up)  
-- Describe the 'Locations' (real streets, urban details, not generic)  
-- Introduce the 'Characters', their **clothing and accessories** (bold, layered, textured)  
-- Show a 'Emotion & Posing', not a pose — walking, stepping out, handing over, adjusting something  
-- Add **light, atmosphere, and texture** (dust, reflections, movement, flash, fabric motion)
+Follow 'Prompt Structure' for creating the prompts:
 
 Now generate 3 diverse prompts for 'Ride-Hail' the following:
 **Scene:** {scenario}  
