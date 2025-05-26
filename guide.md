@@ -194,9 +194,8 @@ Locations must be **urban**, **realistic**, with **texture and personality**.
 
 ---
 
-## Service-Specific Notes
 
-### Ride-Hail 
+## Ride-Hail 
 [keywords: car, tuk tuk, motorcycle, red vehicle, Yaris, Picanto]
 
 - Use white compact cars common and respectful for the country (Yaris, Picanto)  
@@ -204,14 +203,85 @@ Locations must be **urban**, **realistic**, with **texture and personality**.
 - Tuk-tuks and motorcycles should always be red  
 - Passengers always sit in the back seat of the car  
 
-### Food Delivery  
+### Walking to the car
+Rules:
+– The passenger is walking to or from the rear door of a white car
+- The driver is already behind the wheel
+- The shot captures only one side of the street (side view): building façades, storefronts, gates, textured walls — not a full street overview
+
+Composition is slightly angled, often from the side or low
+
+Examples:
+“A woman walking toward the rear door of a white Toyota Yaris, her hand reaching for the handle. Behind her: pastel-painted walls, closed shopfronts, and a hanging wire. The driver is behind the wheel.”
+
+“A man walking away from the car, one foot on the sidewalk, framed by chipped walls and a metal gate. The white Yaris is parked along the curb. Side view with soft golden light.”
+
+### Getting out of the car
+Rules:
+– The passenger is getting out from the rear seat
+– The driver is behind the wheel, but no mirrors or interior reflections are shown
+– The shot shows physical motion: one leg out, torso turning, hand on the door
+
+✅ Examples:
+“A woman getting out of the back seat of a white Toyota Yaris, her heel touching the sidewalk. The driver is behind the wheel.”
+
+“A man stepping out, holding a bag close to his body, door wide open. The light casts long shadows across the side of the car.”
+
+### Sitting in the back seat of a car
+Rules:
+– Shot is from inside the car, showing only the back seat
+– The driver is not mentioned
+- The background is visible through the car window, showing local architecture or streetscape
+
+Describe the interior: seat textures, materials, light reflections
+
+Examples:
+“A girl sitting in the back seat of a white Yaris, scrolling through her phone. Through the window: concrete balconies and faded posters. Light hits the stitched leather seat.”
+
+“A young man leaning back on a grey fabric headrest, phone in one hand. The street outside glows in a blur of graffiti walls and electric cables.”
+
+### Sitting in the back of a tuk tuk
+Rules:
+- The passenger is always seated in the rear bench of the tuk tuk
+- The driver is present, simply described as “at the wheel” — no close detail
+- Framing may be from the side, from inside, or through the opening
+
+Examples:
+“A woman sitting in the back of a red tuk tuk, one hand resting on her lap, the other holding her phone. The driver is at the wheel.”
+
+“A man seated in the back, looking out sideways, legs slightly apart. Flash lights up the vinyl seat. The driver is in front.”
+
+### Sitting on the back of a motorcycle
+Rules:
+- Use clear phrasing: “A person sitting behind the driver on the back of a motorbike”
+- The driver is always present but only mentioned, not described
+- Passenger is slightly off-balance or holding something
+
+Examples:
+“A woman sitting behind the driver on the back of a motorbike, one hand gripping the seat. Her tote bag pressed between her side and the driver’s back.”
+
+“A man sitting behind the driver, legs bent up slightly, holding a food box on his knees.”
+
+### Holding a phone with the vehicle in the background
+Rules:
+- Focus is on the passenger’s hand and phone — nails, rings, sleeves
+- The vehicle is visible in the background, slightly blurred or partially framed (door, wheel, driver silhouette)
+- The hand must be doing something: tapping, holding, swiping
+
+Examples:
+“Close-up of a hand with neon nails holding a phone, ride-hailing app open. In the background: a red tuk tuk with the driver at the wheel.”
+
+“A woman holding her phone in front of her chest. The side of a white Yaris is visible behind, driver faintly seen through the glass.”
+
+
+## Food Delivery  
 [keywords: food, steam, eating, home, interaction]
 
 - Focus on delicious food — sauce, steam, textures  
 - Include eating, serving, setting, or close-up food details  
 - Use dynamic food interaction scenes  
 
-### Parcel Delivery  
+## Parcel Delivery  
 [keywords: courier, box, red top, handoff, biking]
 
 - Courier in red top + black bottom (optional red cap)  
