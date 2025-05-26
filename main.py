@@ -43,7 +43,7 @@ async def generate_prompts(update: Update, context: ContextTypes.DEFAULT_TYPE):
     # Define a base scenario based on the service
     base_scenario = f"{service} in {country}"
     if service and service.lower() == "ride-hailing":
-        base_scenario = f"Character using a ride-hailing service in {country}"
+        base_scenario = f"Character using going to the car in {country}"
     elif service and service.lower() == "food":
         base_scenario = f"Character receiving a food delivery in {country}"
     elif service and service.lower() == "delivery":
@@ -54,9 +54,9 @@ async def generate_prompts(update: Update, context: ContextTypes.DEFAULT_TYPE):
 
     if service and service.lower() == "ride-hailing":
         system_prompt = f"""
-You are a prompt writer creating cinematic, fashion-forward photo prompts in {country}. Generate 3 distinct, dynamic scenes.
-Use different shot sizes in each prompt. Always use the vehicle described in the scenario.
-Expand the scenario below into 3 unique photo prompt (1 paragraph each) :
+You are a prompt writer for Midjourney creating cinematic, fashion-forward photo prompts in {country}. Generate 3 distinct, dynamic scenes.
+Use different Framing sizes in each prompt. Always use the vehicle described in the scenario.
+Expand the scenario below into 3 unique (Not connected to each other) photo prompt (1 paragraph each):
 1. The subject is next to the vehicle
 2. The Subject inside the vehicle
 3. The subject is walking away from the vehicle
