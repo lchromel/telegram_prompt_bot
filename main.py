@@ -60,10 +60,10 @@ Rules for each output:
 2. The vehicle should always have a visible driver (briefly described, e.g. in the mirror, behind the wheel, etc).
 3. Use candid, unstaged framing — no posing or looking at the camera.
 4. Vary the angles: Dutch tilt, low, medium, wide, over-the-shoulder.
-5. Describe the main character’s clothing and appearance with layered, bold streetwear. Include at least one accessory (bag, jewelry, sunglasses, etc).
+5. Describe the main character's clothing and appearance with layered, bold streetwear. Include at least one accessory (bag, jewelry, sunglasses, etc).
 6. Include real local textures and background elements from the given country (e.g. wires, murals, crates, fruit vendors, dust, etc).
 7. Convey time of day, light source, and mood — emphasize flash, dusk light, shadows, sun glare, etc.
-8. The photo should feel like a “caught moment”, full of energy or subtle emotion.
+8. The photo should feel like a "caught moment", full of energy or subtle emotion.
 
 Expand the scene below into 5 diverse cinematic scene descriptions (1 paragraph each). Each should include vehicle + driver + character in action.  
 
@@ -88,10 +88,10 @@ Write 5 results as separate paragraphs. Each must begin on a new line.
 def main():
     app = ApplicationBuilder()\
         .token(os.getenv("TELEGRAM_BOT_TOKEN"))\
-        .read_timeout(60)\
-        .write_timeout(60)\
-        .connect_timeout(60)\
-        .pool_timeout(60)\
+        .read_timeout(120)\
+        .write_timeout(120)\
+        .connect_timeout(120)\
+        .pool_timeout(120)\
         .build()
 
     conv_handler = ConversationHandler(
