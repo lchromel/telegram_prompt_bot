@@ -69,10 +69,10 @@
 
 ### Ride-Hail / Ride-hailing
 
-- Use white compact car (Yaris, Picanto)
-- Frame: wide (approaching), medium (getting in), close-up (foot exiting)
+- Use white compact common and respectful for country car  (Yaris, Picanto)
 - Driver is seated — not described
 - Tuk-tuks and motorcycles should always be red
+- Passengers always sit in the back seat of the car
 
 ### Food Delivery
 
