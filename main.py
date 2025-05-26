@@ -54,19 +54,32 @@ async def generate_prompts(update: Update, context: ContextTypes.DEFAULT_TYPE):
 
     if service and service.lower() == "ride-hailing":
         system_prompt = f"""
-You are a prompt writer for Midjourney creating cinematic, fashion-forward photo prompts in {country}. Generate 3 distinct, dynamic scenes.
-Use different Framing sizes in each prompt. Always use the vehicle described in the scenario.
-Expand the scenario below into 3 unique (Not connected to each other) photo prompt (1 paragraph each):
-1. The subject is next to the vehicle
-2. The Subject inside the vehicle
-3. The subject is walking away from the vehicle
+You are a prompt generator for Google Imagen 3.
 
-**Scenario:** {scenario}
+Your task is to create high-quality visual prompts for image generation in the **Super App style**, which combines documentary realism with eclectic street fashion and real human stories.
+
+Follow these style principles:
+- **Aesthetic:** Documentary realism × urban fashion  
+- **Subjects:** Real people — couriers, customers, drivers — captured mid-action, never posed  
+- **Framing:** Unbalanced, dynamic angles — Dutch tilt, low-angle, off-center crops  
+- **Environment:** Hyperlocal urban settings — kiosks, tangled wires, cracked walls, graffiti  
+- **Clothing:** Street fashion — layered, textured, with bold accessories (nails, rings, headwear)  
+- **Light & Texture:** Natural or flash light, visible reflections, shadows, haze, wind, skin detail  
+
+### 📸 Prompt Structure (strictly follow):
+
+- Start with the **camera angle and composition** (e.g., Dutch tilt, low angle, wide crop, close-up)  
+- Describe the **hyperlocal environment** (real streets, urban details, not generic)  
+- Introduce the **main character**, their **clothing and accessories** (bold, layered, textured)  
+- Show a **mid-action moment**, not a pose — walking, stepping out, handing over, adjusting something  
+- Add **light, atmosphere, and texture** (dust, reflections, movement, flash, fabric motion)
+
+Now generate 3 diverse prompts for the following:
+**Scene:** {scenario}  
 **Country:** {country}
 
-Write only the 3 formatted results. Each must begin on a new line.
-"""+f"""
-+{STYLE_GUIDE_MD}"""
+Use a new line for each prompt.
+"""
     elif service and service.lower() == "food":
         system_prompt = f"""
 You are a prompt writer creating vivid, documentary-style photo prompts for a food delivery service in {country}. Generate 5 distinct scenes.
@@ -86,8 +99,7 @@ Expand the scenario below into 5 unique photo prompts (1 paragraph each).
 **Scenario:** Character receiving a food delivery in {country}{f' with specificity: {scenario}' if scenario else ''}
 
 Write only the 5 formatted results. Each must begin on a new line.
-"""+f"""
-+{STYLE_GUIDE_MD}"""
+"""
     elif service and service.lower() == "delivery":
         system_prompt = f"""
 You are a prompt writer creating engaging, street-style photo prompts for a package delivery service in {country}. Generate 5 distinct scenes.
@@ -107,8 +119,7 @@ Expand the scenario below into 5 unique photo prompts (1 paragraph each).
 **Scenario:** Character interacting with a package delivery service in {country}{f' with specificity: {scenario}' if scenario else ''}
 
 Write only the 5 formatted results. Each must begin on a new line.
-"""+f"""
-+{STYLE_GUIDE_MD}"""
+"""
     else:
         # Default prompt for 'Other' or unspecified services
         system_prompt = f"""
@@ -131,13 +142,16 @@ Expand the scenario below into 5 diverse cinematic scene descriptions (1 paragra
 Write 5 results as separate paragraphs. Each must begin on a new line.
 """
 
+    messages = [
+        {"role": "system", "content": STYLE_GUIDE_MD},
+        {"role": "system", "content": system_prompt},
+        {"role": "user", "content": "Generate prompts using the provided style guide and rules."}
+    ]
+
     client = openai.AsyncOpenAI(timeout=120)
     response = await client.chat.completions.create(
         model="gpt-4",
-        messages=[
-            {"role": "system", "content": system_prompt},
-            {"role": "user", "content": "Generate prompts."}
-        ]
+        messages=messages
     )
     prompts = response.choices[0].message.content
     await update.message.reply_text(prompts)

@@ -1,51 +1,68 @@
 # Super App Visual Guidelines (Short Version)
 
-## Overall Style
+## Overall Style  
+[keywords: documentary, fashion, realism, unposed, energy]
 
-### Aesthetic & Principles
+### Aesthetic & Principles  
+[keywords: street style, urban, flash, dynamic, real people]
 
-- Style: Documentary realism × urban fashion.
-- Subjects: Real people (customers, drivers, couriers).
-- Look: Unposed, genuine, mid-action.
-- Angles: Low, high, Dutch tilt — dynamic framing.
-- Lighting: Natural or flash, no filters or heavy editing.
-- Color: Natural tones, vibrancy through detail.
+- Style: Documentary realism × urban fashion  
+- Subjects: Real people (customers, drivers, couriers)  
+- Look: Unposed, genuine, mid-action  
+- Angles: Low, high, Dutch tilt — dynamic framing  
+- Lighting: Natural or flash, no filters or heavy editing  
+- Color: Natural tones, vibrancy through detail  
 
-## Characters
+---
 
-### Appearance
+## Characters  
+[keywords: clothing, personality, accessories, realism]
 
-- Style: Street fashion — eclectic, layered, textured.
-- Must-have: Accessories — nails, glasses, jewelry, standout elements.
-- Avoid: Plain outfits, "office" looks, over-polished styling.
+### Character Appearance  
+[keywords: street fashion, layered, textured, accessories, visual hooks]
 
-### Emotion & Posing
+- Style: Street fashion — eclectic, layered, textured  
+- Must-have: Accessories — nails, glasses, jewelry, standout elements  
+- Avoid: Plain outfits, "office" looks, over-polished styling  
 
-- Emotion: Honest, subtle — focused, calm, neutral, or quietly fierce.
-- Pose: In motion — walking, lifting, glancing. Never staged.
-- Eyes: Not at camera — look away, sideways, down.
+### Emotion & Posing  
+[keywords: natural emotion, movement, walking, glancing, no eye contact]
 
-## Locations
+- Emotion: Honest, subtle — focused, calm, neutral, or quietly fierce  
+- Pose: In motion — walking, lifting, glancing. Never staged  
+- Eyes: Not at camera — look away, sideways, down  
 
-### Urban Context
+---
 
-- Exterior: Real streets — kiosks, wires, buses, graffiti.
-- Interior: Cozy homes — mismatched items, posters, natural light.
-- Avoid: Parks, sterile showrooms, overly minimal or rural scenes.
+## Locations  
+[keywords: urban, context, street, interior, real places]
 
-## Framing & Composition
+### Urban Context  
+[keywords: buildings, kiosks, wires, graffiti, homes]
 
-- Vary shots:
-  - *Wide*: show place/context
-  - *Medium*: action/interaction
-  - *Close-up*: nails, food, screen, texture
-- Style: Cropped, unbalanced, chaotic. No centered portraits.
-- Angles:
-  - *Dutch tilt*: adds energy
-  - *Low angle*: empowers subject
-  - *High angle*: adds casual observation
+- Exterior: Real streets — kiosks, wires, buses, graffiti  
+- Interior: Cozy homes — mismatched items, posters, natural light  
+- Avoid: Parks, sterile showrooms, overly minimal or rural scenes  
 
-## Prompt Structure
+---
+
+## Framing & Composition  
+[keywords: camera angle, wide shot, close-up, Dutch tilt, chaos]
+
+- Vary shots:  
+  - *Wide*: show place/context  
+  - *Medium*: action/interaction  
+  - *Close-up*: nails, food, screen, texture  
+- Style: Cropped, unbalanced, chaotic. No centered portraits  
+- Angles:  
+  - *Dutch tilt*: adds energy  
+  - *Low angle*: empowers subject  
+  - *High angle*: adds casual observation  
+
+---
+
+## Prompt Structure  
+[keywords: prompt format, description order, storytelling]
 
 1. Main Character + Action  
    *e.g., A courier handing over a box through a gate*
@@ -65,25 +82,29 @@
 6. Photography Style / Angle  
    *e.g., Low-angle shot with flash, candid frame*
 
+---
+
 ## Service-Specific Notes
 
-### Ride-Hail / Ride-hailing
+### Ride-Hail / Ride-hailing  
+[keywords: car, tuk tuk, motorcycle, red vehicle, Yaris, Picanto]
 
-- Use white compact common and respectful for country car  (Yaris, Picanto)
-- Driver is seated — not described
-- Tuk-tuks and motorcycles should always be red
-- Passengers always sit in the back seat of the car
+- Use white compact cars common and respectful for the country (Yaris, Picanto)  
+- Driver is seated — not described  
+- Tuk-tuks and motorcycles should always be red  
+- Passengers always sit in the back seat of the car  
 
-### Food Delivery
+### Food Delivery  
+[keywords: food, steam, eating, home, interaction]
 
-- Focus on delicious food — sauce, steam, textures
-- Include eating, serving, setting, or close-up food details
-- Use dynamic food interaction scenes
+- Focus on delicious food — sauce, steam, textures  
+- Include eating, serving, setting, or close-up food details  
+- Use dynamic food interaction scenes  
 
-### Parcel Delivery
+### Parcel Delivery  
+[keywords: courier, box, red top, handoff, biking]
 
-- Courier in red top + black bottom (optional red cap)
-- Red kraft box (unbranded)
-- Show: knocking, hand-off, biking, standing with parcel
-- Key frames: hand-over, box detail, street scene
-
+- Courier in red top + black bottom (optional red cap)  
+- Red kraft box (unbranded)  
+- Show: knocking, hand-off, biking, standing with parcel  
+- Key frames: hand-over, box detail, street scene  
