@@ -56,13 +56,13 @@ async def generate_prompts(update: Update, context: ContextTypes.DEFAULT_TYPE):
         system_prompt = f"""
 You are a prompt generator for Google Imagen 3.
 
-Your task is to create high-quality visual prompts for image generation in the **Super App style**, which combines documentary realism with eclectic street fashion and real human stories.
+Your task is to create high-quality visual prompts for image generation in the **Super App style**, which combines documentary realism.
 
 Follow these style principles:
 - 'Aesthetic & Principles': Documentary realism × urban fashion  
-- **Subjects:** Real people — couriers, customers, drivers — captured mid-action, never posed  
-- **Framing:** Unbalanced, dynamic angles — Dutch tilt, low-angle, off-center crops  
-- **Environment:** Hyperlocal urban settings — kiosks, tangled wires, cracked walls  
+- 'Characters' confident modern people — couriers, customers, drivers — captured mid-action, never posed  
+- 'Framing & Composition' Unbalanced, dynamic angles — Dutch tilt, low-angle, off-center crops  
+- 'Locations' Hyperlocal urban settings — kiosks, tangled wires, cracked walls  
 - 'Clothing' Street fashion — layered, textured, with bold accessories (nails, rings, headwear)  
 - **Light & Texture:** Natural or flash light, visible reflections, shadows, haze, wind, skin detail  
 

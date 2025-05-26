@@ -18,6 +18,46 @@
 ## Characters  
 [keywords: clothing, personality, accessories, realism]
 
+Use precise present-tense verbs:
+*Stepping into, Biting into, Reaching for, Glancing toward, Holding, Fixing, Adjusting, Carrying, Offering, Zipping, Tapping, Squinting, Laughing, Waiting, Handing over*
+
+**Use:***Caught mid-step, In the act of handing over, Glancing sideways while chewing, Mid-laugh*
+
+**Avoid:***Posing, Standing still, Smiling at the camera, Portrait of*
+
+**Examples (Do):**
+
+- *A woman stepping out of a white Toyota Yaris, adjusting her sunglasses...*
+- *A courier knocking on a gate with a delivery box under his arm...*
+- *A young girl zipping her backpack*
+
+**Examples (Don’t):**
+
+- *A man holding a bag, looking around, fixing his jacket, walking toward the car.*
+- *A woman eating, texting, waving, and opening the door.*
+- *A teenager running, talking to someone, holding balloons, and smiling.*
+
+Add an Emotional Layer
+
+Even simple actions become expressive when they carry **inner emotion**. We avoid exaggerated grimaces or fake commercial smiles — we use **subtle, truthful expressions**, like in strong street or fashion photography.
+
+### Emotions That Work:
+**Calm / Cold**
+*expressionless, jaw slightly tense, sharp eyes, neutral lips*
+suits confident, fashion-forward looks
+
+**Focused / Self-assured**
+*calm focus, soft smirk, relaxed face, present but unreadable*
+works for everyday or working scenes
+
+**Lightness / Inspiration**
+*gentle smile while looking down, subtle contentment, light posture*
+fits quiet, inspiring moments
+
+**Laughter — only between people**
+*two people laughing naturally while doing something together*
+allowed during interaction, but **not solo**
+
 ### Character Appearance  
 [keywords: street fashion, layered, textured, accessories, visual hooks]
 
@@ -30,7 +70,7 @@
 [keywords: street fashion, layered, textured, accessories, visual hooks]
 ## Women’s Looks — Local Street Fashion
 
-**Goal:** Convey personality through a **modern, eclectic look** with cultural accents.
+Convey personality through a **modern, eclectic look** with cultural accents.
 
 Note: This is **street fashion**, not mass-market. Combinations should be bold but authentic. Accessories should be present, but not overdone.
 
@@ -79,6 +119,31 @@ Note: This is **street fashion**, not mass-market. Combinations should be bold b
 
 ## Locations  
 [keywords: urban, context, street, interior, real places]
+
+Showcase country and culture through vibrant, real city context.
+
+Locations must be **urban**, **realistic**, with **texture and personality**.
+
+**Avoid:** parks, trees, greenery, "rural aesthetics."
+
+### Urban Streets (Exterior)
+
+**What works:**
+- narrow city alleys*, concrete courtyards, roadside kiosks, *bus terminals, market crossings
+- vendors, traffic, signs, exposed wires, billboards, graffiti
+- dusty pavement, puddles, crumbling facades, taped posters, neon signs
+
+**Examples:**
+- on a cracked sidewalk in downtown Accra, with honking minibuses and street food smoke
+- under faded billboards in central Medellín, next to a red tuk-tuk and stacked crates
+- walking through a concrete alley in Cairo, graffiti walls and tangled wires overhead
+- near a corner shop in Kinshasa, yellow kiosk with hand-painted ads, puddles on the street
+
+**Avoid:**
+- trees, palms, grass
+- green parks or rural scenery
+- country roads or "nature scenes"
+
 
 ### Urban Context  
 [keywords: buildings, kiosks, wires, , homes]
