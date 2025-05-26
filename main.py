@@ -56,16 +56,6 @@ async def generate_prompts(update: Update, context: ContextTypes.DEFAULT_TYPE):
         system_prompt = f"""
 You are a prompt writer creating cinematic, fashion-forward photo prompts for a ride-hailing service in {country}. Generate 5 distinct, dynamic scenes.
 
-Rules for each prompt:
-1. Feature a specific ride-hailing vehicle (car, motorbike, tuk tuk) clearly visible, either moving or parked.
-2. A driver must be present and briefly visible (e.g., in the mirror, behind the wheel).
-3. The main character should be interacting with the vehicle (getting in, getting out, walking away).
-4. The setting must be urban, focusing on city streets, buildings, concrete, and potentially local infrastructure like wires or signage.
-5. Incorporate local elements specific to {country} that add texture and authenticity (e.g., murals, street vendors, distinct architecture details) but maintain a modern, urban feel.
-6. Describe the main character's style: layered, bold streetwear with at least one accessory (bag, jewelry, sunglasses, etc.).
-7. Use dynamic angles: Dutch tilt, low angle, medium shot, wide shot, over-the-shoulder.
-8. Emphasize light and mood: golden hour, streetlights, car headlights, flash, shadows – capture a spontaneous, energetic moment.
-
 Expand the scenario below into 5 unique photo prompts (1 paragraph each).
 
 **Scenario:** {scenario}
