@@ -54,14 +54,17 @@ async def generate_prompts(update: Update, context: ContextTypes.DEFAULT_TYPE):
 
     if service and service.lower() == "ride-hailing":
         system_prompt = f"""
-You are a prompt writer creating cinematic, fashion-forward photo prompts for a ride-hailing service in {country}. Generate 5 distinct, dynamic scenes.
-
-Expand the scenario below into 5 unique photo prompts (1 paragraph each).
+You are a prompt writer creating cinematic, fashion-forward photo prompts in {country}. Generate 3 distinct, dynamic scenes.
+Use different shot sizes in each prompt. Always use the vehicle described in the scenario.
+Expand the scenario below into 3 unique photo prompt (1 paragraph each) :
+1. The subject is next to the vehicle
+2. The Subject inside the vehicle
+3. The subject is walking away from the vehicle
 
 **Scenario:** {scenario}
 **Country:** {country}
 
-Write only the 5 formatted results. Each must begin on a new line.
+Write only the 3 formatted results. Each must begin on a new line.
 """+f"""
 +{STYLE_GUIDE_MD}"""
     elif service and service.lower() == "food":
