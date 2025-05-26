@@ -149,13 +149,31 @@ Locations must be **urban**, **realistic**, with **texture and personality**.
 - green parks or rural scenery
 - country roads or "nature scenes"
 
+**Rules:**
+Always show the street from the side — a side-view perspective of a single side of the street: building façades, shop entrances, textured walls, balconies, cables.
 
-### Urban Context  
-[keywords: buildings, kiosks, wires, , homes]
+Do not show wide symmetrical views of the whole street or street stretching into depth.
+Do not describe the time of day in a stylized or cinematic way — avoid phrases like:
+“against the harsh midday sun”
+“bathed in golden hour light”
+“morning haze”, “sunset glow”
 
-- Exterior: Real streets — kiosks, wires, buses,  
-- Interior: Cozy homes — mismatched items, posters, natural light  
-- Avoid: Parks, sterile showrooms, overly minimal or rural scenes  
+Lighting should feel realistic and incidental, like ambient daylight or shadow from nearby buildings.
+
+**Good Examples:**
+“A woman walking along a narrow sidewalk, passing faded pink walls and a blue metal gate. Shot from the side, the white car is parked close to the building.”
+
+“A man opening the rear door of a Yaris parked tight against a graffiti-covered wall.”
+
+“A girl stepping toward a tuk tuk, only one side of the street is visible: old apartment balconies, peeling paint, and a broken sign above a metal shop gate.”
+
+**Bad Examples:**
+“A man walking down the middle of the street, buildings on both sides, golden hour sun behind him.”
+Too wide. Too cinematic.
+
+“A woman stepping out of a car as harsh sunlight flares across the road.”
+Avoid stylized sunlight. Keep light natural and unremarkable.
+
 
 ---
 
@@ -226,7 +244,7 @@ Rules:
 – The driver is behind the wheel, but no mirrors or interior reflections are shown
 – The shot shows physical motion: one leg out, torso turning, hand on the door
 
-✅ Examples:
+Examples:
 “A woman getting out of the back seat of a white Toyota Yaris, her heel touching the sidewalk. The driver is behind the wheel.”
 
 “A man stepping out, holding a bag close to his body, door wide open. The light casts long shadows across the side of the car.”

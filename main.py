@@ -64,7 +64,7 @@ Follow these style principles:
 - 'Framing & Composition' Unbalanced, dynamic angles — Dutch tilt, low-angle, off-center crops  
 - 'Locations' Hyperlocal urban settings — kiosks, tangled wires, cracked walls  
 - 'Clothing' Street fashion — layered, textured, with bold accessories (nails, rings, headwear)  
-- **Light & Texture:** Natural or flash light, visible reflections, shadows, haze, wind, skin detail  
+- 'Light & Texture' Natural or flash light, visible reflections, shadows, haze, wind, skin detail  
 
 Follow 'Prompt Structure' for creating the prompts:
 
