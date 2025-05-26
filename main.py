@@ -68,7 +68,7 @@ Follow these style principles:
 
 Follow 'Prompt Structure' for creating the prompts:
 
-Now generate 3 diverse prompts for 'Ride-Hail' the following:
+Now generate 3 diverse prompts for 'Ride-Hail' the following (1 paragraph each):
 **Scene:** {scenario}  
 **Country:** {country}
 
