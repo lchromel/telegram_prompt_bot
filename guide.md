@@ -86,8 +86,13 @@
 
 ## Service-Specific Notes
 
-### Ride-Hail / Ride-hailing  
+### Ride-Hail 
 [keywords: car, tuk tuk, motorcycle, red vehicle, Yaris, Picanto]
+
+We create three prompts:
+1. The subject is exiting the vehicle (medium shot, with a building in the background).
+2. The subject is in the back seat of the vehicle (close-up with a wide-angle lens; outside the window, both buildings and people are visible).
+3. The subject is walking away from the vehicle (our subject is in focus; in the foreground, slightly blurred, is a person or structure; in the background — passersby).
 
 - Use white compact cars common and respectful for the country (Yaris, Picanto)  
 - Driver is seated — not described  
