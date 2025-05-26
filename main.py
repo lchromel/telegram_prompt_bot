@@ -72,7 +72,8 @@ Expand the scenario below into 5 unique photo prompts (1 paragraph each).
 **Country:** {country}
 
 Write only the 5 formatted results. Each must begin on a new line.
-"""
+"""+f"""
++{STYLE_GUIDE_MD}"""
     elif service and service.lower() == "food":
         system_prompt = f"""
 You are a prompt writer creating vivid, documentary-style photo prompts for a food delivery service in {country}. Generate 5 distinct scenes.
@@ -92,7 +93,8 @@ Expand the scenario below into 5 unique photo prompts (1 paragraph each).
 **Scenario:** Character receiving a food delivery in {country}{f' with specificity: {scenario}' if scenario else ''}
 
 Write only the 5 formatted results. Each must begin on a new line.
-"""
+"""+f"""
++{STYLE_GUIDE_MD}"""
     elif service and service.lower() == "delivery":
         system_prompt = f"""
 You are a prompt writer creating engaging, street-style photo prompts for a package delivery service in {country}. Generate 5 distinct scenes.
@@ -112,7 +114,8 @@ Expand the scenario below into 5 unique photo prompts (1 paragraph each).
 **Scenario:** Character interacting with a package delivery service in {country}{f' with specificity: {scenario}' if scenario else ''}
 
 Write only the 5 formatted results. Each must begin on a new line.
-"""
+"""+f"""
++{STYLE_GUIDE_MD}"""
     else:
         # Default prompt for 'Other' or unspecified services
         system_prompt = f"""
