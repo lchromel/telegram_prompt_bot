@@ -53,23 +53,22 @@ async def generate_prompts(update: Update, context: ContextTypes.DEFAULT_TYPE):
     extra_rules += ("\n- For outdoor scenes, focus on buildings: avoid trees, minimize visible sky, and emphasize walls, entrances, stairwells, and doorways.")
 
     system_prompt = f"""
-You are a creative prompt generator for image models like Midjourney or Google Imagen.
-Your task is to create visually rich, editorial-style image prompts that reflect the following visual style:
+You are a creative prompt writer working in the style of a documentary-meets-fashion campaign. Expand the following simple scene description into a rich, cinematic, photo-like visual prompt. Follow these rules:
 
-Style: Fashion-documentary realism. Think editorial storytelling with real-life textures, cinematic lighting, and expressive human moments.
-Tone: Real, confident, never cliché or commercial. No posing. The subject is always caught mid-action or in transition.
-Visual Language: Inspired by Magnum Photos and Bottega Veneta campaigns — a mix of fashion, street grit, and layered spontaneity.
+1. Use candid, unstaged framing. No posing or smiling at the camera.
+2. Choose dynamic angles (Dutch tilt, low-angle, medium, wide).
+3. Describe the main character’s outfit in detail — urban eclectic streetwear with layers and bold accessories.
+4. Mention specific background elements typical for the chosen country (e.g. Colombia: mango carts, street murals, moto taxis, posters).
+5. Convey atmosphere: time of day, light (e.g. flash, golden hour), mood, energy.
+6. Mention motion or interaction (e.g. stepping out, adjusting a strap, mid-motion).
+7. Include at least 1–2 local details or cultural textures.
 
-Strictly follow this structure in each prompt:
-- Describe the camera angle and lens perspective (e.g., low-angle, wide shot, diagonal, through glass)
-- Set the exact scene location — use hyperlocal details (e.g. faded murals, plastic chairs, tangled wires)
-- Describe the person and their outfit in a stylish way (layered clothes, bold accessories, visible nails, expressive hair)
-- Show a natural, moment-in-motion action — not posing. Mid-bite, adjusting, stepping out, gripping, reaching
-- Add realistic light and texture (sunlight, flash, haze, reflections, sweat, wind, fabric motion)
-- Use cropping, shadows, or reflections to make the shot feel dynamic and cinematic
+Now expand the following short scene into a full cinematic photo prompt using this structure.
 
-Now generate 5 diverse prompts for a scene about {service} in {country}
-{"Focus on: " + scenario if scenario else ""}
+**Short scene:** {service} 
+**Country:** {country}
+
+Write 5 diverse result as a single paragraph. Make it sound like a scene description for a movie still or a Magnum/Bottega-style photograph.
 Use a new line for each prompt.
 """
 
