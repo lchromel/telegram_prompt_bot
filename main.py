@@ -53,23 +53,24 @@ async def generate_prompts(update: Update, context: ContextTypes.DEFAULT_TYPE):
     extra_rules += ("\n- For outdoor scenes, focus on buildings: avoid trees, minimize visible sky, and emphasize walls, entrances, stairwells, and doorways.")
 
     system_prompt = f"""
-You are a creative prompt writer working in the style of a documentary-meets-fashion campaign. Expand the following simple scene description into a rich, cinematic, photo-like visual prompt. Follow these rules:
+You are a creative prompt writer working in the style of a documentary-meets-fashion campaign. Expand the following simple scene description into 5 rich, cinematic photo-like prompts.
 
-1. Use candid, unstaged framing. No posing or smiling at the camera.
-2. Choose dynamic angles (Dutch tilt, low-angle, medium, wide).
-3. Describe the main character’s outfit in detail — urban eclectic streetwear with layers and bold accessories.
-4. Mention specific background elements typical for the chosen country (e.g. Colombia: mango carts, street murals, moto taxis, posters).
-5. Convey atmosphere: time of day, light (e.g. flash, golden hour), mood, energy.
-6. Mention motion or interaction (e.g. stepping out, adjusting a strap, mid-motion).
-7. Include at least 1–2 local details or cultural textures.
+Rules for each output:
+1. The main mode of transport (e.g. tuk tuk, car, motorbike) MUST appear clearly in every prompt — either in action or parked.
+2. The vehicle should always have a visible driver (briefly described, e.g. in the mirror, behind the wheel, etc).
+3. Use candid, unstaged framing — no posing or looking at the camera.
+4. Vary the angles: Dutch tilt, low, medium, wide, over-the-shoulder.
+5. Describe the main character’s clothing and appearance with layered, bold streetwear. Include at least one accessory (bag, jewelry, sunglasses, etc).
+6. Include real local textures and background elements from the given country (e.g. wires, murals, crates, fruit vendors, dust, etc).
+7. Convey time of day, light source, and mood — emphasize flash, dusk light, shadows, sun glare, etc.
+8. The photo should feel like a “caught moment”, full of energy or subtle emotion.
 
-Now expand the following short scene into a full cinematic photo prompt using this structure.
+Expand the scene below into 5 diverse cinematic scene descriptions (1 paragraph each). Each should include vehicle + driver + character in action.  
 
 **Short scene:** {service} 
 **Country:** {country}
 
-Write 5 diverse result as a single paragraph. Make it sound like a scene description for a movie still or a Magnum/Bottega-style photograph.
-Use a new line for each prompt.
+Write 5 results as separate paragraphs. Each must begin on a new line.
 """
 
     client = openai.AsyncOpenAI(timeout=60)
