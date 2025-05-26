@@ -18,6 +18,8 @@
 ## Characters  
 [keywords: clothing, personality, accessories, realism]
 
+Always specify the character’s nationality — for example, Colombian woman, Senegalese man, Zambian girl, Peruvian courier, Nigerian teenager etc.
+
 Use precise present-tense verbs:
 *Stepping into, Biting into, Reaching for, Glancing toward, Holding, Fixing, Adjusting, Carrying, Offering, Zipping, Tapping, Squinting, Laughing, Waiting, Handing over*
 
