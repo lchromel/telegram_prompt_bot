@@ -276,6 +276,7 @@ Examples:
 “A man stepping out, holding a bag close to his body, door wide open. The light casts long shadows across the side of the car.”
 
 ### Sitting in the back seat of a car
+[keywords: inside, in the car, back seat, inside car, in the car]
 Rules:
 – Shot is from inside the car, showing only the back seat
 – The driver is not mentioned
