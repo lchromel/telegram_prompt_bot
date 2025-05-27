@@ -73,19 +73,19 @@ allowed during interaction, but **not solo**
 
 ### Clothing
 [keywords: street fashion, layered, textured, accessories, visual hooks]
-## Women’s Looks — Local Street Fashion
 
-Convey personality through a **modern, eclectic look** with cultural accents.
+## Women’s Looks — Street Fashion
 
-Note: This is **street fashion**, not mass-market. Combinations should be bold but authentic. Accessories should be present, but not overdone.
+Convey personality through a **modern, eclectic look**.
+
+Note: This is **street fashion**, not mass-market. Combinations should be bold. Accessories should be present, but not overdone.
 
 **What works:**
 
 - **Layers and textures:** mesh, leather, denim, knitwear, sheer fabrics
 - **Modern hairstyles:** braids, buns, loose waves, flyaways
 - **Hair accessories:** bright clips, metallic beads, scarves, wraps
-- **Nails:** long, designed nails — a key visual element
-- **Clothing:** a mix of athletic, ethnic, and casual wear
+- **Clothing:** a mix of athletic, designer, and casual wear
 - **Shoes:** chunky sneakers, platforms, open sandals
 
 **Examples:**
@@ -95,7 +95,7 @@ Note: This is **street fashion**, not mass-market. Combinations should be bold b
 
 ---
 
-## Men’s Looks — Local Street Fashion
+## Men’s Looks — Street Fashion
 
 **Goal:** Express confidence and style through a **fashion blended street look**. Never overloaded — but there must be a statement. Accessories should be present, but minimal.
 
@@ -104,7 +104,6 @@ Note: This is **street fashion**, not mass-market. Combinations should be bold b
 - **Cultural fusion:** traditional patterns in modern cuts, southern tunics with sneakers
 - **Modern haircuts:** shaved sides, curls, color accents, neat braids
 - **Headwear and scarves:** skullcaps, wraps, bucket hats, bandanas
-- **Jewelry:** chains, earrings, rings, belt bags
 - **Clothing:** open shirts, vintage tees, sporty pants with flair
 - **Shoes:** sneakers, bulky trainers, sandals with socks
 
