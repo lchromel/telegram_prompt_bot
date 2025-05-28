@@ -215,6 +215,13 @@ async def continue_chat_gpt_dialogue(update: Update, context: ContextTypes.DEFAU
             context.user_data['current_prompt'] = refined_prompt
 
             await update.message.reply_text(refined_prompt)
+
+            # After sending the refined prompt, show the edit/create new buttons again
+            keyboard = [[InlineKeyboardButton("Edit", callback_data='edit_prompt'),
+                         InlineKeyboardButton("Create New", callback_data='create_new_prompt')]]
+            reply_markup = InlineKeyboardMarkup(keyboard)
+            await update.message.reply_text("Would you like to edit this prompt or create a new one?", reply_markup=reply_markup)
+
         else:
             await update.message.reply_text("Could not refine prompt. The API returned an empty response.")
 

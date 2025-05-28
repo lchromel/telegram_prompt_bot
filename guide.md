@@ -1,4 +1,4 @@
-# Super App Visual Guidelines (Short Version)
+# Super App Visual Guidelines 
 
 ## Overall Style  
 [keywords: documentary, fashion, realism, unposed, energy]
@@ -159,6 +159,7 @@ Do not describe the time of day in a stylized or cinematic way — avoid phrases
 
 Lighting should feel realistic and incidental, like ambient daylight or shadow from nearby buildings.
 
+
 **Good Examples:**
 “A woman walking along a narrow sidewalk, passing faded pink walls and a blue metal gate. Shot from the side, the white car is parked close to the building.”
 
@@ -199,6 +200,41 @@ Feels artificial and staged.
 “A woman walking alone on a clean, symmetrical sidewalk.”
 Too sterile. Missing texture and life.
 
+### Interiors
+Interiors should feel lived-in and cozy — not sterile or showroom-like. The spaces are personal, contemporary, and filled with small, meaningful details that reflect real life: textiles, everyday objects, open shelves, cups, plants, or gadgets. Rooms should feel warm, inhabited, and authentic — without being retro, broken down, or overly styled. Think soft light, visible signs of use, and elements that tell a story. The environment supports the character’s lifestyle and mood, blending effortlessly into the scene rather than standing out as decoration
+
+What to avoid:
+Interiors that look like showrooms or hotel rooms
+Retro, run-down, or dirty spaces
+Sterile or overly generic descriptions
+
+**Do (Examples):**
+“Inside a sun-filled kitchen with pale wooden cabinets, open shelves with colorful spice jars, and a kettle whistling on the stove. A cotton towel is draped over the oven handle, and the window curtain dances in the breeze.”
+
+“A tidy living room with soft lighting, framed travel photos on the wall, and a woven basket filled with throw blankets next to a low couch. On the coffee table — a half-full tea mug and a book flipped open.”
+
+“In a compact bathroom with light blue tiles, a toothbrush cup with two mismatched brushes, hand cream on the sink edge, and a mirror slightly fogged from a recent shower.”
+
+**Don’t (Examples):**
+
+“A clean modern kitchen with sleek furniture.”
+Too cold and soulless
+
+“A messy old room with broken wallpaper and rusted sink.”
+Outdated and off-brand
+
+“A simple bedroom with bed and chair.”
+Lacks detail, emotion, and personality
+
+Key elements to include:
+
+Textiles: blankets, curtains, towels, napkins — for warmth
+
+Tableware & food: plates, fruit, mugs, teapots — to add life
+
+Lighting: soft daylight or warm evening tones (not retro)
+
+Objects: books, plants, gadgets, cosmetics, candles — to emphasize modernity and individuality
 
 ---
 
