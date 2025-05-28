@@ -187,7 +187,45 @@ async def handle_new_prompt(update: Update, context: ContextTypes.DEFAULT_TYPE):
     await query.message.reply_text("Describe the scenario.")
     # Restart the conversation by going back to the country selection
     await query.message.reply_text("Okay, let's start over. For which country should the prompts be generated?")
-    return SELECT_COUNTRY # Go back to collect the country
+    # Also send the inline keyboard for country selection again
+    countries = [
+        ("🇦🇴 Angola", "Angola"),
+        ("🇦🇿 Azerbaijan", "Azerbaijan"),
+        ("🇧🇴 Bolivia", "Bolivia"),
+        ("🇨🇲 Cameroon", "Cameroon"),
+        ("🇨🇴 Colombia", "Colombia"),
+        ("🇨🇮 Côte d'Ivoire", "Côte d'Ivoire"),
+        ("🇪🇹 Ethiopia", "Ethiopia"),
+        ("🇬🇭 Ghana", "Ghana"),
+        ("🇬🇹 Guatemala", "Guatemala"),
+        ("🇲🇦 Morocco", "Morocco"),
+        ("🇲🇿 Mozambique", "Mozambique"),
+        ("🇳🇦 Namibia", "Namibia"),
+        ("🇳🇵 Nepal", "Nepal"),
+        ("🇴🇲 Oman", "Oman"),
+        ("🇵🇰 Pakistan", "Pakistan"),
+        ("🇵🇪 Peru", "Peru"),
+        ("🇨🇩 R. D. Congo", "R. D. Congo"),
+        ("🇸🇳 Senegal", "Senegal"),
+        ("🇹🇷 Türkiye", "Türkiye"),
+        ("🇦🇪 United Arab Emirates", "United Arab Emirates"),
+        ("🇿🇲 Zambia", "Zambia")
+    ]
+    keyboard = []
+    row = []
+    for text, data in countries:
+        button = InlineKeyboardButton(text, callback_data=data)
+        row.append(button)
+        if len(row) == 4:
+            keyboard.append(row)
+            row = []
+    # Add any remaining buttons in the last row
+    if row:
+        keyboard.append(row)
+    reply_markup = InlineKeyboardMarkup(keyboard)
+    await query.message.reply_text("Please select a country:", reply_markup=reply_markup)
+
+    return SELECT_COUNTRY # Stay in this state waiting for a country selection
 
 async def continue_chat_gpt_dialogue(update: Update, context: ContextTypes.DEFAULT_TYPE):
     # This function will handle the user's text input when they are in the editing dialogue
