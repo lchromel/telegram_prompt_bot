@@ -272,10 +272,11 @@ Examples:
 ### Sitting in the back seat of a car
 [keywords: inside, in the car, back seat, inside car, in the car]
 Rules:
-– Shot is from inside the car, showing only the back seat
-– The driver is not mentioned
+- Shot is from inside the car, showing only the back seat
+- The driver is not mentioned
 - The background is visible through the car window, showing local architecture or streetscape
 - **Always add the entire phrase: Seat belt fastened** 
+- **Always use shot from the front passenger seat**
 
 Describe the interior: seat textures, materials, light reflections
 
