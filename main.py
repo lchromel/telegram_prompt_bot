@@ -118,6 +118,9 @@ Write only the 5 formatted results. Each must begin on a new line.
     else:
         # Default prompt for 'Other' or unspecified services
         system_prompt = f"""
+        You are a prompt generator for Google Imagen 3.
+
+Your task is to create high-quality visual prompts for image generation in the **Super App style**, which combines documentary realism.
 Create a prompt where the {scenario} takes place in {country}. **Use the 'Super App Visual Guidelines' for this.**
 Follow these style principles:
 - 'Aesthetic & Principles': Documentary realism × urban fashion  
@@ -182,20 +185,30 @@ async def handle_new_prompt(update: Update, context: ContextTypes.DEFAULT_TYPE):
     await query.answer()
     context.user_data.clear()
     await query.message.reply_text("Describe the scenario.")
-    return ENTER_SPECIFICITY # Go back to collect the new scenario
+    # Restart the conversation by going back to the country selection
+    await query.message.reply_text("Okay, let's start over. For which country should the prompts be generated?")
+    return SELECT_COUNTRY # Go back to collect the country
 
 async def continue_chat_gpt_dialogue(update: Update, context: ContextTypes.DEFAULT_TYPE):
     # This function will handle the user's text input when they are in the editing dialogue
     user_input = update.message.text
 
-    # Retrieve stored messages
-    messages = context.user_data.get('chat_gpt_messages')
-    if not messages:
-        await update.message.reply_text("Error: Could not find conversation history.")
+    # Retrieve stored messages and the last generated prompt
+    messages = context.user_data.get('chat_gpt_messages', [])
+    last_prompt = context.user_data.get('current_prompt')
+
+    if not messages or not last_prompt:
+        await update.message.reply_text("Error: Could not find previous prompt or conversation history.")
         return ConversationHandler.END # Exit conversation or handle appropriately
 
-    # Append user's edit to messages
-    messages.append({"role": "user", "content": user_input})
+    # Create a new messages list for the API call, focusing on the editing task
+    editing_messages = [
+        {"role": "system", "content": "You are an AI prompt editor. Take the user's instruction and modify the following prompt based on their request. Only output the revised prompt."},
+        {"role": "user", "content": f"Previous Prompt: {last_prompt}\n\nEditing Instruction: {user_input}\n\nGenerate Revised Prompt:"}
+    ]
+
+    # Optionally, you could include more of the history if needed, but focusing on the last prompt might be better for specific edits.
+    # editing_messages = messages + [{"role": "user", "content": user_input}]
 
     await update.message.reply_text("Generating refined prompt, please wait...")
 
@@ -203,13 +216,14 @@ async def continue_chat_gpt_dialogue(update: Update, context: ContextTypes.DEFAU
     client = openai.AsyncOpenAI(timeout=120)
     try:
         response = await client.chat.completions.create(
-            model="gpt-4",
-            messages=messages
+            model="gpt-4", # Or a more suitable model if needed
+            messages=editing_messages
         )
         refined_prompt = response.choices[0].message.content
 
         if refined_prompt:
-            # Append AI response to messages and update stored history/prompt
+            # Append the user's input and the AI's response to the main conversation history
+            messages.append({"role": "user", "content": user_input})
             messages.append({"role": "assistant", "content": refined_prompt})
             context.user_data['chat_gpt_messages'] = messages
             context.user_data['current_prompt'] = refined_prompt
