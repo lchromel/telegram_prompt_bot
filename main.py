@@ -123,7 +123,7 @@ Create a prompt where the {scenario} takes place in {country}. **Use the 'Super 
 
     # For 'Other' service, send the user's response to a ChatGPT dialogue for prompt editing
     if service and service.lower() == "other":
-        await update.message.reply_text("Please describe the scene for the 'Other' service.")
+        await update.message.reply_text("Please describe the scene")
         return ENTER_SPECIFICITY
 
     # After generating the prompt, ask the user if they want to edit or create a new one
@@ -137,6 +137,7 @@ Create a prompt where the {scenario} takes place in {country}. **Use the 'Super 
         {"role": "user", "content": "Generate prompts using the provided style guide and rules."}
     ]
 
+    # Generate the prompt using ChatGPT
     client = openai.AsyncOpenAI(timeout=120)
     response = await client.chat.completions.create(
         model="gpt-4",
@@ -144,7 +145,7 @@ Create a prompt where the {scenario} takes place in {country}. **Use the 'Super 
     )
     prompts = response.choices[0].message.content
     await update.message.reply_text(prompts)
-    return ConversationHandler.END
+    return ASK_SPECIFICITY
 
 def main():
     app = ApplicationBuilder()\
