@@ -18,11 +18,38 @@ with open("guide.md", "r", encoding="utf-8") as f:
 services = ["Ride-hailing", "Other"]
 
 async def start(update: Update, context: ContextTypes.DEFAULT_TYPE):
-    await update.message.reply_text("For which country should the prompts be generated?")
+    countries = [
+        ("🇦🇴 Angola", "Angola"),
+        ("🇦🇿 Azerbaijan", "Azerbaijan"),
+        ("🇧🇴 Bolivia", "Bolivia"),
+        ("🇨🇲 Cameroon", "Cameroon"),
+        ("🇨🇴 Colombia", "Colombia"),
+        ("🇨🇮 Côte d'Ivoire", "Côte d'Ivoire"),
+        ("🇪🇹 Ethiopia", "Ethiopia"),
+        ("🇬🇭 Ghana", "Ghana"),
+        ("🇬🇹 Guatemala", "Guatemala"),
+        ("🇲🇦 Morocco", "Morocco"),
+        ("🇲🇿 Mozambique", "Mozambique"),
+        ("🇳🇦 Namibia", "Namibia"),
+        ("🇳🇵 Nepal", "Nepal"),
+        ("🇴🇲 Oman", "Oman"),
+        ("🇵🇰 Pakistan", "Pakistan"),
+        ("🇵🇪 Peru", "Peru"),
+        ("🇨🇩 R. D. Congo", "R. D. Congo"),
+        ("🇸🇳 Senegal", "Senegal"),
+        ("🇹🇷 Türkiye", "Türkiye"),
+        ("🇦🇪 United Arab Emirates", "United Arab Emirates"),
+        ("🇿🇲 Zambia", "Zambia")
+    ]
+    keyboard = [[InlineKeyboardButton(text, callback_data=data)] for text, data in countries]
+    reply_markup = InlineKeyboardMarkup(keyboard)
+    await update.message.reply_text("For which country should the prompts be generated?", reply_markup=reply_markup)
     return SELECT_COUNTRY
 
 async def select_country(update: Update, context: ContextTypes.DEFAULT_TYPE):
-    context.user_data['country'] = update.message.text
+    query = update.callback_query
+    await query.answer()
+    context.user_data['country'] = query.data
     reply_markup = ReplyKeyboardMarkup([[s] for s in services], one_time_keyboard=True, resize_keyboard=True)
     await update.message.reply_text("Choose a service:", reply_markup=reply_markup)
     return SELECT_SERVICE
@@ -215,7 +242,7 @@ def main():
     conv_handler = ConversationHandler(
         entry_points=[CommandHandler("start", start)],
         states={
-            SELECT_COUNTRY: [MessageHandler(filters.TEXT & ~filters.COMMAND, select_country)],
+            SELECT_COUNTRY: [CallbackQueryHandler(select_country)],
             SELECT_SERVICE: [MessageHandler(filters.TEXT & ~filters.COMMAND, select_service)],
             ENTER_SPECIFICITY: [MessageHandler(filters.TEXT & ~filters.COMMAND, enter_specificity)],
             ASK_SPECIFICITY: [
