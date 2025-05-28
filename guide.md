@@ -255,19 +255,24 @@ Composition is slightly angled, often from the side or low
 
 Examples:
 “A woman walking toward the rear door of a white Toyota Yaris, her hand reaching for the handle. Behind her: pastel-painted walls, closed shopfronts, and a hanging wire. The driver is behind the wheel.”
-
 “A man walking away from the car, one foot on the sidewalk, framed by chipped walls and a metal gate. The white Yaris is parked along the curb. Side view with soft golden light.”
+“Wide-angle candid photo of a red tuk tuk pulling over on a busy street in Cali, Colombia. A street vendor slices mango into plastic cups under a striped umbrella in the foreground. Mid-frame: a fashionable young man steps out of the tuk tuk mid-motion, wearing baggy navy cargos, a cropped graphic tee under a loose mesh vest, and silver chains that catch the sunlight. His hair is braided with neon beads, and a black fanny pack hangs across his chest. The driver, partly visible in the mirror, adjusts his cap. The camera is angled low with a Dutch tilt, adding tension. Background blur reveals tangled overhead wires, old murals, and a passing moto taxi. Scene feels hot, fast, alive — dust catching the sharp midday light.”
+“Wide-angle candid photo of a red tuk tuk pulling into a crowded street corner in Cali. In the foreground: a local man selling mango slices. Mid-ground: a fashionable young man stepping out of the tuk tuk — flared trousers, utility vest, multiple silver necklaces. In the background: the driver, visible in the mirror, wearing a blue button-up. Camera is tilted slightly for dynamism. Motion and street chaos create visual layering”
+“A top-angle candid photo of a young Pakistani woman stepping out of a white Toyota Corolla in Lahore. She wears a red velvet shalwar kameez and chunky designer boots, carrying a paper shopping bag. Her long earrings swing as she moves. The car is parked on a narrow street with old bricks, fruit vendors, and motorbikes blurred in motion. Shot from above, cinematic motion, flash used to highlight textures, chaotic but authentic urban vibe”
+“A young woman wearing a colorful alpaca wool cardigan swiftly goes to the rear door of white Toyota Corolla 2022, her large, geometric earrings glinting in the glow he morning sun. The scene is set on a busy cobblestone street in central La Paz, Bolivia, surrounded by vibrant market stalls and colonial architecture. The mood is fresh and invigorating, as the Andean light casts long, cool shadows across the scene. The photograph is taken from a high angle, allowing a bird's eye view of the action and providing a panoramic encompass of the old city's charm and chaos.”
+“Caught in a wide-shot, a woman wearing an oversized jean jacket decorated with colorful patches, a black dress, bold Doc Marten boots, and rounded mirrored sunglasses, approaches a white Picanto parked in front of a streaked graffiti wall in downtown Barranquilla. The driver leans on the car, his features half-hidden in the shadow of his cap. The scene throbs with life as bikes whiz past in the background, the sun casts long, dramatic shadows across the cobblestone streets, embellishing the city's stoic vibrancy.”
 
-### Getting out of the car
+### Getting out of the car / tuk tuk
 Rules:
-– The passenger is getting out from the rear seat
-– The driver is behind the wheel, but no mirrors or interior reflections are shown
-– The shot shows physical motion: one leg out, torso turning, hand on the door
+- The passenger is getting out from the rear seat
+- The driver is behind the wheel, but no mirrors or interior reflections are shown
+- The shot shows physical motion: one leg out, torso turning, hand on the door
 
 Examples:
 “A woman getting out of the back seat of a white Toyota Yaris, her heel touching the sidewalk. The driver is behind the wheel.”
 
 “A man stepping out, holding a bag close to his body, door wide open. The light casts long shadows across the side of the car.”
+
 
 ### Sitting in the back seat of a car
 [keywords: inside, in the car, back seat, inside car, in the car]
@@ -324,6 +329,7 @@ Examples:
 “A woman sitting in the back of a red tuk tuk, one hand resting on her lap, the other holding her phone. The driver is at the wheel.”
 
 “A man seated in the back, looking out sideways, legs slightly apart. Flash lights up the vinyl seat. The driver is in front.”
+“Low-angle shot of a Colombian guy sitting sideways in a red tuk tuk, leaning back casually with one leg up. He wears green wide-leg cargo pants, a vintage football jersey, and rectangular sunglasses. His ears are pierced with mismatched hoops. Flash reflects off his sweat-beaded forehead, and his woven crossbody bag rests on his lap. Scene feels hot, real, stylishly gritty”
 
 ### Sitting on the back of a motorcycle
 Rules:
