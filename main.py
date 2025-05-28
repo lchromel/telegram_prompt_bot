@@ -119,7 +119,13 @@ Write only the 5 formatted results. Each must begin on a new line.
         # Default prompt for 'Other' or unspecified services
         system_prompt = f"""
 Create a prompt where the {scenario} takes place in {country}. **Use the 'Super App Visual Guidelines' for this.**
-
+Follow these style principles:
+- 'Aesthetic & Principles': Documentary realism × urban fashion  
+- 'Characters' confident modern people — couriers, customers, drivers — captured mid-action, never posed  
+- 'Framing & Composition' Unbalanced, dynamic angles — Dutch tilt, low-angle, off-center crops  
+- 'Locations' Hyperlocal urban settings
+- 'Clothing' Street fashion — layered, textured, with bold accessories (nails, rings, headwear)  
+- 'Light & Texture' Natural or flash light, visible reflections, shadows, haze, wind, skin detail  
 """
 
     messages = [
@@ -168,14 +174,14 @@ Create a prompt where the {scenario} takes place in {country}. **Use the 'Super 
 async def handle_edit(update: Update, context: ContextTypes.DEFAULT_TYPE):
     query = update.callback_query
     await query.answer()
-    await update.message.reply_text("What would you like to change?")
+    await query.message.reply_text("What would you like to change?")
     return ASK_SPECIFICITY # Stay in this state to continue the dialogue
 
 async def handle_new_prompt(update: Update, context: ContextTypes.DEFAULT_TYPE):
     query = update.callback_query
     await query.answer()
     context.user_data.clear()
-    await update.message.reply_text("Describe the scenario.")
+    await query.message.reply_text("Describe the scenario.")
     return ENTER_SPECIFICITY # Go back to collect the new scenario
 
 async def continue_chat_gpt_dialogue(update: Update, context: ContextTypes.DEFAULT_TYPE):
