@@ -121,11 +121,6 @@ Create a prompt where the {scenario} takes place in {country}. **Use the 'Super 
 
 """
 
-    # For 'Other' service, send the user's response to a ChatGPT dialogue for prompt editing
-    if service and service.lower() == "other":
-        await update.message.reply_text("Please describe the scene")
-        return ENTER_SPECIFICITY
-
     # After generating the prompt, ask the user if they want to edit or create a new one
     reply_markup = ReplyKeyboardMarkup([["Edit", "Create New"]], one_time_keyboard=True, resize_keyboard=True)
     await update.message.reply_text("Would you like to edit this prompt or create a new one?", reply_markup=reply_markup)
@@ -147,6 +142,23 @@ Create a prompt where the {scenario} takes place in {country}. **Use the 'Super 
     await update.message.reply_text(prompts)
     return ASK_SPECIFICITY
 
+async def handle_edit(update: Update, context: ContextTypes.DEFAULT_TYPE):
+    await update.message.reply_text("Okay, send me your edits for the prompt.")
+    return ASK_SPECIFICITY # Stay in this state to continue the dialogue
+
+async def handle_new_prompt(update: Update, context: ContextTypes.DEFAULT_TYPE):
+    context.user_data.clear()
+    await update.message.reply_text("Okay, let's start over.")
+    return await start(update, context) # Restart the conversation
+
+async def continue_chat_gpt_dialogue(update: Update, context: ContextTypes.DEFAULT_TYPE):
+    # This function will handle the user's text input when they are in the editing dialogue
+    user_input = update.message.text
+    # Here you would add the logic to send user_input to ChatGPT and get a refined prompt
+    # For now, let's just acknowledge the input
+    await update.message.reply_text(f"Received your edit: {user_input}. (ChatGPT editing logic not yet implemented)")
+    return ASK_SPECIFICITY # Stay in this state
+
 def main():
     app = ApplicationBuilder()\
         .token(os.getenv("TELEGRAM_BOT_TOKEN"))\
@@ -162,6 +174,11 @@ def main():
             SELECT_COUNTRY: [MessageHandler(filters.TEXT & ~filters.COMMAND, select_country)],
             SELECT_SERVICE: [MessageHandler(filters.TEXT & ~filters.COMMAND, select_service)],
             ENTER_SPECIFICITY: [MessageHandler(filters.TEXT & ~filters.COMMAND, enter_specificity)],
+            ASK_SPECIFICITY: [
+                MessageHandler(filters.Regex('^Edit$'), handle_edit),
+                MessageHandler(filters.Regex('^Create New$'), handle_new_prompt),
+                MessageHandler(filters.TEXT & ~filters.COMMAND, continue_chat_gpt_dialogue),
+            ],
         },
         fallbacks=[]
     )
