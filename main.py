@@ -117,24 +117,19 @@ Write only the 5 formatted results. Each must begin on a new line.
     else:
         # Default prompt for 'Other' or unspecified services
         system_prompt = f"""
-You are a creative prompt writer generating cinematic photo concepts for a scene in {country}. Expand the simple scene description into 5 rich, photo-like prompts.
+Create a prompt where the {scenario} takes place in {country}. **Use the 'Super App Visual Guidelines' for this.**
 
-Rules for each prompt:
-1. If applicable to the service, include a relevant mode of transport (e.g., car, bus, train, bike) clearly visible.
-2. If applicable, a driver or operator of the transport should be briefly visible.
-3. Focus on the main character in action within the scene.
-4. The setting should be urban, depicting city life and architecture.
-5. Include local textures and background elements from {country} (e.g., specific signage, street details) that fit an urban context.
-6. Describe the main character's modern streetwear with at least one accessory.
-7. Use dynamic and cinematic angles: low, medium, wide, different perspectives.
-8. Convey time of day, light source, and mood, emphasizing urban lighting.
-
-Expand the scenario below into 5 diverse cinematic scene descriptions (1 paragraph each).
-
-**Scenario:** {service} activity in {country}{f' with specificity: {scenario}' if scenario else ''}
-
-Write 5 results as separate paragraphs. Each must begin on a new line.
 """
+
+    # For 'Other' service, send the user's response to a ChatGPT dialogue for prompt editing
+    if service and service.lower() == "other":
+        await update.message.reply_text("Please describe the scene for the 'Other' service.")
+        return ENTER_SPECIFICITY
+
+    # After generating the prompt, ask the user if they want to edit or create a new one
+    reply_markup = ReplyKeyboardMarkup([["Edit", "Create New"]], one_time_keyboard=True, resize_keyboard=True)
+    await update.message.reply_text("Would you like to edit this prompt or create a new one?", reply_markup=reply_markup)
+    return ASK_SPECIFICITY
 
     messages = [
         {"role": "system", "content": STYLE_GUIDE_MD},
