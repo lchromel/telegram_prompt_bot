@@ -122,13 +122,6 @@ Create a prompt where the {scenario} takes place in {country}. **Use the 'Super 
 
 """
 
-    # After generating the prompt, ask the user if they want to edit or create a new one
-    keyboard = [[InlineKeyboardButton("Edit", callback_data='edit_prompt'),
-                 InlineKeyboardButton("Create New", callback_data='create_new_prompt')]]
-    reply_markup = InlineKeyboardMarkup(keyboard)
-    await update.message.reply_text("Would you like to edit this prompt or create a new one?", reply_markup=reply_markup)
-    return ASK_SPECIFICITY
-
     messages = [
         {"role": "system", "content": STYLE_GUIDE_MD},
         {"role": "system", "content": system_prompt},
@@ -143,12 +136,28 @@ Create a prompt where the {scenario} takes place in {country}. **Use the 'Super 
 
     # Generate the prompt using ChatGPT
     client = openai.AsyncOpenAI(timeout=120)
-    response = await client.chat.completions.create(
-        model="gpt-4",
-        messages=messages
-    )
-    prompts = response.choices[0].message.content
-    await update.message.reply_text(prompts)
+    try:
+        response = await client.chat.completions.create(
+            model="gpt-4",
+            messages=messages
+        )
+        prompts = response.choices[0].message.content
+
+        if prompts:
+            await update.message.reply_text(prompts)
+        else:
+            await update.message.reply_text("Could not generate prompt. The API returned an empty response.")
+
+    except Exception as e:
+        logging.error(f"Error generating prompt: {e}")
+        await update.message.reply_text(f"An error occurred while generating the prompt: {e}")
+
+    # After generating the prompt, ask the user if they want to edit or create a new one
+    keyboard = [[InlineKeyboardButton("Edit", callback_data='edit_prompt'),
+                 InlineKeyboardButton("Create New", callback_data='create_new_prompt')]]
+    reply_markup = InlineKeyboardMarkup(keyboard)
+    await update.message.reply_text("Would you like to edit this prompt or create a new one?", reply_markup=reply_markup)
+
     return ASK_SPECIFICITY
 
 async def handle_edit(update: Update, context: ContextTypes.DEFAULT_TYPE):
