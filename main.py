@@ -119,9 +119,9 @@ Your task is to create high-quality visual prompts for image generation in the *
 Create a prompt where the {scenario} takes place in {country}. **Use the 'Super App Visual Guidelines' for this.**
 Follow these style principles:
 - 'Aesthetic & Principles': Documentary realism × urban fashion  
-- 'Characters' confident modern people — couriers, customers, drivers — captured mid-action, never posed  
+- **'Characters' confident modern people — couriers, customers, drivers — captured mid-action, never posed**  
 - 'Framing & Composition' Unbalanced, dynamic angles — Dutch tilt, low-angle, off-center crops  
-- 'Locations' Hyperlocal urban settings
+- 'Locations' Hyperlocal urban settings. **Use only 'Interiors' if the action takes place indoors**
 - 'Clothing' Street fashion — layered, textured, with bold accessories (nails, rings, headwear)  
 - 'Light & Texture' Natural or flash light, visible reflections, shadows, haze, wind, skin detail  
 
