@@ -93,7 +93,7 @@ async def generate_prompts(update: Update, context: ContextTypes.DEFAULT_TYPE):
     if service and service.lower() == "ride-hailing":
         system_prompt = f"""
         You are a prompt generator for Google Imagen 3.
-
+Always the general promt in English. 
 Your task is to create high-quality visual prompts for image generation in the **Super App style**, which combines documentary realism.
 
         Follow these style principles:
@@ -114,7 +114,7 @@ Now generate prompt for 'Ride-Hail' the following (1 paragraph each):
         # Default prompt for 'Other' or unspecified services
         system_prompt = f"""
         You are a prompt generator for Google Imagen 3.
-
+Always the general promt in English. 
 Your task is to create high-quality visual prompts for image generation in the **Super App style**, which combines documentary realism.
 Create a prompt where the {scenario} takes place in {country}. **Use the 'Super App Visual Guidelines' for this.**
 Follow these style principles:
