@@ -15,7 +15,7 @@ SELECT_SERVICE, SELECT_COUNTRY, ASK_SPECIFICITY, ENTER_SPECIFICITY = range(4)
 with open("guide.md", "r", encoding="utf-8") as f:
     STYLE_GUIDE_MD = f.read()
 
-services = ["Ride-hailing", "Food", "Delivery", "Other"]
+services = ["Ride-hailing", "Other"]
 
 async def start(update: Update, context: ContextTypes.DEFAULT_TYPE):
     await update.message.reply_text("For which country should the prompts be generated?")
@@ -55,11 +55,11 @@ async def generate_prompts(update: Update, context: ContextTypes.DEFAULT_TYPE):
 
     if service and service.lower() == "ride-hailing":
         system_prompt = f"""
-You are a prompt generator for Google Imagen 3.
+        You are a prompt generator for Google Imagen 3.
 
 Your task is to create high-quality visual prompts for image generation in the **Super App style**, which combines documentary realism.
 
-Follow these style principles:
+        Follow these style principles:
 - 'Aesthetic & Principles': Documentary realism × urban fashion  
 - 'Characters' confident modern people — couriers, customers, drivers — captured mid-action, never posed  
 - 'Framing & Composition' Unbalanced, dynamic angles — Dutch tilt, low-angle, off-center crops  
@@ -67,53 +67,11 @@ Follow these style principles:
 - 'Clothing' Street fashion — layered, textured, with bold accessories (nails, rings, headwear)  
 - 'Light & Texture' Natural or flash light, visible reflections, shadows, haze, wind, skin detail  
 
-Follow 'Prompt Structure' for creating the prompts:
+Follow 'Prompt Structure' for creating the prompt:
 
-Now generate 3 diverse prompts for 'Ride-Hail' the following (1 paragraph each):
+Now generate prompt for 'Ride-Hail' the following (1 paragraph each):
 **Scene:** {scenario}  
 **Country:** {country}
-
-Use a new line for each prompt.
-"""
-    elif service and service.lower() == "food":
-        system_prompt = f"""
-You are a prompt writer creating vivid, documentary-style photo prompts for a food delivery service in {country}. Generate 5 distinct scenes.
-
-Rules for each prompt:
-1. Feature a specific delivery vehicle (motorbike, bicycle, car) clearly visible, either moving or parked, often near a residential or commercial building.
-2. A driver/delivery person must be present and briefly visible.
-3. The main character should be interacting with the delivery (receiving the food, opening the bag).
-4. The setting should focus on urban residential or commercial entryways, sidewalks, doorsteps, or building exteriors.
-5. Incorporate local elements specific to {country} that add texture and authenticity (e.g., door details, specific signage, nearby street life) but maintain an urban feel.
-6. Describe the main character's casual streetwear style with perhaps one key accessory.
-7. Use dynamic angles: low angle, medium shot, wide shot, slightly voyeuristic framing.
-8. Emphasize light and mood: daytime sun, evening light from windows or streetlights, capturing the moment of exchange.
-
-Expand the scenario below into 5 unique photo prompts (1 paragraph each).
-
-**Scenario:** Character receiving a food delivery in {country}{f' with specificity: {scenario}' if scenario else ''}
-
-Write only the 5 formatted results. Each must begin on a new line.
-"""
-    elif service and service.lower() == "delivery":
-        system_prompt = f"""
-You are a prompt writer creating engaging, street-style photo prompts for a package delivery service in {country}. Generate 5 distinct scenes.
-
-Rules for each prompt:
-1. Feature a specific delivery vehicle (van, motorbike, car) clearly visible, either moving or parked, often near a drop-off or pick-up point.
-2. A driver/delivery person must be present and briefly visible.
-3. The main character should be interacting with a package (sending it, receiving it, carrying it).
-4. The setting should be urban, focusing on sidewalks, building entrances, post offices, or street corners.
-5. Incorporate local elements specific to {country} that add texture and authenticity (e.g., street ads, specific building materials, relevant signage) but maintain an urban feel.
-6. Describe the main character's practical yet stylish streetwear with a functional accessory like a backpack or tote bag.
-7. Use dynamic angles: medium shot, wide shot, street-level view, capturing movement.
-8. Emphasize light and mood: varying urban light conditions, capturing the action of delivery or collection.
-
-Expand the scenario below into 5 unique photo prompts (1 paragraph each).
-
-**Scenario:** Character interacting with a package delivery service in {country}{f' with specificity: {scenario}' if scenario else ''}
-
-Write only the 5 formatted results. Each must begin on a new line.
 """
     else:
         # Default prompt for 'Other' or unspecified services
