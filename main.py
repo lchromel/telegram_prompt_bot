@@ -152,6 +152,11 @@ Create a prompt where the {scenario} takes place in {country}. **Use the 'Super 
         logging.error(f"Error generating prompt: {e}")
         await update.message.reply_text(f"An error occurred while generating the prompt: {e}")
 
+    # Store the conversation history and the generated prompt if service is 'Other'
+    if service and service.lower() == "other" and prompts:
+        context.user_data['chat_gpt_messages'] = messages
+        context.user_data['current_prompt'] = prompts
+
     # After generating the prompt, ask the user if they want to edit or create a new one
     keyboard = [[InlineKeyboardButton("Edit", callback_data='edit_prompt'),
                  InlineKeyboardButton("Create New", callback_data='create_new_prompt')]]
@@ -161,20 +166,56 @@ Create a prompt where the {scenario} takes place in {country}. **Use the 'Super 
     return ASK_SPECIFICITY
 
 async def handle_edit(update: Update, context: ContextTypes.DEFAULT_TYPE):
-    await update.message.reply_text("Okay, send me your edits for the prompt.")
+    query = update.callback_query
+    await query.answer()
+    await update.message.reply_text("What would you like to change?")
     return ASK_SPECIFICITY # Stay in this state to continue the dialogue
 
 async def handle_new_prompt(update: Update, context: ContextTypes.DEFAULT_TYPE):
+    query = update.callback_query
+    await query.answer()
     context.user_data.clear()
-    await update.message.reply_text("Okay, let's start over.")
-    return await start(update, context) # Restart the conversation
+    await update.message.reply_text("Describe the scenario.")
+    return ENTER_SPECIFICITY # Go back to collect the new scenario
 
 async def continue_chat_gpt_dialogue(update: Update, context: ContextTypes.DEFAULT_TYPE):
     # This function will handle the user's text input when they are in the editing dialogue
     user_input = update.message.text
-    # Here you would add the logic to send user_input to ChatGPT and get a refined prompt
-    # For now, let's just acknowledge the input
-    await update.message.reply_text(f"Received your edit: {user_input}. (ChatGPT editing logic not yet implemented)")
+
+    # Retrieve stored messages
+    messages = context.user_data.get('chat_gpt_messages')
+    if not messages:
+        await update.message.reply_text("Error: Could not find conversation history.")
+        return ConversationHandler.END # Exit conversation or handle appropriately
+
+    # Append user's edit to messages
+    messages.append({"role": "user", "content": user_input})
+
+    await update.message.reply_text("Generating refined prompt, please wait...")
+
+    # Make new API call with updated messages
+    client = openai.AsyncOpenAI(timeout=120)
+    try:
+        response = await client.chat.completions.create(
+            model="gpt-4",
+            messages=messages
+        )
+        refined_prompt = response.choices[0].message.content
+
+        if refined_prompt:
+            # Append AI response to messages and update stored history/prompt
+            messages.append({"role": "assistant", "content": refined_prompt})
+            context.user_data['chat_gpt_messages'] = messages
+            context.user_data['current_prompt'] = refined_prompt
+
+            await update.message.reply_text(refined_prompt)
+        else:
+            await update.message.reply_text("Could not refine prompt. The API returned an empty response.")
+
+    except Exception as e:
+        logging.error(f"Error refining prompt: {e}")
+        await update.message.reply_text(f"An error occurred while refining the prompt: {e}")
+
     return ASK_SPECIFICITY # Stay in this state
 
 def main():
