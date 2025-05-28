@@ -3,9 +3,10 @@ import json
 import openai
 import asyncio
 import logging
-from telegram import Update, ReplyKeyboardMarkup
+from telegram import Update, ReplyKeyboardMarkup, InlineKeyboardMarkup, InlineKeyboardButton
 from telegram.ext import ApplicationBuilder, CommandHandler, MessageHandler, filters, ConversationHandler, ContextTypes
 import PyPDF2
+from telegram.ext import CallbackQueryHandler
 
 # States
 SELECT_SERVICE, SELECT_COUNTRY, ASK_SPECIFICITY, ENTER_SPECIFICITY = range(4)
@@ -122,15 +123,23 @@ Create a prompt where the {scenario} takes place in {country}. **Use the 'Super 
 """
 
     # After generating the prompt, ask the user if they want to edit or create a new one
-    reply_markup = ReplyKeyboardMarkup([["Edit", "Create New"]], one_time_keyboard=True, resize_keyboard=True)
+    keyboard = [[InlineKeyboardButton("Edit", callback_data='edit_prompt'),
+                 InlineKeyboardButton("Create New", callback_data='create_new_prompt')]]
+    reply_markup = InlineKeyboardMarkup(keyboard)
     await update.message.reply_text("Would you like to edit this prompt or create a new one?", reply_markup=reply_markup)
     return ASK_SPECIFICITY
 
     messages = [
         {"role": "system", "content": STYLE_GUIDE_MD},
         {"role": "system", "content": system_prompt},
-        {"role": "user", "content": "Generate prompts using the provided style guide and rules."}
     ]
+
+    if service and service.lower() == "other":
+        # For the 'Other' service, send the user's specific scenario as the user message
+        messages.append({"role": "user", "content": scenario})
+    else:
+        # For other services, use the generic user message (or you might want to refine this too)
+        messages.append({"role": "user", "content": "Generate prompts using the provided style guide and rules."})
 
     # Generate the prompt using ChatGPT
     client = openai.AsyncOpenAI(timeout=120)
@@ -175,8 +184,8 @@ def main():
             SELECT_SERVICE: [MessageHandler(filters.TEXT & ~filters.COMMAND, select_service)],
             ENTER_SPECIFICITY: [MessageHandler(filters.TEXT & ~filters.COMMAND, enter_specificity)],
             ASK_SPECIFICITY: [
-                MessageHandler(filters.Regex('^Edit$'), handle_edit),
-                MessageHandler(filters.Regex('^Create New$'), handle_new_prompt),
+                CallbackQueryHandler(handle_edit, pattern='^edit_prompt$'),
+                CallbackQueryHandler(handle_new_prompt, pattern='^create_new_prompt$'),
                 MessageHandler(filters.TEXT & ~filters.COMMAND, continue_chat_gpt_dialogue),
             ],
         },
