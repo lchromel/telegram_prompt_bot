@@ -41,7 +41,17 @@ async def start(update: Update, context: ContextTypes.DEFAULT_TYPE):
         ("🇦🇪 United Arab Emirates", "United Arab Emirates"),
         ("🇿🇲 Zambia", "Zambia")
     ]
-    keyboard = [[InlineKeyboardButton(text, callback_data=data)] for text, data in countries]
+    keyboard = []
+    row = []
+    for text, data in countries:
+        button = InlineKeyboardButton(text, callback_data=data)
+        row.append(button)
+        if len(row) == 4:
+            keyboard.append(row)
+            row = []
+    # Add any remaining buttons in the last row
+    if row:
+        keyboard.append(row)
     reply_markup = InlineKeyboardMarkup(keyboard)
     await update.message.reply_text("For which country should the prompts be generated?", reply_markup=reply_markup)
     return SELECT_COUNTRY
