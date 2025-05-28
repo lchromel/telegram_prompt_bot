@@ -222,19 +222,14 @@ Too sterile. Missing texture and life.
 
 1. Main Character + Action  
    *e.g., A courier handing over a box through a gate*
-
 2. Clothing / Appearance  
    *e.g., In a bright red jacket and black pants, neon nails*
-
 3. Location & Environment  
    *e.g., Narrow alley in Kinshasa, street vendors nearby*
-
 4. Time & Light  
    *e.g., Midday sun casting strong shadows, dust in the air*
-
 5. Background Elements  
    *e.g., Faded posters, tangled wires, passing bikes*
-
 6. Photography Style / Angle  
    *e.g., Low-angle shot with flash, candid frame*
 
@@ -283,7 +278,23 @@ Rules:
 
 Describe the interior: seat textures, materials, light reflections
 
-Examples:
+ **Examples:**
+“Camera angle & lens: Wide-angle close-up shot from the front seat, slightly over-the-shoulder, with shallow depth of field.
+Location: Inside the back seat of a Toyota Yaris, urban street life of Nairobi visible through the window — street vendors, tangled power lines, faded posters on concrete walls.
+Character & outfit: A young Kenyan woman, fashion-forward, wears a bright orange mesh top over a bralette, layered necklaces, and oversized cargo pants. Her long braids fall over her shoulder, with bold earrings peeking through. Neon nails grip the edge of the seat.
+Action: She’s fastening her seat belt mid-movement, glancing casually out the window, one hand adjusting her phone on her lap.
+Light & atmosphere: Late afternoon sun casts diagonal rays across the seat and her face. Dust motes float in the warm air.
+Texture & detail: Seat fabric texture, glints from jewelry, worn edges of the seatbelt. The Yaris interior feels compact but lively.
+Background: Through the window — blurred movement of pedestrians, a passing motorcycle, and handwritten chalk signs on nearby walls.”
+
+“Main Character + Action: A young woman sits in the backseat of a Toyota Yaris 2023 car. Seat belt fastened. 
+Clothing / Appearance: Dressed in an oversized denim jacket with gold chain, chunky rings and dangling earrings, her brightly colored nails tap rhythmically on her smartphone screen.
+Location & Environment: Set against the backdrop of bustling Bogotá streets, vibrant murals line the sidewalks, hinting at the city’s artistic soul.
+Time & Light: The late afternoon sun filters through the window, casting intricate patterns of light and shadow inside the car.
+Background Elements: Cars whiz by in a colorful blur, and among them, street vendors push their carts filled with tropical fruit and snacks.
+Camera angle & lens: Wide-angle close-up shot from the front seat, slightly over-the-shoulder, with shallow depth of field”
+
+
 “A girl sitting in the back seat of a white Yaris, scrolling through her phone. Through the window: concrete balconies and faded posters. Light hits the stitched leather seat.”
 
 “A young man leaning back on a grey fabric headrest, phone in one hand. The street outside glows in a blur of graffiti walls and electric cables.”
