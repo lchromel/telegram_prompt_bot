@@ -51,7 +51,7 @@ async def select_country(update: Update, context: ContextTypes.DEFAULT_TYPE):
     await query.answer()
     context.user_data['country'] = query.data
     reply_markup = ReplyKeyboardMarkup([[s] for s in services], one_time_keyboard=True, resize_keyboard=True)
-    await update.message.reply_text("Choose a service:", reply_markup=reply_markup)
+    await query.message.reply_text("Choose a service:", reply_markup=reply_markup)
     return SELECT_SERVICE
 
 async def select_service(update: Update, context: ContextTypes.DEFAULT_TYPE):
@@ -114,6 +114,8 @@ Follow these style principles:
 - 'Locations' Hyperlocal urban settings
 - 'Clothing' Street fashion — layered, textured, with bold accessories (nails, rings, headwear)  
 - 'Light & Texture' Natural or flash light, visible reflections, shadows, haze, wind, skin detail  
+
+1 paragraph
 """
 
     messages = [
