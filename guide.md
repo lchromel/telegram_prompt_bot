@@ -288,12 +288,25 @@ Light & atmosphere: Late afternoon sun casts diagonal rays across the seat and h
 Texture & detail: Seat fabric texture, glints from jewelry, worn edges of the seatbelt. The Yaris interior feels compact but lively.
 Background: Through the window — blurred movement of pedestrians, a passing motorcycle, and handwritten chalk signs on nearby walls.”
 
+“Camera angle & lens: Medium wide shot from the front passenger seat, eye level, slightly tilted.
+Location: Backseat of a white Toyota Yaris 2023 parked on a sloping street in Medellín. Outside the window — brick houses with balconies, graffiti murals, and a street dog lounging nearby.
+Character & outfit: A Colombian teenager in a patchwork hoodie, ripped jeans, and vibrant beaded bracelets. His hair is dyed blond at the tips. Seat belt fastened. 
+Action: Sitting cross-legged, he’s scribbling something into a beat-up sketchbook, occasionally glancing out the window.
+Light & atmosphere: Overcast sky casting soft diffused light through the windows, making interior shadows gentle.
+Texture & detail: Pencil marks on his fingers, torn denim texture, condensation on the car window.”
+
 “Main Character + Action: A young woman sits in the backseat of a Toyota Yaris 2023 car. Seat belt fastened. 
 Clothing / Appearance: Dressed in an oversized denim jacket with gold chain, chunky rings and dangling earrings, her brightly colored nails tap rhythmically on her smartphone screen.
 Location & Environment: Set against the backdrop of bustling Bogotá streets, vibrant murals line the sidewalks, hinting at the city’s artistic soul.
 Time & Light: The late afternoon sun filters through the window, casting intricate patterns of light and shadow inside the car.
 Background Elements: Cars whiz by in a colorful blur, and among them, street vendors push their carts filled with tropical fruit and snacks.
 Camera angle & lens: Wide-angle close-up shot from the front seat, slightly over-the-shoulder, with shallow depth of field”
+
+“Main Character + Action: A young man seats and leans back on the back seat of a Toyota Yaris 2023 car in the heart of Lusaka. Seat belt fastened. 
+Clothing / Appearance: He sports a rolled-up sleeve leather jacket over a graphic t-shirt, a beaded necklace peeks out from under it. His hands, adorned in rings, casually hold a phone with a vibrant cover. 
+Location & Environment: Through the car window, multi-storied buildings and hanging wires form the backdrop hinting at the urban buzz of Zambia. 
+Time & Light: Dusty sunlight seeps in from the window adding depth to the scene.  Background Elements: Cars whiz past, a boy sells groundnuts in the near distance, and an old billboard forms the last layer of this urban scene. 
+Camera angle & lens: The frame is angled from the front seat offering a side view of the man and the scenery behind.”
 
 
 “A girl sitting in the back seat of a white Yaris, scrolling through her phone. Through the window: concrete balconies and faded posters. Light hits the stitched leather seat.”
