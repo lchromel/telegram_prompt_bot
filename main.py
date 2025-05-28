@@ -8,8 +8,11 @@ from telegram.ext import ApplicationBuilder, CommandHandler, MessageHandler, fil
 import PyPDF2
 from telegram.ext import CallbackQueryHandler
 
-# States
-SELECT_SERVICE, SELECT_COUNTRY, ASK_SPECIFICITY, ENTER_SPECIFICITY = range(4)
+# Define states explicitly for clarity and order
+SELECT_COUNTRY = 0
+SELECT_SERVICE = 1
+ENTER_SPECIFICITY = 2
+ASK_SPECIFICITY = 3
 
 # Load style guide from Markdown
 with open("guide.md", "r", encoding="utf-8") as f:
@@ -263,7 +266,10 @@ def main():
                 MessageHandler(filters.TEXT & ~filters.COMMAND, continue_chat_gpt_dialogue),
             ],
         },
-        fallbacks=[]
+        fallbacks=[
+            CommandHandler("start", start), # Allow /start at any point to restart
+            # Add other fallbacks if necessary
+        ]
     )
 
     app.add_handler(conv_handler)
