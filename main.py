@@ -46,10 +46,11 @@ async def start(update: Update, context: ContextTypes.DEFAULT_TYPE):
     ]
     keyboard = []
     row = []
-    for text, data in countries:
-        button = InlineKeyboardButton(text, callback_data=data)
+    for emoji_text, data in countries:
+        button_text = emoji_text # Use the full emoji and country name
+        button = InlineKeyboardButton(button_text, callback_data=data)
         row.append(button)
-        if len(row) == 4:
+        if len(row) == 5:
             keyboard.append(row)
             row = []
     # Add any remaining buttons in the last row
@@ -213,10 +214,11 @@ async def handle_new_prompt(update: Update, context: ContextTypes.DEFAULT_TYPE):
     ]
     keyboard = []
     row = []
-    for text, data in countries:
-        button = InlineKeyboardButton(text, callback_data=data)
+    for emoji_text, data in countries:
+        button_text = emoji_text # Use the full emoji and country name
+        button = InlineKeyboardButton(button_text, callback_data=data)
         row.append(button)
-        if len(row) == 4:
+        if len(row) == 5:
             keyboard.append(row)
             row = []
     # Add any remaining buttons in the last row
