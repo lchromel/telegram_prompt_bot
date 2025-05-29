@@ -71,12 +71,20 @@ allowed during interaction, but **not solo**
 - Avoid: Plain outfits, "office" looks, over-polished styling  
 
 
-### Clothing
+## Clothing
 [keywords: street fashion, layered, textured, accessories, visual hooks]
 
-**Never use local clothing**
+### Never Use Local or Traditional Clothing
 
-## Women’s Looks — Street Fashion
+In Super App visuals, we avoid depicting characters in traditional or folkloric clothing — no matter how regionally authentic it may seem.
+
+Why?
+
+- **We’re building a modern brand**: Our aesthetic reflects *today’s urban reality*, not historical or ceremonial imagery.
+- **Local dress often looks outdated or stereotypical** when placed in contemporary, fashion-forward contexts.
+- **Traditional elements can be used — but only as accents**: a pattern on a modern Accessories, a scarf styled with streetwear, etc. Never the full look.
+
+### Women’s Looks — Street Fashion
 
 Convey personality through a **modern, eclectic look**.
 
@@ -84,51 +92,66 @@ Note: This is **street fashion**, not mass-market. Combinations should be bold. 
 
 **What works:**
 
-- **Layers and textures:** mesh, leather, denim, knitwear, sheer fabrics
-- **Modern hairstyles:** braids, buns, loose waves, flyaways
-- **Hair accessories:** bright clips, metallic beads, scarves, wraps
-- **Clothing:** a mix of athletic, designer, and casual wear
-- **Shoes:** chunky sneakers, platforms, open sandals
+- **Bold layering and contrasts**  
+  Mix structured and soft pieces — denim with tulle, lace with sportswear, oversized with fitted.
 
-**Examples:**
+- **Statement pieces**  
+  Think heart-print pants, alien graphics, robe sets, or standout vintage jackets that define the look.
 
-“A futuristic street fashion look — woman in a cropped black jacket and electric blue high-waisted pants with bold white and striped detailing, white pointed heels, walking confidently through the city.”
+- **Accessories with personality**  
+  Berets, mini bags, layered pearls, retro sunglasses, and beaded jewelry that add flair and individuality.
 
-“Urban intellectual vintage — woman wearing a red vest over a white tee, oversized light-wash jeans with a tie as a belt, round glasses, layered gold jewelry, and a patterned shoulder bag.”
+- **Unexpected pairings**  
+  Football tees with lace skirts, track jackets with heels, graphic tops with midi skirts — surprising but stylish.
 
-“Playful street style with a geeky twist — girl in a bright blue graphic long-sleeve tucked into a cream midi skirt with front slit, mismatched colorful socks and chunky sneakers, bold accessories and a patterned shoulder bag.”
+- **Shoes that anchor the look**  
+  Chunky sneakers, combat boots, platform heels — always visible, always intentional.
 
-“Bold and colorful urban look — young woman with braided space buns in an oversized plaid jacket, graphic tee, bright orange cargo pants and retro sneakers, standing on a city street.”
+- **Hair as part of the look**  
+  Voluminous, styled, or wrapped — hair isn’t passive; it frames the face and adds attitude.
 
-“Sporty glam meets street art — woman wearing a black mesh jersey with "80", dramatic pearl necklace, oversized sunglasses, and vivid red and white tie-dye trousers, walking through a crowd.”
+**DO (Examples)**
 
-“Asian vintage streetwear — woman in a red oversized sweatshirt over checked layers, brown knee-length cargo shorts, bright red socks and two-tone platform loafers, head wrapped in a neutral scarf.”
+“woman in a cropped black jacket and electric blue high-waisted pants with bold white and striped detailing, white pointed heels”
+→ Why: Bold silhouette and color pop — feels sharp, graphic, and cinematic
 
-“Quirky alien-core style — woman sitting on a clear chair, wearing a lavender sweater with neon green alien heads, voluminous lime tulle pants, black beanie, and black-and-white sneakers.”
+“woman wearing a red vest over a white tee, oversized light-wash jeans with a tie as a belt, round glasses, layered gold jewelry, and a patterned shoulder bag”
+→ Why: Street meets vintage. Quirky details feel personal, lived-in
 
-“Sporty meets feminine contrast — woman in a red Adidas track jacket paired with a short white lace skirt and red pointed heels, holding coffee and a large black handbag.”
+“girl in a bright blue graphic long-sleeve tucked into a cream midi skirt with front slit, mismatched colorful socks and chunky sneakers, bold accessories and a patterned shoulder bag”
+→ Why: Energetic and playful. Contrasts and layering create depth
 
-“Punk royalty fusion — woman in a cropped black blazer with layered pearls, brooches, dramatic heart-print red trousers and oversized black sunglasses, striding confidently down the sidewalk.”
+“woman sitting on a clear chair, wearing a lavender sweater with neon green alien heads, voluminous lime tulle pants, black beanie, and black-and-white sneakers”
+→ Why: Fun, expressive, and memorable — fashion with a wink
 
-“Romantic grunge mix — woman wearing an oversized green football tee with yellow accents, flowing white lace-trimmed skirt and heavy black combat boots, walking past a shop window.”
+“woman in a red Adidas track jacket paired with a short white lace skirt and red pointed heels, holding coffee and a large black handbag”
+→ Why: Unexpected combo. High-low balance fits our eclectic vibe
 
-“Edgy city elegance — woman walking with confidence in a white graphic tee, high-slit plaid skirt over matching maxi, platform boots, and a brown headscarf and trench thrown over the arm.”
+“woman in a cropped black blazer with layered pearls, brooche, dramatic heart-print red trousers and oversized black sunglasses”
+→ Why: Overstyled on purpose — feels bold, editorial, and smartly ironic
 
-“Avant-garde glam on the street — tall woman with voluminous hair in a bandeau top and oversized light denim palazzo pants, finished with a sheer balloon-sleeve robe, standing powerfully in an urban alley.”
+“woman wearing an oversized green football tee with yellow accents, flowing white lace-trimmed skirt and heavy black combat boots”
+→ Why: Real-life eclecticism. Everyday pieces clashing beautifully
 
-“Graphic minimalism with a twist — young woman in a black midi skirt, white t-shirt with blue photo print, layered over a leopard mesh top, belted waist, and black tabi-style shoes, standing by a graffitied wall.”
+“woman in a white graphic tee, high-slit plaid skirt over matching maxi, platform boots, and a brown headscarf and trench thrown over the arm”
+→ Why: Layered and textured — storytelling through outfit
 
-“Tokyo street fusion — girl in a blue graphic tee tucked into a layered tulle midi skirt, crossbody pouch bag, high-top sneakers, transparent tote with neon accessories, and a beret.”
+“tall woman with voluminous hair in a bandeau top and oversized light denim palazzo pants, finished with a sheer balloon-sleeve robe”
+→ Why: Cinematic proportions. Confident and airy, like a fashion moment
 
-“Vibrant pattern royalty — fashion-forward woman in a bold orange printed robe set, layered silver jewelry, retro sunglasses, neon sneakers, and a chartreuse mini bag, posing against a stone wall.”
+“girl in a blue graphic tee tucked into a layered tulle midi skirt, crossbody pouch bag, high-top sneakers, transparent tote with neon accessories, and a beret”
+→ Why: Youthful and detail-rich — the kind of look you remember
 
-*Wearing a cropped mesh top under a loose jacket, layered beaded necklaces, yellow acrylic nails with cartoon decals*
+“fashion-forward woman in a bold orange printed robe set, layered silver jewelry, retro sunglasses, neon sneakers, and a chartreuse mini bag”
+→ Why: Strong color + personality — a full look, not a uniform
 
-*Braided hair with colorful clips and silver beads, scarf tied as a headband, glossy lips and bold hoop earrings*
+“Wearing a cropped mesh top under a loose jacket, layered beaded necklaces, yellow acrylic nails with cartoon decals”
+
+“Braided hair with colorful clips and silver beads, scarf tied as a headband, glossy lips and bold hoop earrings”
 
 ---
 
-## Men’s Looks — Street Fashion
+### Men’s Looks — Street Fashion
 
 **Goal:** Express confidence and style through a **fashion blended street look**. Never overloaded — but there must be a statement. Accessories should be present, but minimal.
 
@@ -140,21 +163,9 @@ Note: This is **street fashion**, not mass-market. Combinations should be bold. 
 - **Clothing:** open shirts, vintage tees, sporty pants with flair
 - **Shoes:** sneakers, bulky trainers, sandals with socks
 
-**Example Phrases:**
+**Example:**
 
-“Runway prep-school remix — man wearing an oversized pink graphic tee layered over a plaid shirt, wide khaki trousers, round glasses and a slick hairstyle, walking confidently under stage lights.”
 
-“Urban summer cool — man in a striped button-down shirt worn open over a mesh tank, with dark wide-leg jeans, white sneakers and a bandana loosely tied around the neck.”
-
-“Color-blocked maximalism — man in a pink-and-green striped sweater vest over a white shirt, beige tailored shorts, chunky white platform shoes, pink bucket hat and mini handbag.”
-
-“Graphic streetwear with culture flair — man in mustard wide-leg trousers, navy jacket, and a black beanie, accessorized with a bold patterned crossbody bag and coffee in hand.”
-
-“Clean and color-popped utility look — man standing still in an orange oversized sweatshirt, white cargo pants with oversized pockets, white sneakers, and a cream cap, against a minimal wall.”
-
-“Layered textures in monochrome blue — man in a cable-knit blue sweater over a shirt, printed baggy jeans, tan moccasins, large tote with plush charms, walking on a wet city street.”
-
-“Playful vintage daisycore — tall man in a light blue cardigan covered in daisy prints, red wide trousers, bucket hat and white sneakers, carrying a neutral tote bag and layered beaded necklaces.”
 
 - *Wearing a patterned tunic over jogger pants, layered with a bomber, gold ring on one hand and beaded bracelet on the other*
 - *Short fade haircut with dyed tips, wraparound shades, and a silk scarf tied around the neck*
