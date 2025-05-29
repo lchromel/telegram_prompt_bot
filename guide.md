@@ -92,8 +92,39 @@ Note: This is **street fashion**, not mass-market. Combinations should be bold. 
 
 **Examples:**
 
-- *Wearing a cropped mesh top under a loose denim jacket, layered beaded necklaces, yellow acrylic nails with cartoon decals*
-- *Braided hair with colorful clips and silver beads, scarf tied as a headband, glossy lips and bold hoop earrings*
+*A futuristic street fashion look — woman in a cropped black jacket and electric blue high-waisted pants with bold white and striped detailing, white pointed heels, walking confidently through the city.*
+
+*Urban intellectual vintage — woman wearing a red vest over a white tee, oversized light-wash jeans with a tie as a belt, round glasses, layered gold jewelry, and a patterned shoulder bag.*
+
+*Playful street style with a geeky twist — girl in a bright blue graphic long-sleeve tucked into a cream midi skirt with front slit, mismatched colorful socks and chunky sneakers, bold accessories and a patterned shoulder bag.*
+
+*Bold and colorful urban look — young woman with braided space buns in an oversized plaid jacket, graphic tee, bright orange cargo pants and retro sneakers, standing on a city street.*
+
+*Sporty glam meets street art — woman wearing a black mesh jersey with "80", dramatic pearl necklace, oversized sunglasses, and vivid red and white tie-dye trousers, walking through a crowd.*
+
+*Asian vintage streetwear — woman in a red oversized sweatshirt over checked layers, brown knee-length cargo shorts, bright red socks and two-tone platform loafers, head wrapped in a neutral scarf.*
+
+*Quirky alien-core style — woman sitting on a clear chair, wearing a lavender sweater with neon green alien heads, voluminous lime tulle pants, black beanie, and black-and-white sneakers.*
+
+*Sporty meets feminine contrast — woman in a red Adidas track jacket paired with a short white lace skirt and red pointed heels, holding coffee and a large black handbag.*
+
+*Punk royalty fusion — woman in a cropped black blazer with layered pearls, brooches, dramatic heart-print red trousers and oversized black sunglasses, striding confidently down the sidewalk.*
+
+*Romantic grunge mix — woman wearing an oversized green football tee with yellow accents, flowing white lace-trimmed skirt and heavy black combat boots, walking past a shop window.*
+
+*Edgy city elegance — woman walking with confidence in a white graphic tee, high-slit plaid skirt over matching maxi, platform boots, and a brown headscarf and trench thrown over the arm.*
+
+*Avant-garde glam on the street — tall woman with voluminous hair in a bandeau top and oversized light denim palazzo pants, finished with a sheer balloon-sleeve robe, standing powerfully in an urban alley.*
+
+*Graphic minimalism with a twist — young woman in a black midi skirt, white t-shirt with blue photo print, layered over a leopard mesh top, belted waist, and black tabi-style shoes, standing by a graffitied wall.*
+
+*Tokyo street fusion — girl in a blue graphic tee tucked into a layered tulle midi skirt, crossbody pouch bag, high-top sneakers, transparent tote with neon accessories, and a beret.*
+
+*Vibrant pattern royalty — fashion-forward woman in a bold orange printed robe set, layered silver jewelry, retro sunglasses, neon sneakers, and a chartreuse mini bag, posing against a stone wall.*
+
+*Wearing a cropped mesh top under a loose jacket, layered beaded necklaces, yellow acrylic nails with cartoon decals*
+
+*Braided hair with colorful clips and silver beads, scarf tied as a headband, glossy lips and bold hoop earrings*
 
 ---
 
@@ -110,6 +141,20 @@ Note: This is **street fashion**, not mass-market. Combinations should be bold. 
 - **Shoes:** sneakers, bulky trainers, sandals with socks
 
 **Example Phrases:**
+
+*Runway prep-school remix — man wearing an oversized pink graphic tee layered over a plaid shirt, wide khaki trousers, round glasses and a slick hairstyle, walking confidently under stage lights.*
+
+*Urban summer cool — man in a striped button-down shirt worn open over a mesh tank, with dark wide-leg jeans, white sneakers and a bandana loosely tied around the neck.*
+
+*Color-blocked maximalism — man in a pink-and-green striped sweater vest over a white shirt, beige tailored shorts, chunky white platform shoes, pink bucket hat and mini handbag.*
+
+*Graphic streetwear with culture flair — man in mustard wide-leg trousers, navy jacket, and a black beanie, accessorized with a bold patterned crossbody bag and coffee in hand.*
+
+*Clean and color-popped utility look — man standing still in an orange oversized sweatshirt, white cargo pants with oversized pockets, white sneakers, and a cream cap, against a minimal wall.*
+
+*Layered textures in monochrome blue — man in a cable-knit blue sweater over a shirt, printed baggy jeans, tan moccasins, large tote with plush charms, walking on a wet city street.*
+
+*Playful vintage daisycore — tall man in a light blue cardigan covered in daisy prints, red wide trousers, bucket hat and white sneakers, carrying a neutral tote bag and layered beaded necklaces.*
 
 - *Wearing a patterned tunic over jogger pants, layered with a bomber, gold ring on one hand and beaded bracelet on the other*
 - *Short fade haircut with dyed tips, wraparound shades, and a silk scarf tied around the neck*
