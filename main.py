@@ -105,9 +105,9 @@ Your task is to create high-quality visual prompts for image generation in the *
 - 'Characters' confident modern people — couriers, customers, drivers — captured mid-action, never posed  
 - 'Framing & Composition' Unbalanced, dynamic angles — Dutch tilt, low-angle, off-center crops  
 - 'Locations' Hyperlocal urban settings — kiosks, tangled wires, cracked walls  
-- 'Clothing' Street fashion — layered, textured, with bold accessories (nails, rings, headwear)  
+- 'Clothing' Street fashion — layered, textured, with bold accessories (nails, rings, headwear) **Never use local or traditional clothing** 
 - 'Light & Texture' Natural or flash light, visible reflections, shadows, haze, wind, skin detail  
-
+don't use the word taxi, change it to the name of the car with the year
 Follow 'Prompt Structure' for creating the prompt:
 
 Now generate prompt for 'Ride-Hail' the following (1 paragraph each):
@@ -126,7 +126,7 @@ Follow these style principles:
 - **'Characters' confident modern people — couriers, customers, drivers — captured mid-action, never posed**  
 - 'Framing & Composition' Unbalanced, dynamic angles — Dutch tilt, low-angle, off-center crops  
 - 'Locations' Hyperlocal urban settings. **Use only 'Interiors' if the action takes place indoors**
-- 'Clothing' Street fashion — layered, textured, with bold accessories (nails, rings, headwear)  
+- 'Clothing' Street fashion — layered, textured, with bold accessories (nails, rings, headwear) **Never use local or traditional clothing**  
 - 'Light & Texture' Natural or flash light, visible reflections, shadows, haze, wind, skin detail  
 
 1 paragraph
