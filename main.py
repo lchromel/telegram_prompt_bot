@@ -22,27 +22,27 @@ services = ["Ride-hailing", "Other"]
 
 async def start(update: Update, context: ContextTypes.DEFAULT_TYPE):
     countries = [
-        ("🇦🇴 Angola", "Angola"),
-        ("🇦🇿 Azerbaijan", "Azerbaijan"),
-        ("🇧🇴 Bolivia", "Bolivia"),
-        ("🇨🇲 Cameroon", "Cameroon"),
-        ("🇨🇴 Colombia", "Colombia"),
-        ("🇨🇮 Côte d'Ivoire", "Côte d'Ivoire"),
-        ("🇪🇹 Ethiopia", "Ethiopia"),
-        ("🇬🇭 Ghana", "Ghana"),
-        ("🇬🇹 Guatemala", "Guatemala"),
-        ("🇲🇦 Morocco", "Morocco"),
-        ("🇲🇿 Mozambique", "Mozambique"),
-        ("🇳🇦 Namibia", "Namibia"),
-        ("🇳🇵 Nepal", "Nepal"),
-        ("🇴🇲 Oman", "Oman"),
-        ("🇵🇰 Pakistan", "Pakistan"),
-        ("🇵🇪 Peru", "Peru"),
-        ("🇨🇩 R. D. Congo", "R. D. Congo"),
-        ("🇸🇳 Senegal", "Senegal"),
-        ("🇹🇷 Türkiye", "Türkiye"),
-        ("🇦🇪 United Arab Emirates", "United Arab Emirates"),
-        ("🇿🇲 Zambia", "Zambia")
+        ("🇦🇴 ANG", "Angola"),
+        ("🇦🇿 AZE", "Azerbaijan"),
+        ("🇧🇴 BOL", "Bolivia"),
+        ("🇨🇲 CMR", "Cameroon"),
+        ("🇨🇴 COL", "Colombia"),
+        ("🇨🇮 CIV", "Côte d'Ivoire"),
+        ("🇪🇹 ETH", "Ethiopia"),
+        ("🇬🇭 GHA", "Ghana"),
+        ("🇬🇹 GTM", "Guatemala"),
+        ("🇲🇦 MAR", "Morocco"),
+        ("🇲🇿 MOZ", "Mozambique"),
+        ("🇳🇦 NAM", "Namibia"),
+        ("🇳🇵 NPL", "Nepal"),
+        ("🇴🇲 OMN", "Oman"),
+        ("🇵🇰 PAK", "Pakistan"),
+        ("🇵🇪 PER", "Peru"),
+        ("🇨🇩 COD", "Democratic Republic of the Congo"),
+        ("🇸🇳 SEN", "Senegal"),
+        ("🇹🇷 TUR", "Türkiye"),
+        ("🇦🇪 AUE", "United Arab Emirates"),
+        ("🇿🇲 ZMB", "Zambia")
     ]
     keyboard = []
     row = []
@@ -50,7 +50,7 @@ async def start(update: Update, context: ContextTypes.DEFAULT_TYPE):
         button_text = emoji_text # Use the full emoji and country name
         button = InlineKeyboardButton(button_text, callback_data=data)
         row.append(button)
-        if len(row) == 5:
+        if len(row) == 6:
             keyboard.append(row)
             row = []
     # Add any remaining buttons in the last row
@@ -218,7 +218,7 @@ async def handle_new_prompt(update: Update, context: ContextTypes.DEFAULT_TYPE):
         button_text = emoji_text # Use the full emoji and country name
         button = InlineKeyboardButton(button_text, callback_data=data)
         row.append(button)
-        if len(row) == 5:
+        if len(row) == 6:
             keyboard.append(row)
             row = []
     # Add any remaining buttons in the last row
