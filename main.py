@@ -22,7 +22,7 @@ services = ["Ride-hailing", "Other"]
 
 async def start(update: Update, context: ContextTypes.DEFAULT_TYPE):
     countries = [
-        ("🇦🇴 ANG", "Angola"),
+        ("🇦🇴 AGO", "Angola"),
         ("🇦🇿 AZE", "Azerbaijan"),
         ("🇧🇴 BOL", "Bolivia"),
         ("🇨🇲 CMR", "Cameroon"),
@@ -41,7 +41,7 @@ async def start(update: Update, context: ContextTypes.DEFAULT_TYPE):
         ("🇨🇩 COD", "Democratic Republic of the Congo"),
         ("🇸🇳 SEN", "Senegal"),
         ("🇹🇷 TUR", "Türkiye"),
-        ("🇦🇪 AUE", "United Arab Emirates"),
+        ("🇦🇪 UAE", "United Arab Emirates"),
         ("🇿🇲 ZMB", "Zambia")
     ]
     keyboard = []
@@ -137,12 +137,12 @@ Follow these style principles:
         {"role": "system", "content": system_prompt},
     ]
 
-    if service and service.lower() == "other":
-        # For the 'Other' service, send the user's specific scenario as the user message
+    # For Ride-hailing and Other services, the user's input is the scenario
+    if service and service.lower() in ["ride-hailing", "other"]:
         messages.append({"role": "user", "content": scenario})
     else:
-        # For other services, use the generic user message (or you might want to refine this too)
-        messages.append({"role": "user", "content": "Generate prompts using the provided style guide and rules."})
+         # Keep original behavior for other services if any are added later
+         messages.append({"role": "user", "content": "Generate prompts using the provided style guide and rules."})
 
     # Generate the prompt using ChatGPT
     client = openai.AsyncOpenAI(timeout=120)
@@ -162,8 +162,8 @@ Follow these style principles:
         logging.error(f"Error generating prompt: {e}")
         await update.message.reply_text(f"An error occurred while generating the prompt: {e}")
 
-    # Store the conversation history and the generated prompt if service is 'Other'
-    if service and service.lower() == "other" and prompts:
+    # Store the conversation history and the generated prompt for services that allow editing
+    if service and service.lower() in ["ride-hailing", "other"] and prompts:
         context.user_data['chat_gpt_messages'] = messages
         context.user_data['current_prompt'] = prompts
 
@@ -190,7 +190,7 @@ async def handle_new_prompt(update: Update, context: ContextTypes.DEFAULT_TYPE):
     await query.message.reply_text("Okay, let's start over. For which country should the prompts be generated?")
     # Also send the inline keyboard for country selection again
     countries = [
-        ("🇦🇴 ANG", "Angola"),
+        ("🇦🇴 AGO", "Angola"),
         ("🇦🇿 AZE", "Azerbaijan"),
         ("🇧🇴 BOL", "Bolivia"),
         ("🇨🇲 CMR", "Cameroon"),
@@ -209,7 +209,7 @@ async def handle_new_prompt(update: Update, context: ContextTypes.DEFAULT_TYPE):
         ("🇨🇩 COD", "Democratic Republic of the Congo"),
         ("🇸🇳 SEN", "Senegal"),
         ("🇹🇷 TUR", "Türkiye"),
-        ("🇦🇪 AUE", "United Arab Emirates"),
+        ("🇦🇪 UAE", "United Arab Emirates"),
         ("🇿🇲 ZMB", "Zambia")
     ]
     keyboard = []
