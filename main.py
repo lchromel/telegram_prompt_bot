@@ -190,27 +190,27 @@ async def handle_new_prompt(update: Update, context: ContextTypes.DEFAULT_TYPE):
     await query.message.reply_text("Okay, let's start over. For which country should the prompts be generated?")
     # Also send the inline keyboard for country selection again
     countries = [
-        ("🇦🇴 Angola", "Angola"),
-        ("🇦🇿 Azerbaijan", "Azerbaijan"),
-        ("🇧🇴 Bolivia", "Bolivia"),
-        ("🇨🇲 Cameroon", "Cameroon"),
-        ("🇨🇴 Colombia", "Colombia"),
-        ("🇨🇮 Côte d'Ivoire", "Côte d'Ivoire"),
-        ("🇪🇹 Ethiopia", "Ethiopia"),
-        ("🇬🇭 Ghana", "Ghana"),
-        ("🇬🇹 Guatemala", "Guatemala"),
-        ("🇲🇦 Morocco", "Morocco"),
-        ("🇲🇿 Mozambique", "Mozambique"),
-        ("🇳🇦 Namibia", "Namibia"),
-        ("🇳🇵 Nepal", "Nepal"),
-        ("🇴🇲 Oman", "Oman"),
-        ("🇵🇰 Pakistan", "Pakistan"),
-        ("🇵🇪 Peru", "Peru"),
-        ("🇨🇩 R. D. Congo", "R. D. Congo"),
-        ("🇸🇳 Senegal", "Senegal"),
-        ("🇹🇷 Türkiye", "Türkiye"),
-        ("🇦🇪 United Arab Emirates", "United Arab Emirates"),
-        ("🇿🇲 Zambia", "Zambia")
+        ("🇦🇴 ANG", "Angola"),
+        ("🇦🇿 AZE", "Azerbaijan"),
+        ("🇧🇴 BOL", "Bolivia"),
+        ("🇨🇲 CMR", "Cameroon"),
+        ("🇨🇴 COL", "Colombia"),
+        ("🇨🇮 CIV", "Côte d'Ivoire"),
+        ("🇪🇹 ETH", "Ethiopia"),
+        ("🇬🇭 GHA", "Ghana"),
+        ("🇬🇹 GTM", "Guatemala"),
+        ("🇲🇦 MAR", "Morocco"),
+        ("🇲🇿 MOZ", "Mozambique"),
+        ("🇳🇦 NAM", "Namibia"),
+        ("🇳🇵 NPL", "Nepal"),
+        ("🇴🇲 OMN", "Oman"),
+        ("🇵🇰 PAK", "Pakistan"),
+        ("🇵🇪 PER", "Peru"),
+        ("🇨🇩 COD", "Democratic Republic of the Congo"),
+        ("🇸🇳 SEN", "Senegal"),
+        ("🇹🇷 TUR", "Türkiye"),
+        ("🇦🇪 AUE", "United Arab Emirates"),
+        ("🇿🇲 ZMB", "Zambia")
     ]
     keyboard = []
     row = []
