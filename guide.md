@@ -74,6 +74,8 @@ allowed during interaction, but **not solo**
 ### Clothing
 [keywords: street fashion, layered, textured, accessories, visual hooks]
 
+**Never use local clothing**
+
 ## Women’s Looks — Street Fashion
 
 Convey personality through a **modern, eclectic look**.
@@ -101,9 +103,9 @@ Note: This is **street fashion**, not mass-market. Combinations should be bold. 
 
 **What works:**
 
-- **Cultural fusion:** traditional patterns in modern cuts, southern tunics with sneakers
 - **Modern haircuts:** shaved sides, curls, color accents, neat braids
 - **Headwear and scarves:** skullcaps, wraps, bucket hats, bandanas
+- **Clothing:** a mix of athletic, designer, and casual wear
 - **Clothing:** open shirts, vintage tees, sporty pants with flair
 - **Shoes:** sneakers, bulky trainers, sandals with socks
 
