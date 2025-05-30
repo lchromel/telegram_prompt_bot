@@ -74,7 +74,9 @@ allowed during interaction, but **not solo**
 ## Clothing
 [keywords: street fashion, layered, textured, accessories, visual hooks]
 
-### Never Use Local or Traditional Clothing
+**Never Use Local or Traditional Clothing**
+Clothing should be without Traditional prints — a mix of sporty and designer global brands.
+Remove traditional patterns completely.
 
 In Super App visuals, we avoid depicting characters in traditional or folkloric clothing — no matter how regionally authentic it may seem.
 
@@ -91,6 +93,8 @@ Convey personality through a **modern, eclectic look**.
 Note: This is **street fashion**, not mass-market. Combinations should be bold. Accessories should be present, but not overdone.
 
 **What works:**
+
+Manicures can include nail art, not just solid colors — for women only.
 
 - **Bold layering and contrasts**  
   Mix structured and soft pieces — denim with tulle, lace with sportswear, oversized with fitted.
@@ -156,6 +160,8 @@ Note: This is **street fashion**, not mass-market. Combinations should be bold. 
 **Goal:** Express confidence and style through a **fashion blended street look**. Never overloaded — but there must be a statement. Accessories should be present, but minimal.
 
 **What works:**
+
+**Colorful manicures for men are not allowed**
 
 - **Modern haircuts:** shaved sides, curls, color accents, neat braids
 - **Headwear and scarves:** skullcaps, wraps, bucket hats, bandanas
@@ -460,6 +466,6 @@ Examples:
 [keywords: courier, box, red top, handoff, biking]
 
 - Courier in red top + black bottom (optional red cap)  
-- Red kraft box (unbranded)  
+- kraft box (unbranded)  
 - Show: knocking, hand-off, biking, standing with parcel  
 - Key frames: hand-over, box detail, street scene  
