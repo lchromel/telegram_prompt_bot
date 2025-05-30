@@ -80,6 +80,9 @@ Remove traditional patterns completely.
 
 In Super App visuals, we avoid depicting characters in traditional or folkloric clothing — no matter how regionally authentic it may seem.
 
+**Avoid:** 
+*ceremonial African clothing, ethnic dress, folkloric attire, tribal outfits, native costume, heritage-style garments, festival wear, African cultural dress, ancestral robes, printed wax fabrics in full look, traditional textiles as full outfits, national dress, Afrocentric costumes, symbolic cultural wear, ornamental wraps and headscarves, village-style garments, pan-African prints head-to-toe, as well as similar traditional outfits from Latin America and Pakistan — such as Andean woven ponchos, folkloric embroidered blouses, mariachi-style pieces, Pakistani kurta-pajamas or sherwanis when styled as ethnic sets rather than streetwear-infused.*
+
 Why?
 
 - **We’re building a modern brand**: Our aesthetic reflects *today’s urban reality*, not historical or ceremonial imagery.
