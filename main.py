@@ -105,7 +105,7 @@ Your task is to create high-quality visual prompts for image generation in the *
 - 'Characters' confident modern people — couriers, customers, drivers — captured mid-action, never posed  
 - 'Framing & Composition' Unbalanced, dynamic angles — Dutch tilt, low-angle, off-center crops  
 - 'Locations' Hyperlocal urban settings — kiosks, tangled wires, bricks walls, sun-washed, raw  
-- **Use 'Clothing' Street fashion — layered, textured, with bold accessories (nails for woman, rings, headwear) **Never use local or traditional patterns in clothing**. Clothing should be without prints — a mix of sporty and designer global brands. NO USE traditional patterns completely**
+- **Use 'Clothing' Street fashion — layered, textured, with bold accessories (nails for woman, rings, headwear) **Never use local or traditional patterns in clothing**. Clothing should be without prints — a mix of sporty and designer global brands. NO USE traditional patterns completely. Awoid: traditional African garb, ceremonial African clothing, ethnic dress, folkloric attire, native costume, national dress ** 
 - 'Light & Texture' Natural or flash light, visible reflections, shadows, haze, wind, skin detail  
 don't use the word taxi, change it to the name of the car with the year
 Follow 'Prompt Structure' for creating the prompt:
@@ -126,7 +126,7 @@ Follow these style principles:
 - **'Characters' confident modern people — couriers, customers, drivers — captured mid-action, never posed**  
 - 'Framing & Composition' Unbalanced, dynamic angles — Dutch tilt, low-angle, off-center crops  
 - 'Locations' Hyperlocal urban settings. **Use only 'Interiors' if the action takes place indoors**
-- 'Clothing' Street fashion — layered, textured, with bold accessories (nails, rings, headwear) **Never use local or traditional clothing**  
+- **Use 'Clothing' Street fashion — layered, textured, with bold accessories (nails for woman, rings, headwear) **Never use local or traditional patterns in clothing**. Clothing should be without prints — a mix of sporty and designer global brands. NO USE traditional patterns completely. Awoid: traditional African garb, ceremonial African clothing, ethnic dress, folkloric attire, native costume, national dress ** 
 - 'Light & Texture' Natural or flash light, visible reflections, shadows, haze, wind, skin detail  
 
 1 paragraph
@@ -148,7 +148,7 @@ Follow these style principles:
     client = openai.AsyncOpenAI(timeout=120)
     try:
         response = await client.chat.completions.create(
-            model="gpt-4",
+            model="gpt-4-turbo",
             messages=messages
         )
         prompts = response.choices[0].message.content
@@ -256,7 +256,7 @@ async def continue_chat_gpt_dialogue(update: Update, context: ContextTypes.DEFAU
     client = openai.AsyncOpenAI(timeout=120)
     try:
         response = await client.chat.completions.create(
-            model="gpt-4", # Or a more suitable model if needed
+            model="gpt-4-turbo", # Or a more suitable model if needed
             messages=editing_messages
         )
         refined_prompt = response.choices[0].message.content
