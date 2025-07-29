@@ -72,7 +72,7 @@ allowed during interaction, but **not solo**
 
 
 ## Clothing
-[keywords: street fashion, layered, textured, accessories, visual hooks]
+[keywords: Clothing, style, street fashion, layered, textured, accessories, visual hooks]
 
 **Never Use Local or Traditional Clothing**
 Clothing should be without Traditional prints — a mix of sporty and designer global brands.
@@ -90,6 +90,8 @@ Why?
 - **Traditional elements can be used — but only as accents**: a pattern on a modern Accessories, a scarf styled with streetwear, etc. Never the full look.
 
 ### Women’s Looks — Street Fashion
+[keywords: Woman style, woman, Woman Looks, wardrobe]
+
 
 Convey personality through a **modern, eclectic look**.
 
@@ -159,7 +161,7 @@ Manicures can include nail art, not just solid colors — for women only.
 ---
 
 ### Men’s Looks — Street Fashion
-
+[keywords: man style, man, man Looks, man wardrobe]
 **Goal:** Express confidence and style through a **fashion blended street look**. Never overloaded — but there must be a statement. Accessories should be present, but minimal.
 
 **What works:**
@@ -415,7 +417,7 @@ Camera angle & lens: Wide-angle close-up shot from the front seat, slightly over
 “Main Character + Action: A young man seats and leans back on the back seat of a Toyota Yaris 2023 car in the heart of Lusaka. Seat belt fastened. 
 Clothing / Appearance: He sports a rolled-up sleeve leather jacket over a graphic t-shirt, a beaded necklace peeks out from under it. His hands, adorned in rings, casually hold a phone with a vibrant cover. 
 Location & Environment: Through the car window, multi-storied buildings and hanging wires form the backdrop hinting at the urban buzz of Zambia. 
-Time & Light: Dusty sunlight seeps in from the window adding depth to the scene.  Background Elements: Cars whiz past, a boy sells groundnuts in the near distance, and an old billboard forms the last layer of this urban scene. 
+Time & Light: Dusty sunlight seeps in from the window adding depth to the scene. Background Elements: Cars whiz past, a boy sells groundnuts in the near distance, and an old billboard forms the last layer of this urban scene. 
 Camera angle & lens: The frame is angled from the front seat offering a side view of the man and the scenery behind.”
 
 
@@ -436,15 +438,27 @@ Examples:
 “Low-angle shot of a Colombian guy sitting sideways in a red tuk tuk, leaning back casually with one leg up. He wears green wide-leg cargo pants, a vintage football jersey, and rectangular sunglasses. His ears are pierced with mismatched hoops. Flash reflects off his sweat-beaded forehead, and his woven crossbody bag rests on his lap. Scene feels hot, real, stylishly gritty”
 
 ### Sitting on the back of a motorcycle
+[keywords: motorcycle, go to motorcycle, motorcycle, on motorcycle]
 Rules:
 - Use clear phrasing: “A person sitting behind the driver on the back of a motorbike”
 - The driver is always present but only mentioned, not described
 - Passenger is slightly off-balance or holding something
 
 Examples:
-“A woman sitting behind the driver on the back of a motorbike, one hand gripping the seat. Her tote bag pressed between her side and the driver’s back.”
+“A young Nepali man sits on a red Bajaj Pulsar motorcycle, captured in a close-up from a sharp, low diagonal angle just behind the handlebar, focusing on his upper body. He wears a matte red full-face helmet with a reflective visor, turned slightly over his shoulder, revealing part of his thoughtful expression. His outfit is a layered streetwear look with a loose cream-colored cotton kurta under a sleeveless tan utility vest — blending traditional cuts with modern function. The natural light hits the curves of the helmet and vest, creating a cinematic highlight.
+In the blurred background, a second person walks away along a concrete wall with faded graffiti, adding narrative depth. The setting is a Kathmandu alley with fallen leaves on the ground and muted city textures. The camera tilt and shallow depth of field create a dynamic, editorial framing that feels both raw and intentional — reminiscent of campaign stills from Yango or Kinfolk, but grounded in South Asian street context.”
 
-“A man sitting behind the driver, legs bent up slightly, holding a food box on his knees.”
+“A fashion-forward Nepali man sits sideways on a red Bajaj Pulsar motorcycle parked on a dusty Kathmandu street, with his right leg over the seat and his left foot touching the ground. His helmet rests on the seat behind him. He wears a relaxed yet expressive outfit blending earthy and jewel tones: a lightweight patterned shirt with tribal and embroidered motifs, a draped loose jacket with vintage-inspired detailing, and wide-leg high-waisted pants made of raw textured cotton. His accessories include chunky silver rings and a narrow beaded necklace. His footwear is eclectic — hand-stitched leather loafers with visible wear. The camera is positioned at a slightly low and close angle, highlighting the motorcycle's curves and his silhouette against a backdrop of textured stone architecture and potted plants. Natural daylight with soft, warm shadows adds a candid documentary feel, merging local character with an elevated editorial streetwear aesthetic.”
+
+“Shot from a low trailing angle just behind the rear wheel, a red Bajaj Pulsar glides through a dusty Kathmandu lane. The couple’s legs dominate the foreground — the woman wears cropped wide-leg cargo pants in washed charcoal with utility pockets and raw hems, paired with strappy leather sandals and a silver ankle cuff. Her upper half, partially visible, features a fitted ribbed tank top layered under an oversized, lightweight open jacket with faded patch graphics and frayed edges — casual, but expressive.
+The man wears relaxed trousers and a loose cotton overshirt, both in earthy tones. Both riders wear matte black helmets, with the woman’s wavy hair pulled into a loose, low ponytail that moves slightly in the wind.
+Their upper bodies rise into view with the backdrop of tangled Kathmandu street wires and aged brick textures. The light is diffused and warm, bouncing off metal and fabric folds. The overall composition captures urban motion with street-editorial flair — energetic, tactile, and rooted in contemporary Nepali culture.”
+
+“A stylish young Nepali woman walks confidently past a red Bajaj Pulsar motorcycle on a narrow Kathmandu street. The camera captures her from a low, wide-angle perspective, emphasizing her movement and layered outfit. She wears a naturally dyed cotton dress with oversized sleeves, a patchwork vest made from vintage fabrics, and loose earthy-toned trousers with handcrafted embroidery at the cuffs. Her hair is softly waved and partially braided with beads, and she wears handmade jewelry. Her nails are painted in a soft, neutral shade. She glances down at her red phone, absorbed in thought as she walks.
+In the background, slightly out of focus, a Nepali man sits on the parked Bajaj Pulsar, wearing a matte black helmet and layered streetwear with local textile patterns. His posture is relaxed but observant. Overhead wires, weathered walls, and signage place the scene clearly in Kathmandu. The natural daylight is diffused and cinematic, highlighting rich textures and vibrant but muted tones. The mood is editorial yet grounded — real, stylish, and subtly expressive of local culture.”
+
+“A young Nepali man sits on a red Bajaj Pulsar motorcycle, captured in a close-up from a sharp, low diagonal angle just behind the handlebar, focusing on his upper body. He wears a matte red full-face helmet with a reflective visor, turned slightly over his shoulder, revealing part of his thoughtful expression. His outfit is a layered streetwear look with a loose cream-colored cotton kurta under a sleeveless tan utility vest — blending traditional cuts with modern function. The natural light hits the curves of the helmet and vest, creating a cinematic highlight.
+In the blurred background, a second person walks away along a concrete wall with faded graffiti, adding narrative depth. The setting is a Kathmandu alley with fallen leaves on the ground and muted city textures. The camera tilt and shallow depth of field create a dynamic, editorial framing that feels both raw and intentional — reminiscent of campaign stills from Yango or Kinfolk, but grounded in South Asian street context.”
 
 ### Holding a phone with the vehicle in the background
 Rules:
@@ -456,6 +470,25 @@ Examples:
 “Close-up of a hand with neon nails holding a phone, ride-hailing app open. In the background: a red tuk tuk with the driver at the wheel.”
 
 “A woman holding her phone in front of her chest. The side of a white Yaris is visible behind, driver faintly seen through the glass.”
+
+### Couple
+[keywords: Couple, man and woman, two passengers, Two women, Two men, Mother and child, Father and child, Friends, two girls]
+
+*Inside the car*
+
+
+**Examples:**
+*Inside car*
+“A stylish Ivorian couple sitting together in the back seat of a clean white sedan taxi. She’s wearing a neon green wrap top and silver hoop earrings, her hand casually on his knee; he wears a brown mohair sweater with layered chains and a cap. Through the side window, glimpses of Abidjan pass by — market stalls, motorbikes, and rooftops. Shot from the front seat with shallow depth of field and warm interior light.”
+
+*Inside car*
+“A Nigerian woman and her younger sister sit in the back seat of a new sedan, viewed from the driver’s POV. The older sister wears a structured blazer and satin head wrap, relaxed but upright. The younger one clutches a pink purse and wears a graphic sweatshirt. They’re both buckled in. City textures — signs, umbrellas, faded walls — flicker behind them through the glass.”
+
+*Inside car*
+“A Zambian man and his younger brother sit in the back seat of a white Toyota sedan, shot from the driver’s POV. The older one wears a black-and-red bomber and bucket hat, watching something out the window. The boy wears a bright graphic tee and rests a bag on his knees. Seatbelts are on. Outside: glimpses of markets and street vendors pass by.”
+
+
+
 
 
 ## Food Delivery  
