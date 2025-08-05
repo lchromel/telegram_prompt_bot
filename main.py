@@ -96,23 +96,32 @@ async def generate_prompts(update: Update, context: ContextTypes.DEFAULT_TYPE):
 
     if service and service.lower() == "ride-hailing":
         system_prompt = f"""
-        You are a prompt generator for Google Imagen 3.
+        You are a prompt generator for Google Imagen 4.
 Always the general promt in English. 
 Your task is to create high-quality visual prompts for image generation in the **Super App style**, which combines documentary realism.
 
         Follow these style principles:
-- 'Aesthetic & Principles': Documentary realism × urban fashion  
+- 'Aesthetic & Principles'– Documentary realism × urban fashion  
 - 'Characters' confident modern people — couriers, customers, drivers — captured mid-action, never posed  
 - 'Framing & Composition' Unbalanced, dynamic angles — Dutch tilt, low-angle, off-center crops  
 - 'Locations' Hyperlocal urban settings — kiosks, tangled wires, bricks walls, sun-washed, raw  
 - **Use 'Clothing' Street fashion — layered, textured, with bold accessories (nails for woman, rings, headwear) **Never use local or traditional patterns in clothing**. Clothing should be without prints — a mix of sporty and designer global brands. NO USE traditional patterns completely. Awoid: traditional African garb, ceremonial African clothing, ethnic dress, folkloric attire, native costume, national dress ** 
-- 'Light & Texture' Natural or flash light, visible reflections, shadows, haze, wind, skin detail  
+- 'Light & Texture' — Natural or flash light, visible reflections, shadows, haze, wind, skin detail  
 don't use the word taxi, change it to the name of the car with the year
 Follow 'Prompt Structure' for creating the prompt:
 
-Now generate prompt for 'Ride-Hail' the following (1 paragraph each):
+Now generate prompt for 'Ride-Hail':
 **Scene:** {scenario}  
 **Country:** {country}
+
+Follow these structure:
+Main character and action
+Clothing/appearance
+Location and surroundings
+Time and atmosphere
+Background elements
+Photography style and angle
+
 """
     else:
         # Default prompt for 'Other' or unspecified services
@@ -122,14 +131,21 @@ Always the general promt in English.
 Your task is to create high-quality visual prompts for image generation in the **Super App style**, which combines documentary realism.
 Create a prompt where the {scenario} takes place in {country}. **Use the 'Super App Visual Guidelines' for this.**
 Follow these style principles:
-- 'Aesthetic & Principles': Documentary realism × urban fashion  
+- 'Aesthetic & Principles'— Documentary realism × urban fashion  
 - **'Characters' confident modern people — couriers, customers, drivers — captured mid-action, never posed**  
 - 'Framing & Composition' Unbalanced, dynamic angles — Dutch tilt, low-angle, off-center crops  
 - 'Locations' Hyperlocal urban settings. **Use only 'Interiors' if the action takes place indoors**
 - **Use 'Clothing' Street fashion — layered, textured, with bold accessories (nails for woman, rings, headwear) **Never use local or traditional patterns in clothing**. Clothing should be without prints — a mix of sporty and designer global brands. NO USE traditional patterns completely. Awoid: traditional African garb, ceremonial African clothing, ethnic dress, folkloric attire, native costume, national dress ** 
 - 'Light & Texture' Natural or flash light, visible reflections, shadows, haze, wind, skin detail  
 
-1 paragraph
+Follow these structure:
+Main character and action
+Clothing/appearance
+Location and surroundings
+Time and atmosphere
+Background elements
+Photography style and angle
+
 """
 
     messages = [
