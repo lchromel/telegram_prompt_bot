@@ -8,6 +8,19 @@ from telegram.ext import ApplicationBuilder, CommandHandler, MessageHandler, fil
 import PyPDF2
 from telegram.ext import CallbackQueryHandler
 
+async def generate_image_with_gpt(prompt: str) -> str:
+    """
+    Generate an image via OpenAI Images API (gpt-image-1) and return the URL.
+    """
+    client = openai.AsyncOpenAI(timeout=180)
+    result = await client.images.generate(
+        model="gpt-image-1",
+        prompt=prompt,
+        size="1024x1024"
+    )
+    return result.data[0].url
+
+
 # Define states explicitly for clarity and order
 SELECT_COUNTRY = 0
 SELECT_SERVICE = 1
@@ -164,7 +177,7 @@ Photography style and angle
     client = openai.AsyncOpenAI(timeout=120)
     try:
         response = await client.chat.completions.create(
-            model="gpt-4-turbo",
+            model="gpt-5",
             messages=messages
         )
         prompts = response.choices[0].message.content
@@ -272,7 +285,7 @@ async def continue_chat_gpt_dialogue(update: Update, context: ContextTypes.DEFAU
     client = openai.AsyncOpenAI(timeout=120)
     try:
         response = await client.chat.completions.create(
-            model="gpt-4-turbo", # Or a more suitable model if needed
+            model="gpt-5", # Or a more suitable model if needed
             messages=editing_messages
         )
         refined_prompt = response.choices[0].message.content
@@ -300,6 +313,23 @@ async def continue_chat_gpt_dialogue(update: Update, context: ContextTypes.DEFAU
         await update.message.reply_text(f"An error occurred while refining the prompt: {e}")
 
     return ASK_SPECIFICITY # Stay in this state
+
+
+async def img(update: Update, context: ContextTypes.DEFAULT_TYPE):
+    """
+    /img <prompt> — generate image with GPT-5 Image model and return a URL.
+    """
+    if not context.args:
+        await update.message.reply_text("Usage: /img <prompt>")
+        return
+    prompt = " ".join(context.args)
+    try:
+        url = await generate_image_with_gpt(prompt)
+        await update.message.reply_text(url)
+    except Exception as e:
+        logging.exception("Image generation failed")
+        await update.message.reply_text(f"Image generation failed: {e}")
+
 
 def main():
     app = ApplicationBuilder()\
@@ -329,6 +359,7 @@ def main():
     )
 
     app.add_handler(conv_handler)
+    app.add_handler(CommandHandler('img', img))
     app.run_polling()
 
 if __name__ == "__main__":
