@@ -164,7 +164,7 @@ Photography style and angle
     client = openai.AsyncOpenAI(timeout=120)
     try:
         response = await client.chat.completions.create(
-            model="gpt-4-turbo",
+            model="gpt-5",
             messages=messages
         )
         prompts = response.choices[0].message.content
@@ -272,9 +272,11 @@ async def continue_chat_gpt_dialogue(update: Update, context: ContextTypes.DEFAU
     client = openai.AsyncOpenAI(timeout=120)
     try:
         response = await client.chat.completions.create(
-            model="gpt-4-turbo", # Or a more suitable model if needed
+            model="gpt-5", # Or a more suitable model if needed
             messages=editing_messages
         )
+        
+
         refined_prompt = response.choices[0].message.content
 
         if refined_prompt:
