@@ -1,31 +1,4 @@
-# Telegram Bot Deployment Guide
-
-## Railway Deployment Configuration
-
-To avoid the "Conflict: terminated by other getUpdates request" error, configure your Railway deployment with these environment variables:
-
-### Required Environment Variables:
-- `TELEGRAM_BOT_TOKEN`: Your Telegram bot token from @BotFather
-- `OPENAI_API_KEY`: Your OpenAI API key
-
-### Optional Environment Variables:
-- `USE_WEBHOOK`: Set to "true" for production (recommended for Railway)
-- `WEBHOOK_URL`: Your Railway app URL (e.g., https://your-app-name.railway.app)
-- `PORT`: Port number (Railway sets this automatically)
-
-### Recommended Railway Settings:
-1. Set `USE_WEBHOOK=true` in your Railway environment variables
-2. Set `WEBHOOK_URL` to your Railway app's public URL
-3. Ensure only one instance is running at a time
-
-### Troubleshooting:
-- If you see conflict errors, check that only one bot instance is running
-- Use webhook mode in production to avoid polling conflicts
-- Monitor logs for any startup issues
-
----
-
-# Style Guide for Super App Visual Prompts
+# Super App Visual Guidelines 
 
 ## Overall Style  
 [keywords: documentary, fashion, realism, unposed, energy]
