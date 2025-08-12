@@ -3,10 +3,24 @@ import json
 import openai
 import asyncio
 import logging
+import signal
+import sys
+from aiohttp import web
 from telegram import Update, ReplyKeyboardMarkup, InlineKeyboardMarkup, InlineKeyboardButton
 from telegram.ext import ApplicationBuilder, CommandHandler, MessageHandler, filters, ConversationHandler, ContextTypes
+from telegram.error import Conflict, NetworkError, TimedOut
 import PyPDF2
 from telegram.ext import CallbackQueryHandler
+
+# Configure logging
+logging.basicConfig(
+    format='%(asctime)s - %(name)s - %(levelname)s - %(message)s',
+    level=logging.INFO
+)
+logger = logging.getLogger(__name__)
+
+# Global variable to track if the bot is running
+bot_running = False
 
 async def generate_image_with_gpt(prompt: str) -> str:
     """
@@ -330,15 +344,58 @@ async def img(update: Update, context: ContextTypes.DEFAULT_TYPE):
         logging.exception("Image generation failed")
         await update.message.reply_text(f"Image generation failed: {e}")
 
+async def health_check(request):
+    """Health check endpoint for Railway."""
+    return web.Response(text="Bot is running!", status=200)
 
-def main():
+async def error_handler(update: object, context: ContextTypes.DEFAULT_TYPE) -> None:
+    """Log Errors caused by Updates."""
+    logger.error("Exception while handling an update:", exc_info=context.error)
+    
+    # Handle specific conflict error
+    if isinstance(context.error, Conflict):
+        logger.error("Bot conflict detected. This usually means multiple bot instances are running.")
+        # Don't restart here, let the main function handle it
+    elif isinstance(context.error, (NetworkError, TimedOut)):
+        logger.error("Network error occurred, will retry automatically")
+    else:
+        logger.error(f"Update {update} caused error {context.error}")
+
+def signal_handler(signum, frame):
+    """Handle shutdown signals gracefully."""
+    global bot_running
+    logger.info(f"Received signal {signum}, shutting down gracefully...")
+    bot_running = False
+    sys.exit(0)
+
+async def main():
+    global bot_running
+    
+    # Set up signal handlers for graceful shutdown
+    signal.signal(signal.SIGINT, signal_handler)
+    signal.signal(signal.SIGTERM, signal_handler)
+    
+    # Get bot token
+    token = os.getenv("TELEGRAM_BOT_TOKEN")
+    if not token:
+        logger.error("TELEGRAM_BOT_TOKEN environment variable not set")
+        return
+    
+    # Check if we should use webhook (for production environments)
+    use_webhook = os.getenv("USE_WEBHOOK", "false").lower() == "true"
+    port = int(os.getenv("PORT", 8080))
+    
+    # Build application with proper error handling
     app = ApplicationBuilder()\
-        .token(os.getenv("TELEGRAM_BOT_TOKEN"))\
+        .token(token)\
         .read_timeout(120)\
         .write_timeout(120)\
         .connect_timeout(120)\
         .pool_timeout(120)\
         .build()
+
+    # Add error handler
+    app.add_error_handler(error_handler)
 
     conv_handler = ConversationHandler(
         entry_points=[CommandHandler("start", start)],
@@ -360,7 +417,83 @@ def main():
 
     app.add_handler(conv_handler)
     app.add_handler(CommandHandler('img', img))
-    app.run_polling()
+    
+    # Start the bot with proper error handling
+    bot_running = True
+    logger.info("Starting bot...")
+    
+    try:
+        await app.initialize()
+        await app.start()
+        
+        if use_webhook:
+            # Use webhook for production (Railway)
+            webhook_url = os.getenv("WEBHOOK_URL")
+            if not webhook_url:
+                logger.error("WEBHOOK_URL environment variable not set for webhook mode")
+                return
+                
+            await app.updater.start_webhook(
+                listen="0.0.0.0",
+                port=port,
+                url_path=token,
+                webhook_url=f"{webhook_url}/{token}",
+                drop_pending_updates=True
+            )
+            logger.info(f"Bot started with webhook on port {port}")
+        else:
+            # Use polling for development
+            await app.updater.start_polling(
+                drop_pending_updates=True,  # Drop updates that arrived while the bot was offline
+                allowed_updates=Update.ALL_TYPES
+            )
+            logger.info("Bot started with polling")
+        
+        logger.info("Bot started successfully")
+        
+        # Set up HTTP server for health checks (Railway requirement)
+        if use_webhook:
+            # Create aiohttp app for health checks
+            http_app = web.Application()
+            http_app.router.add_get('/', health_check)
+            http_app.router.add_get('/health', health_check)
+            
+            # Start HTTP server
+            runner = web.AppRunner(http_app)
+            await runner.setup()
+            site = web.TCPSite(runner, '0.0.0.0', port)
+            await site.start()
+            logger.info(f"HTTP server started on port {port}")
+        
+        # Keep the bot running
+        while bot_running:
+            await asyncio.sleep(1)
+            
+    except Conflict as e:
+        logger.error(f"Bot conflict detected: {e}")
+        logger.error("This usually means another instance of the bot is already running.")
+        logger.error("Please ensure only one instance is running at a time.")
+        logger.error("Consider using webhook mode in production by setting USE_WEBHOOK=true")
+    except Exception as e:
+        logger.error(f"Error starting bot: {e}")
+    finally:
+        logger.info("Shutting down bot...")
+        try:
+            if use_webhook:
+                await app.updater.stop_webhook()
+            else:
+                await app.updater.stop()
+            await app.stop()
+            await app.shutdown()
+        except Exception as e:
+            logger.error(f"Error during shutdown: {e}")
+        logger.info("Bot shutdown complete")
 
 if __name__ == "__main__":
-    main()
+    try:
+        asyncio.run(main())
+    except KeyboardInterrupt:
+        logger.info("Bot stopped by user")
+    except Exception as e:
+        logger.error(f"Fatal error: {e}")
+        sys.exit(1)
