@@ -126,7 +126,7 @@ Photography style and angle
     else:
         # Default prompt for 'Other' or unspecified services
         system_prompt = f"""
-        You are a prompt generator for Google Imagen 3.
+        You are a prompt generator for Google Imagen 4.
 Always the general promt in English. 
 Your task is to create high-quality visual prompts for image generation in the **Super App style**, which combines documentary realism.
 Create a prompt where the {scenario} takes place in {country}. **Use the 'Super App Visual Guidelines' for this.**
@@ -164,7 +164,7 @@ Photography style and angle
     client = openai.AsyncOpenAI(timeout=120)
     try:
         response = await client.chat.completions.create(
-            model="gpt-5-mini",
+            model="gpt-5",
             messages=messages
         )
         prompts = response.choices[0].message.content
@@ -282,7 +282,7 @@ Photography style and angle"""}
     client = openai.AsyncOpenAI(timeout=120)
     try:
         response = await client.chat.completions.create(
-            model="gpt-5-mini", # Or a more suitable model if needed
+            model="gpt-5", # Or a more suitable model if needed
             messages=editing_messages
         )
         
