@@ -260,7 +260,13 @@ async def continue_chat_gpt_dialogue(update: Update, context: ContextTypes.DEFAU
     # Create a new messages list for the API call, focusing on the editing task
     editing_messages = [
         {"role": "system", "content": "You are an AI prompt editor. Take the user's instruction and modify the following prompt based on their request. Only output the revised prompt."},
-        {"role": "user", "content": f"Previous Prompt: {last_prompt}\n\nEditing Instruction: {user_input}\n\nGenerate Revised Prompt:"}
+        {"role": "user", "content": f"Previous Prompt: {last_prompt}\n\nEditing Instruction: {user_input}\n\nGenerate Revised Prompt.Follow these structure:
+Main character and action
+Clothing/appearance
+Location and surroundings
+Time and atmosphere
+Background elements
+Photography style and angle"}
     ]
 
     # Optionally, you could include more of the history if needed, but focusing on the last prompt might be better for specific edits.
