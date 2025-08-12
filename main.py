@@ -164,7 +164,7 @@ Photography style and angle
     client = openai.AsyncOpenAI(timeout=120)
     try:
         response = await client.chat.completions.create(
-            model="gpt-5",
+            model="gpt-5-mini",
             messages=messages
         )
         prompts = response.choices[0].message.content
@@ -282,7 +282,7 @@ Photography style and angle"""}
     client = openai.AsyncOpenAI(timeout=120)
     try:
         response = await client.chat.completions.create(
-            model="gpt-5", # Or a more suitable model if needed
+            model="gpt-5-mini", # Or a more suitable model if needed
             messages=editing_messages
         )
         
