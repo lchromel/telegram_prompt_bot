@@ -113,14 +113,15 @@ Clothing: Street fashion — layered, textured, bold accessories (nails for wome
 Light & Texture: Natural or flash light with visible reflections, shadows, haze, wind, and skin detail
 Naming Rule: Do not use the word “taxi”; instead use a specific car model with year (e.g., "Toyota Camry 2022")
 
-You must ALWAYS follow this exact output format:  
+Use descriptive, artistic English. Avoid repetition. Visualize the scene as vividly as possible.
 
+You must ALWAYS follow this exact output format:  
 Main character and action: [2–3 sentences]  
 Clothing/appearance: [2–3 sentences]  
 Location and surroundings: [2–3 sentences]  
-Time and atmosphere: [2–3 sentences]  
-Background elements: [2–3 sentences]  
-Photography style and angle: [2–3 sentences]  
+Time and atmosphere: [1–2 sentences]  
+Background elements: [1–2 sentences]  
+Photography style and angle: [1 sentences]  
 
 """
     else:
@@ -138,13 +139,13 @@ Follow these style principles:
 - **Use 'Clothing' Street fashion — layered, textured, with bold accessories (nails for woman, rings, headwear) **Never use local or traditional patterns in clothing**. Clothing should be without prints — a mix of sporty and designer global brands. NO USE traditional patterns completely. Awoid: traditional African garb, ceremonial African clothing, ethnic dress, folkloric attire, native costume, national dress ** 
 - 'Light & Texture' Natural or flash light, visible reflections, shadows, haze, wind, skin detail  
 
-Follow these structure:
-Main character and action
-Clothing/appearance
-Location and surroundings
-Time and atmosphere
-Background elements
-Photography style and angle
+You must ALWAYS follow this exact output format:  
+Main character and action: [2–3 sentences]  
+Clothing/appearance: [2–3 sentences]  
+Location and surroundings: [2–3 sentences]  
+Time and atmosphere: [2–3 sentences]  
+Background elements: [2–3 sentences]  
+Photography style and angle: [2–3 sentences] 
 
 """
 
@@ -264,13 +265,14 @@ async def continue_chat_gpt_dialogue(update: Update, context: ContextTypes.DEFAU
 
 Editing Instruction: {user_input}
 
-Generate Revised Prompt. Follow these structure:
-Main character and action
-Clothing/appearance
-Location and surroundings
-Time and atmosphere
-Background elements
-Photography style and angle"""}
+Generate Revised Prompt. You must ALWAYS follow this exact output format:  
+
+Main character and action: [2–3 sentences]  
+Clothing/appearance: [2–3 sentences]  
+Location and surroundings: [2–3 sentences]  
+Time and atmosphere: [2–3 sentences]  
+Background elements: [2–3 sentences]  
+Photography style and angle: [2–3 sentences] 
     ]
 
     # Optionally, you could include more of the history if needed, but focusing on the last prompt might be better for specific edits.
