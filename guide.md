@@ -74,6 +74,13 @@ allowed during interaction, but **not solo**
 ## Clothing
 [keywords: Clothing, style, street fashion, layered, textured, accessories, visual hooks]
 
+**Clothing/appearance**: Describe clothing based strictly on what is visible in the frame.  
+- Portrait (face and shoulders only): describe only visible upper clothing items, avoid mentioning shoes.  
+- Partial view (e.g., hand, torso): describe only that part’s clothing (e.g., sleeve, cuff, chest fabric).  
+- Full body: describe entire outfit including footwear and accessories.  
+Never describe items that are not visible.
+
+
 **Never Use Local or Traditional Clothing**
 Clothing should be without Traditional prints — a mix of sporty and designer global brands.
 Remove traditional patterns completely.
