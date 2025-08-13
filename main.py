@@ -113,13 +113,14 @@ Clothing: Street fashion — layered, textured, bold accessories (nails for wome
 Light & Texture: Natural or flash light with visible reflections, shadows, haze, wind, and skin detail
 Naming Rule: Do not use the word “taxi”; instead use a specific car model with year (e.g., "Toyota Camry 2022")
 
-Prompt Structure:
-Main character and action  
-Clothing/appearance  
-Location and surroundings  
-Time and atmosphere  
-Background elements  
-Photography style and angle
+You must ALWAYS follow this exact output format:  
+
+Main character and action: [2–3 sentences]  
+Clothing/appearance: [2–3 sentences]  
+Location and surroundings: [2–3 sentences]  
+Time and atmosphere: [2–3 sentences]  
+Background elements: [2–3 sentences]  
+Photography style and angle: [2–3 sentences]  
 
 """
     else:
