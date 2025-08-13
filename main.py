@@ -116,9 +116,9 @@ Naming Rule: Do not use the word “taxi”; instead use a specific car model wi
 Use descriptive, artistic English. Avoid repetition. Visualize the scene as vividly as possible.
 
 You must ALWAYS follow this exact output format:  
-Main character and action: [2–3 sentences]  
-Clothing/appearance: [2–3 sentences]  
-Location and surroundings: [2–3 sentences]  
+Main character and action: [1–2 sentences]  
+Clothing/appearance: [1–2 sentences]  
+Location and surroundings: [1–2 sentences]  
 Time and atmosphere: [1–2 sentences]  
 Background elements: [1–2 sentences]  
 Photography style and angle: [1 sentences]  
@@ -272,7 +272,7 @@ Clothing/appearance: [2–3 sentences]
 Location and surroundings: [2–3 sentences]  
 Time and atmosphere: [2–3 sentences]  
 Background elements: [2–3 sentences]  
-Photography style and angle: [2–3 sentences] 
+Photography style and angle: [2–3 sentences]"""}
     ]
 
     # Optionally, you could include more of the history if needed, but focusing on the last prompt might be better for specific edits.
