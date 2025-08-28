@@ -150,6 +150,10 @@ You must ALWAYS follow this exact output format:
 <photography>Photography style and angle: [1 sentence]</photography>
 </output_format>
 
+<output_instruction>
+Generate ONLY the final prompt text without any HTML tags, formatting markers, or structural elements.
+</output_instruction>
+
 <quality_checks>
 - Ensure character shows clear nationality specification
 - Verify clothing avoids all traditional/ethnic patterns
@@ -212,13 +216,17 @@ Use the 'Super App Visual Guidelines' for all creative decisions.
 <mandatory_output_format>
 You must ALWAYS follow this exact structure:
 
-<main_character>Main character and action: [1–2 sentences]</main_character>
-<clothing>Clothing/appearance: [2–3 sentences]</clothing>
-<location>Location and surroundings: [2–3 sentences]</location>
-<atmosphere>Time and atmosphere: [1–2 sentences]</atmosphere>
-<background>Background elements: [1–2 sentences]</background>
+<main_character>Main character and action: [1-2 sentences]</main_character>
+<clothing>Clothing/appearance: [2-3 sentences]</clothing>
+<location>Location and surroundings: [2-3 sentences]</location>
+<atmosphere>Time and atmosphere: [1-2 sentences]</atmosphere>
+<background>Background elements: [1-2 sentences]</background>
 <photography>Photography style and angle: [1 sentences]</photography>
 </mandatory_output_format>
+
+<output_instruction>
+Generate ONLY the final prompt text without any HTML tags, formatting markers, or structural elements.
+</output_instruction>
 
 <quality_control>
 Before generating, verify:
@@ -394,6 +402,11 @@ async def continue_chat_gpt_dialogue(update: Update, context: ContextTypes.DEFAU
       Background elements: [1-2 sentences]  
       Photography style and angle: [1 sentences]
     </output_format_reminder>
+
+    <output_instruction>
+Generate ONLY the final prompt text without any HTML tags, formatting markers, or structural elements.
+</output_instruction>
+
             """,
         },
     ]
