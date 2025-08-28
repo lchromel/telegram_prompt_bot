@@ -143,8 +143,8 @@ Use descriptive, artistic English. Avoid repetition. Visualize the scene as vivi
 You must ALWAYS follow this exact output format:
 
 <main_character>Main character and action: [1–2 sentences]</main_character>
-<clothing>Clothing/appearance: [1–2 sentences]</clothing>  
-<location>Location and surroundings: [1–2 sentences]</location>
+<clothing>Clothing/appearance: [2–3 sentences]</clothing>  
+<location>Location and surroundings: [2–3 sentences]</location>
 <atmosphere>Time and atmosphere: [1–2 sentences]</atmosphere>
 <background>Background elements: [1–2 sentences]</background>
 <photography>Photography style and angle: [1 sentence]</photography>
@@ -162,25 +162,74 @@ You must ALWAYS follow this exact output format:
     else:
         # Default prompt for 'Other' or unspecified services
         system_prompt = f"""
-        You are a prompt generator for Google Imagen 4.
-Always the general promt in English. 
-Your task is to create high-quality visual prompts for image generation in the **Super App style**, which combines documentary realism.
-Create a prompt where the {scenario} takes place in {country}. **Use the 'Super App Visual Guidelines' for this.**
-Follow these style principles:
-- 'Aesthetic & Principles'— Documentary realism × urban fashion  
-- **'Characters' confident modern people — couriers, customers, drivers — captured mid-action, never posed**  
-- 'Framing & Composition' Unbalanced, dynamic angles — Dutch tilt, low-angle, off-center crops  
-- 'Locations' Hyperlocal urban settings. **Use only 'Interiors' if the action takes place indoors**
-- **Use 'Clothing' Street fashion — layered, textured, with bold accessories (nails for woman, rings, headwear) **Never use local or traditional patterns in clothing**. Clothing should be without prints — a mix of sporty and designer global brands. NO USE traditional patterns completely. Awoid: traditional African garb, ceremonial African clothing, ethnic dress, folkloric attire, native costume, national dress ** 
-- 'Light & Texture' Natural or flash light, visible reflections, shadows, haze, wind, skin detail  
+        <role>You are a prompt generator for Google Imagen 4. Always write the general prompt in English.</role>
 
-You must ALWAYS follow this exact output format:  
-Main character and action: [2–3 sentences]  
-Clothing/appearance: [2–3 sentences]  
-Location and surroundings: [2–3 sentences]  
-Time and atmosphere: [2–3 sentences]  
-Background elements: [2–3 sentences]  
-Photography style and angle: [2–3 sentences] 
+<primary_task>
+Create high-quality visual prompts for image generation in the Super App style, which combines documentary realism.
+</primary_task>
+
+<input_variables>
+Scenario: {scenario}
+Location: {country}
+</input_variables>
+
+<reference_guidelines>
+Use the 'Super App Visual Guidelines' for all creative decisions.
+</reference_guidelines>
+
+<style_principles>
+  <aesthetic>Documentary realism × urban fashion</aesthetic>
+  
+  <characters>
+    Confident modern people — couriers, customers, drivers — captured mid-action, never posed
+  </characters>
+  
+  <framing>
+    Unbalanced, dynamic angles — Dutch tilt, low-angle, off-center crops
+  </framing>
+  
+  <locations>
+    <outdoor>Hyperlocal urban settings</outdoor>
+    <indoor>Use only 'Interiors' guidelines if the action takes place indoors</indoor>
+  </locations>
+  
+  <clothing_rules>
+    <style>Street fashion — layered, textured, with bold accessories (nails for women, rings, headwear)</style>
+    <strict_requirement>Never use local or traditional patterns in clothing</strict_requirement>
+    <fabric_rules>Clothing should be without prints — a mix of sporty and designer global brands</fabric_rules>
+    <absolute_prohibition>NO USE traditional patterns completely</absolute_prohibition>
+    <forbidden_items>
+      Traditional African garb, ceremonial African clothing, ethnic dress, folkloric attire, 
+      native costume, national dress
+    </forbidden_items>
+  </clothing_rules>
+  
+  <lighting>
+    Natural or flash light, visible reflections, shadows, haze, wind, skin detail
+  </lighting>
+</style_principles>
+
+<mandatory_output_format>
+You must ALWAYS follow this exact structure:
+
+<main_character>Main character and action: [1–2 sentences]</main_character>
+<clothing>Clothing/appearance: [2–3 sentences]</clothing>
+<location>Location and surroundings: [2–3 sentences]</location>
+<atmosphere>Time and atmosphere: [1–2 sentences]</atmosphere>
+<background>Background elements: [1–2 sentences]</background>
+<photography>Photography style and angle: [1 sentences]</photography>
+</mandatory_output_format>
+
+<quality_control>
+Before generating, verify:
+- Character nationality is specified
+- Single action only (no multiple simultaneous actions)
+- No traditional/ethnic clothing patterns anywhere
+- Urban setting appropriate for scenario
+- Natural lighting without cinematic clichés
+- Background activity and street life included
+- Appropriate accessories for character gender
+</quality_control> 
 
 """
 
@@ -295,19 +344,58 @@ async def continue_chat_gpt_dialogue(update: Update, context: ContextTypes.DEFAU
 
     # Create a new messages list for the API call, focusing on the editing task
     editing_messages = [
-        {"role": "system", "content": "You are an AI prompt editor. Take the user's instruction and modify the following prompt based on their request. Only output the revised prompt."},
-        {"role": "user", "content": f"""Previous Prompt: {last_prompt}
-
-Editing Instruction: {user_input}
-
-Generate Revised Prompt. You must ALWAYS follow this exact output format:  
-
-Main character and action: [2–3 sentences]  
-Clothing/appearance: [2–3 sentences]  
-Location and surroundings: [2–3 sentences]  
-Time and atmosphere: [2–3 sentences]  
-Background elements: [2–3 sentences]  
-Photography style and angle: [2–3 sentences]"""}
+        {
+            "role": "system",
+            "content": f"""
+    <role>You are an AI prompt editor</role>
+    
+    <primary_task>
+      Take the user's instruction and modify the provided prompt based on their specific request
+    </primary_task>
+    
+    <output_requirement>
+      Only output the revised prompt - no additional commentary or explanation
+    </output_requirement>
+    
+    <mandatory_format>
+      You must ALWAYS follow this exact output structure:
+      
+      <main_character>Main character and action: [1-2 sentences]</main_character>
+      <clothing>Clothing/appearance: [2-3 sentences]</clothing>
+      <location>Location and surroundings: [2-3 sentences]</location>
+      <atmosphere>Time and atmosphere: [1-2 sentences]</atmosphere>
+      <background>Background elements: [1-2 sentences]</background>
+      <photography>Photography style and angle: [1 sentence]</photography>
+    </mandatory_format>
+    
+    <editing_guidelines>
+      <preserve_structure>Maintain the six-part format structure</preserve_structure>
+      <respect_constraints>Keep all Super App style guidelines intact unless specifically asked to modify them</respect_constraints>
+      <focus_changes>Only modify elements directly addressed in the user's editing instruction</focus_changes>
+      <maintain_quality>Ensure revised prompt maintains visual coherence and prompt effectiveness</maintain_quality>
+    </editing_guidelines>
+            """,
+        },
+        {
+            "role": "user",
+            "content": f"""
+    <previous_prompt>{last_prompt}</previous_prompt>
+    
+    <editing_instruction>{user_input}</editing_instruction>
+    
+    <task>Generate Revised Prompt</task>
+    
+    <output_format_reminder>
+      Must follow exact format:
+      Main character and action: [1-2 sentences]  
+      Clothing/appearance: [2-3 sentences]  
+      Location and surroundings: [2-3 sentences]  
+      Time and atmosphere: [1-2 sentences]  
+      Background elements: [1-2 sentences]  
+      Photography style and angle: [1 sentences]
+    </output_format_reminder>
+            """,
+        },
     ]
 
     # Optionally, you could include more of the history if needed, but focusing on the last prompt might be better for specific edits.
