@@ -170,9 +170,15 @@ IF OUTSIDE A CAR:
 
 IF A TUK-TUK IS PRESENT:
 - It must be red
+- A driver is always present (mandatory)
+- Passengers sit in the back
+- If the prompt focuses on passenger(s): the driver must NOT be visible
 
 IF A MOTORCYCLE IS PRESENT:
 - It must be red
+- A driver is always present (mandatory)
+- Passenger sits behind the driver
+- Keep the driver cropped/back view unless explicitly required
 
 LIGHT & ATMOSPHERE:
 - Natural or flash only
