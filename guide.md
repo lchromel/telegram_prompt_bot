@@ -212,10 +212,25 @@ white Toyota Corolla 2019 with red Yango logotype on the door
 ## TUK-TUK RULES
 - Tuk-tuks must ALWAYS be red
 - Passenger sits in the back
+- A driver is ALWAYS present (mandatory)
+
+### Driver visibility control
+- If the scene focuses on passenger(s) in the back:
+  the driver must NOT be visible in any way
+  (no reflections, no silhouettes, no windshield views)
+- Describe the driver ONLY if explicitly required by the scenario,
+  and only the visible part (shoulder, arm), no invented details
 
 ## MOTORCYCLE RULES
 - Motorcycles must ALWAYS be red
+- A driver is ALWAYS present (mandatory)
 - Passenger sits behind the driver
+
+### Driver visibility control
+- If the scene focuses on the passenger:
+  keep the driver mostly out of frame (cropped or back view)
+- Describe the driver ONLY if explicitly required,
+  and only visible parts (back/shoulder/helmet edge), no face emphasis
 
 ---
 
