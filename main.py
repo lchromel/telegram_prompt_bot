@@ -322,12 +322,12 @@ async def continue_chat_gpt_dialogue(update: Update, context: ContextTypes.DEFAU
     <mandatory_format>
       You must ALWAYS follow this exact output structure:
       
-      <main_character>Main character and action: [1-2 sentences]</main_character>
-      <clothing>Clothing/appearance: [2-3 sentences]</clothing>
-      <location>Location and surroundings: [2-3 sentences]</location>
-      <atmosphere>Time and atmosphere: [1-2 sentences]</atmosphere>
-      <background>Background elements: [1-2 sentences]</background>
-      <photography>Photography style and angle: [1 sentence]</photography>
+      <main_character>Main character and action</main_character>
+      <clothing>Clothing/appearance</clothing>
+      <location>Location and surroundings</location>
+      <atmosphere>Time and atmosphere</atmosphere>
+      <background>Background elements</background>
+      <photography>Photography style and angle</photography>
     </mandatory_format>
     
     <editing_guidelines>
@@ -349,12 +349,12 @@ async def continue_chat_gpt_dialogue(update: Update, context: ContextTypes.DEFAU
     
     <output_format_reminder>
       Must follow exact format:
-      Main character and action: [1-2 sentences]  
-      Clothing/appearance: [2-3 sentences]  
-      Location and surroundings: [2-3 sentences]  
-      Time and atmosphere: [1-2 sentences]  
-      Background elements: [1-2 sentences]  
-      Photography style and angle: [1 sentences]
+      Main character and action
+      Clothing/appearance
+      Location and surroundings 
+      Time and atmosphere
+      Background elements
+      Photography style and angle
     </output_format_reminder>
 
     <output_instruction>
