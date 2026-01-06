@@ -99,7 +99,7 @@ CHARACTERS:
 
 PHONE RULE:
 - At least one character should be holding or using a phone when appropriate
-- Phone interaction must support the scenario (scrolling, showing, holding)
+- Phone interaction must support the scenario
 
 STYLE:
 - Street fashion must be bold and expressive
@@ -109,7 +109,6 @@ STYLE:
 SEASON & TIME LOGIC:
 - Clothing must match the current season and climate
 - Time of day must logically follow the scenario
-  (e.g. party → evening/night, errands → daytime)
 - Never contradict season or scenario with styling or lighting
 
 CLOTHING RESTRICTIONS:
@@ -124,11 +123,18 @@ LOCATION RULES:
 - Never use the words: street, alley, road, market, sidewalk
 - Describe the exterior environment through architecture only
 - Always make clear the characters are outside next to a building
-- Include a building surface and a transition element (entrance, doorway, corner, step)
+- Include a building surface and a transition element
 - Maximum 2–3 architectural details
 - Avoid extreme wear or decay
 
-VEHICLE RULES (IF A CAR IS PRESENT):
+VEHICLE RULES (MANDATORY IF A CAR IS PRESENT):
+- Always specify the car as:
+  the most popular mass-market model in the given country,
+  white color,
+  latest commonly used body generation (year)
+- Always include the phrase:
+  “with red Yango logotype on the door”
+
 - Passengers are always in the back seat
 - If inside the car: Seat belt fastened (mandatory)
 - If approaching or exiting: only the rear door
@@ -137,7 +143,7 @@ VEHICLE RULES (IF A CAR IS PRESENT):
 
 LIGHT & ATMOSPHERE:
 - Natural or flash light only
-- Used to reveal texture and fabric
+- Used to show texture and fabric
 - No cinematic or poetic time-of-day language
 
 BACKGROUND:
@@ -147,16 +153,15 @@ BACKGROUND:
 - Never interacting with main characters
 
 OUTPUT FORMAT (STRICT):
-Main character(s) and action: 1–2 sentences
-Clothing and appearance: 2–3 sentences
-Location and surroundings: 2–3 sentences
-Time and atmosphere: 1 sentence
-Background elements: 0–1 sentence
-Photography style and angle: 1 sentence
+Main character(s) and action: 1–2 sentences  
+Clothing and appearance: 2–3 sentences  
+Location and surroundings: 2–3 sentences  
+Time and atmosphere: 1 sentence  
+Background elements: 0–1 sentence  
+Photography style and angle: 1 sentence  
 
 FINAL CHECK:
-If the scene logic breaks season, time of day, interaction, or grooming rules — rewrite it.
-
+If the car model, color, year, or Yango logo is missing or incorrect — rewrite the prompt.
 
 """
 

@@ -1,7 +1,7 @@
 # SUPER APP VISUAL GUIDE
 Urban Fashion × Documentary Realism
 
-This guide defines strict visual rules for image generation.
+This guide defines strict, non-negotiable visual rules for image generation.
 The goal is clean, believable, fashion-forward urban scenes grounded in real life.
 
 ---
@@ -13,8 +13,9 @@ The goal is clean, believable, fashion-forward urban scenes grounded in real lif
 - Fashion is dominant
 - Environment supports, never overwhelms
 - Scenes must read as real exterior city moments
-- Clothing must match season and weather
-- Time of day must match the scenario logic
+- Clothing must match season and climate
+- Time of day must logically follow the scenario
+- Vehicle depiction must be realistic and localized
 
 ---
 
@@ -28,8 +29,8 @@ The goal is clean, believable, fashion-forward urban scenes grounded in real lif
 ### Interaction rules (for two characters)
 - Characters may interact only with each other
 - Interaction must support the scenario (talking, laughing, leaning closer, sharing a moment)
-- Both characters must be visible in the frame
-- Interaction should feel natural, not staged
+- Both characters must be clearly visible in the frame
+- Interaction must feel natural, not staged
 
 ---
 
@@ -43,12 +44,11 @@ The goal is clean, believable, fashion-forward urban scenes grounded in real lif
 
 ---
 
-## PHONE RULE (IMPORTANT)
+## PHONE RULE
 
 - At least ONE character should be holding or using a phone when contextually appropriate
 - Phone interaction must be natural:
   holding, scrolling, showing something to the other person
-- Phone use should support the story, not distract from it
 
 ---
 
@@ -70,12 +70,12 @@ Avoid:
 
 ---
 
-## SEASONAL CLOTHING RULE (CRITICAL)
+## SEASONAL CLOTHING RULE
 
 Clothing MUST reflect the current season and climate of the country.
 
 - Hot / summer climate:
-  lightweight fabrics, short sleeves, open silhouettes
+  lightweight fabrics, short sleeves, open silhouettes  
   no coats, puffers, scarves, or heavy layers
 
 - Mild or cool weather:
@@ -91,7 +91,7 @@ Never mix summer clothing with cold conditions or vice versa.
 ## CLOTHING RESTRICTIONS
 
 - No traditional, ethnic, folkloric, or ceremonial clothing
-- No ethnic prints or full traditional outfits
+- No ethnic patterns or full traditional outfits
 - Global street fashion only
 
 ### Grooming rules
@@ -101,20 +101,18 @@ Never mix summer clothing with cold conditions or vice versa.
 
 ---
 
-## TIME OF DAY LOGIC (NEW — CRITICAL)
+## TIME OF DAY LOGIC
 
 Time of day must be inferred from the scenario.
 
 Examples:
-- Going to a party, nightlife, social plans → evening or night
-- Commuting, errands, deliveries → daytime
-- Early work, school-related scenes → morning
-- Relaxed homebound rides → late afternoon or evening
+- Party, nightlife, social plans → evening or night
+- Errands, commuting, deliveries → daytime
+- Early work or school → morning
+- Relaxed rides home → late afternoon or evening
 
 Never choose time of day randomly.
-Time must support the story naturally.
-
-Lighting should reflect this choice realistically, without cinematic language.
+Lighting must support the scenario naturally.
 
 ---
 
@@ -130,8 +128,8 @@ Every exterior scene MUST include:
 - A transition element (entrance, doorway, corner, gate, step, threshold)
 - Spatial positioning (beside, near, along, adjacent to)
 
-The description must clearly signal:
-“This is outside, next to a building in a city.”
+The scene must clearly read as:
+“Outside, next to a building in a city.”
 
 ---
 
@@ -156,7 +154,25 @@ Optional realism details (max 1–2):
 
 ---
 
-## VEHICLE RULES (NON-NEGOTIABLE)
+## VEHICLE RULES (CRITICAL & NON-NEGOTIABLE)
+
+### Car specification (MANDATORY IF A CAR IS PRESENT)
+
+- ALWAYS specify:
+  - Brand and model
+  - Most popular mass-market car for the given country
+  - Latest commonly used body generation (year)
+  - White color
+
+- ALWAYS add the phrase:
+  **“with red Yango logotype on the door”**
+
+Example format:
+white Toyota Corolla 2018 with red Yango logotype on the door
+
+No variation, no synonyms, no omissions.
+
+---
 
 ### Passenger logic
 - Passengers are ALWAYS in the back seat
@@ -209,10 +225,10 @@ Empty backgrounds are allowed and often preferred.
 ## FINAL SANITY CHECK
 
 If:
-- clothing doesn’t match season
-- time of day doesn’t match scenario
+- the car is not specified clearly
+- the car is not white
+- the Yango logo is missing
 - men have visible manicures
-- interaction feels staged
-- driver appears unnecessarily
+- season or time of day feels wrong
 
 → the prompt is invalid and must be rewritten.
