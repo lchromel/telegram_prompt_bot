@@ -93,6 +93,30 @@ Never style clothing against the weather.
 - Women: bold manicures allowed
 - Men: NO visible manicures or painted nails
 
+## PARTIAL VISIBILITY CLOTHING RULE (CRITICAL)
+
+Describe clothing and accessories based on what is ACTUALLY visible in the frame.
+If only a fragment is visible, describe ONLY that visible portion.
+
+### Partial-visibility phrasing (use these patterns)
+- “the waistband of light-wash jeans is visible”
+- “a cropped hem of denim shorts is visible”
+- “the cuff of a jacket sleeve is visible”
+- “a sliver of a skirt hem is visible”
+- “only the upper chest and collar area of the top is visible”
+- “only the edge of the outer layer is visible near the shoulder”
+
+### Never do
+- Do not describe full garments if they are mostly out of frame
+- Do not describe shoes or full-length pants unless clearly visible
+- If uncertain, omit rather than invent
+
+### Interior car POV guidance
+For POV from the driver’s seat focusing on back passengers:
+- prioritize: hands, red phone, seatbelt, face, hair, eyewear, upper layers
+- lower body: mention only partial cues if visible (waistband/hem), nothing more
+
+
 ---
 
 ## TIME OF DAY LOGIC

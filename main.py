@@ -105,6 +105,14 @@ STYLE:
 - Harmonious and interesting color combination, Unexpected combination of different styles, Statement accessories and hairstyles
 - Avoid safe or minimal looks
 
+PARTIAL VISIBILITY RULE (MANDATORY):
+- Describe clothing/accessories ONLY as they appear in the frame.
+- If only a fragment is visible, describe only that fragment using phrases like:
+  “the waistband of light-wash jeans is visible” or “a cropped denim hem is visible”.
+- Never describe shoes or full outfits unless clearly visible.
+- If unsure, omit details rather than guessing.
+
+
 SEASON & TIME LOGIC:
 - Clothing must match the current season and climate in {country}
 - Time of day must logically follow the scenario (party → evening/night, errands → daytime)
