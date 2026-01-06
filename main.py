@@ -121,6 +121,14 @@ LOCATION RULES (EXTERIOR):
 - Describe exterior space through architecture only
 - Include a building surface + a transition element
 - Max 2–3 details, avoid extreme decay
+- Avoid decay language (peeling, crumbling, abandoned, sun-bleached)
+- Use maintained, lived-in exterior details (clean frames, intact tiles, utility boxes)
+- Add 1–2 life cues max (mailboxes, doorbells, doormat, potted plant, bicycle, small notice board)
+
+BACKGROUND PEOPLE (ANTI-CREEPY):
+- If present: turned away or profile, busy with a task
+- Never looking at camera, never staring at main character
+- Prefer blurred/cropped partial presence
 
 COUNTRY → ECONOMY CAR MAP (MANDATORY):
 Ivory Coast → white Suzuki Alto 2019

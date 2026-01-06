@@ -118,6 +118,27 @@ Must include:
 - Transition element (entrance, doorway, corner, step, threshold)
 - Spatial positioning (beside, near, along, adjacent to)
 
+## LOCATION QUALITY (LIVED-IN, NOT RUINED)
+
+Avoid decay language: sun-bleached, peeling paint, crumbling, dilapidated, abandoned, heavily weathered.
+Use maintained realism instead: intact plaster, clean doorframe, recent repaint patches, functional details.
+
+Add 1–2 life cues max:
+doormat, mailboxes, doorbells, utility meter box, potted plant + watering can, bicycle lock, small notice board, curtains behind glass.
+
+Pick ONE exterior context per scene (no repetition):
+apartment entrance / office doorway / low-rise corner / residential facade with balcony shadows / simple storefront edge (not markets).
+
+## BACKGROUND PEOPLE (ANTI-CREEPY)
+
+If a background person appears:
+- they are turned away or in profile, busy with a task
+- never looking at camera, never staring at main characters
+- prefer partial/cropped/blurred presence
+
+Never describe: "a person stands in the doorway" or "watching".
+
+
 ---
 
 ## REALISM (USED, NOT RUINED)
