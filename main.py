@@ -97,9 +97,8 @@ CHARACTERS:
 - If two characters are present, both must be visible and interacting naturally
 
 PHONE RULE:
-- If a phone appears in the scene, it must be a **red phone**
-- At least one character should be holding or using a red phone when appropriate
-- Phone interaction must support the scenario
+- If a phone appears, it must be a red phone (no other colors)
+- At least one character should use/hold a red phone when appropriate
 
 STYLE:
 - Bold, expressive street fashion
@@ -107,35 +106,57 @@ STYLE:
 - Avoid safe or minimal looks
 
 SEASON & TIME LOGIC:
-- Clothing must match the season and climate
-- Time of day must logically follow the scenario
+- Clothing must match the current season and climate
+- Time of day must logically follow the scenario (party → evening/night, errands → daytime)
 
 CLOTHING RESTRICTIONS:
-- No traditional or ethnic clothing
+- No traditional, ethnic, folkloric, or ceremonial clothing
 - No ethnic patterns or prints
 - Global street fashion only
-- Accessories must be intentional
 - Women may have bold manicures
 - Men must have natural, unstyled nails only
 
 LOCATION RULES (EXTERIOR):
 - Never use: street, alley, road, market, sidewalk
-- Describe exterior space through architecture
-- Include a building surface and a transition element
-- Max 2–3 details
+- Describe exterior space through architecture only
+- Include a building surface + a transition element
+- Max 2–3 details, avoid extreme decay
+
+COUNTRY → ECONOMY CAR MAP (MANDATORY):
+Ivory Coast → white Suzuki Alto 2019
+Peru → white Toyota Yaris 2020
+Colombia → white Chevrolet Spark 2018
+Azerbaijan → white Chevrolet Cobalt 2016
+Bolivia → white Toyota Corolla 2018
+Senegal → white Peugeot 308 2021
+Pakistan → white Suzuki Alto 2019
+Zambia → white Toyota Vitz 2014
+Angola → white Suzuki S-Presso 2019
+Ghana → white Toyota Vitz 2014
+Mozambique → white Toyota Vitz 2014
+Cameroon → white Toyota Yaris 2020
+Namibia → white Mazda Demio 2019
+DR of Congo → white Toyota Ist 2007
+Ethiopia → white Toyota Vitz 2014
+Guatemala → white Honda Fit 2020
+Oman → white Toyota Corolla 2019
+Nepal → white Suzuki Alto 2019
+Morocco → white Dacia Logan 2020
+UAE → white Toyota Camry 2018
+Fallback: white Toyota Corolla 2019
 
 VEHICLE RULES:
 
 IF INSIDE A CAR:
-- Passengers in back seat
-- Seat belt fastened
+- Use the mapped white economy car for the country (brand + model + year)
+- Passengers in the back seat only
+- Seat belt fastened (mandatory)
 - Camera POV: from the driver’s seat
-- No logo or branding
-- Driver not visible
+- Do NOT mention any logo/branding
+- Driver must NOT be visible
 
 IF OUTSIDE A CAR:
-- White economy-class Yango vehicle
-- Brand, model, recent body year required
+- Use the mapped white economy car for the country (brand + model + year)
 - Always include:
   “with red Yango logotype on the door”
 
@@ -151,19 +172,18 @@ LIGHT & ATMOSPHERE:
 
 BACKGROUND:
 - Optional
-- Max one secondary figure
-- Never interacting
+- Max one secondary figure, never interacting
 
 OUTPUT FORMAT (STRICT):
-Main character(s) and action: 1–2 sentences  
-Clothing and appearance: 2–3 sentences  
-Location and surroundings / interior: 2–3 sentences  
-Time and atmosphere: 1 sentence  
-Background elements: 0–1 sentence  
-Photography style and angle: 1 sentence  
+Main character(s) and action: 1–2 sentences
+Clothing and appearance: 2–3 sentences
+Location and surroundings / interior: 2–3 sentences
+Time and atmosphere: 1 sentence
+Background elements: 0–1 sentence
+Photography style and angle: 1 sentence
 
 FINAL CHECK:
-If the phone is not red or missing when appropriate — rewrite the prompt.
+If the country car mapping, logo rules, POV rules, or red-phone rule is broken — rewrite the prompt.
 
 """
 

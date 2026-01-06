@@ -16,6 +16,7 @@ The goal is clean, believable, fashion-forward urban scenes grounded in real lif
 - Clothing must match season and climate
 - Time of day must logically follow the scenario
 - Vehicle depiction must match Yango service reality
+- Country-based economy car selection is mandatory
 
 ---
 
@@ -45,14 +46,10 @@ The goal is clean, believable, fashion-forward urban scenes grounded in real lif
 
 ## PHONE RULE (CRITICAL)
 
-- If a phone is present in the scene, it MUST be:
-  **a red phone**
+- If a phone is present in the scene, it MUST be a **red phone**
 - No other phone colors are allowed
-- Phone interaction must be natural:
-  holding, scrolling, showing something to another person
-- At least ONE character should have a phone when contextually appropriate
-
-Never describe phone brand, model, or interface — only color and interaction.
+- At least one character should have a red phone when contextually appropriate
+- Never mention phone brand/model/interface — only color + interaction
 
 ---
 
@@ -78,9 +75,9 @@ Avoid:
 
 Clothing MUST reflect the current season and climate.
 
-- Hot climate: lightweight fabrics, open silhouettes
-- Mild climate: light jackets, denim, layered tops
-- Cold climate: coats, puffers, knitwear
+- Hot climate: lightweight fabrics, open silhouettes, no heavy outerwear
+- Mild/cool: light jackets, denim, layered tops
+- Cold: coats, puffers, knitwear, scarves when appropriate
 
 Never style clothing against the weather.
 
@@ -94,20 +91,19 @@ Never style clothing against the weather.
 
 ### Grooming
 - Women: bold manicures allowed
-- Men: **NO visible manicures or painted nails**
+- Men: NO visible manicures or painted nails
 
 ---
 
 ## TIME OF DAY LOGIC
 
 Time of day must be inferred from the scenario.
-
 Examples:
 - Party / nightlife → evening or night
-- Errands / commuting → daytime
+- Errands / commuting / delivery → daytime
 - Early work / school → morning
 
-Never random.
+Never choose time randomly.
 
 ---
 
@@ -117,113 +113,112 @@ Never use words:
 street, alley, road, market, sidewalk
 
 Describe exterior spaces through architecture only.
-
 Must include:
 - Building surface
-- Transition element (entrance, doorway, corner, step)
-- Spatial positioning (beside, near, along)
+- Transition element (entrance, doorway, corner, step, threshold)
+- Spatial positioning (beside, near, along, adjacent to)
 
 ---
 
 ## REALISM (USED, NOT RUINED)
 
-Urban environments should feel:
-- Used
-- Maintained
-- Lived-in
-
-Avoid:
-- Extreme decay
-- Slum aesthetics
-- Over-distressing
+Urban environments should feel used, maintained, lived-in.
+Avoid extreme decay or slum aesthetics.
 
 Optional realism details (max 1–2):
-- Curtains, plants, mailboxes
-- Light reflections
-- Building shadows
+- Curtains, plants, mailboxes, intercoms
+- Light reflections, building shadows
 
 ---
 
 ## VEHICLE RULES (NON-NEGOTIABLE)
 
-### CAR — EXTERIOR SCENES
+### COUNTRY → ECONOMY CAR MAP (MANDATORY)
+Select exactly ONE economy-class car by country:
 
-- White economy-class Yango vehicle
-- Brand + model + recent body year required
-- Always include:
-  **“with red Yango logotype on the door”**
+Ivory Coast → white Suzuki Alto 2019  
+Peru → white Toyota Yaris 2020  
+Colombia → white Chevrolet Spark 2018  
+Azerbaijan → white Chevrolet Cobalt 2016  
+Bolivia → white Toyota Corolla 2018  
+Senegal → white Peugeot 308 2021  
+Pakistan → white Suzuki Alto 2019  
+Zambia → white Toyota Vitz 2014  
+Angola → white Suzuki S-Presso 2019  
+Ghana → white Toyota Vitz 2014  
+Mozambique → white Toyota Vitz 2014  
+Cameroon → white Toyota Yaris 2020  
+Namibia → white Mazda Demio 2019  
+DR of Congo → white Toyota Ist 2007  
+Ethiopia → white Toyota Vitz 2014  
+Guatemala → white Honda Fit 2020  
+Oman → white Toyota Corolla 2019  
+Nepal → white Suzuki Alto 2019  
+Morocco → white Dacia Logan 2020  
+UAE → white Toyota Camry 2018
 
-Example:
-white Toyota Corolla 2018 with red Yango logotype on the door
+Fallback (if country is missing from the map):
+white Toyota Corolla 2019
 
 ---
 
-### CAR — INTERIOR SCENES
+### CAR — EXTERIOR SCENES (car visible from outside)
+- Use the mapped white economy car for the country (brand + model + year)
+- ALWAYS include the exact phrase:
+  “with red Yango logotype on the door”
 
-- Passengers in back seat only
-- **Seat belt fastened** (mandatory)
-- Camera POV: **from the driver’s seat**
-- No logo or branding mentioned
-- Driver must NOT be visible
+Example format:
+white Toyota Corolla 2019 with red Yango logotype on the door
+
+---
+
+### CAR — INTERIOR SCENES (camera inside the car)
+- Still use the mapped white economy car for the country (brand + model + year)
+- Passengers are always in the back seat
+- Seat belt fastened (mandatory)
+- Camera POV: from the driver’s seat
+- Do NOT mention any logo/branding on the car
+- Driver must NOT be visible in any way (no reflections, silhouettes, windshield views)
 
 ---
 
 ### APPROACHING / EXITING
-
 - Rear door only
-- Exterior branding rules apply
+- Exterior branding rules apply (logo included)
 
 ---
 
 ## TUK-TUK RULES
-
-- Always red
-- Passenger in the back
-- Driver present but not described
-
----
+- Tuk-tuks must ALWAYS be red
+- Passenger sits in the back
 
 ## MOTORCYCLE RULES
-
-- Always red
-- Passenger behind driver
-- Driver present but not described
-
----
-
-## BACKGROUND CONTROL
-
-- Optional
-- Max ONE secondary figure
-- Blurred / cropped / partial only
-- Never interacting
+- Motorcycles must ALWAYS be red
+- Passenger sits behind the driver
 
 ---
 
 ## CAMERA & COMPOSITION
-
-- Exterior: side or angled
-- Interior: POV from driver’s seat
-- Cropped, asymmetrical
-- No wide establishing shots
+- Exterior: side or slightly angled
+- Interior: POV from the driver’s seat
+- Cropped, asymmetrical, no wide establishing shots
 
 ---
 
 ## LIGHT
-
 - Natural or flash only
-- Texture-focused
-- No cinematic language
+- Texture-focused, no cinematic language
 
 ---
 
 ## FINAL SANITY CHECK
-
 If:
-- phone color is not red
-- logo appears inside the car
-- tuk-tuk or motorcycle is not red
+- phone is not red
+- interior mentions logo
+- exterior misses logo
+- wrong country car
+- tuk-tuk/motorcycle not red
 - men have manicures
-- POV is incorrect
+- wrong POV for interior
 
 → the prompt is invalid.
