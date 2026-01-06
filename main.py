@@ -1,24 +1,18 @@
 import os
-import json
 import openai
-import asyncio
 import logging
-from telegram import Update, ReplyKeyboardMarkup, InlineKeyboardMarkup, InlineKeyboardButton
+from telegram import Update, InlineKeyboardMarkup, InlineKeyboardButton
 from telegram.ext import ApplicationBuilder, CommandHandler, MessageHandler, filters, ConversationHandler, ContextTypes
-import PyPDF2
 from telegram.ext import CallbackQueryHandler
 
 # Define states explicitly for clarity and order
 SELECT_COUNTRY = 0
-SELECT_SERVICE = 1
-ENTER_SPECIFICITY = 2
-ASK_SPECIFICITY = 3
+ENTER_SPECIFICITY = 1
+ASK_SPECIFICITY = 2
 
 # Load style guide from Markdown
 with open("guide.md", "r", encoding="utf-8") as f:
     STYLE_GUIDE_MD = f.read()
-
-services = ["Ride-hailing", "Other"]
 
 async def start(update: Update, context: ContextTypes.DEFAULT_TYPE):
     countries = [
@@ -64,13 +58,7 @@ async def select_country(update: Update, context: ContextTypes.DEFAULT_TYPE):
     query = update.callback_query
     await query.answer()
     context.user_data['country'] = query.data
-    reply_markup = ReplyKeyboardMarkup([[s] for s in services], one_time_keyboard=True, resize_keyboard=True)
-    await query.message.reply_text("Choose a service:", reply_markup=reply_markup)
-    return SELECT_SERVICE
-
-async def select_service(update: Update, context: ContextTypes.DEFAULT_TYPE):
-    context.user_data['service'] = update.message.text
-    await update.message.reply_text("Please describe the situation (e.g., 'trip to the airport', 'only about burgers', etc.)")
+    await query.message.reply_text("Please describe the situation (e.g., 'trip to the airport', 'only about burgers', etc.)")
     return ENTER_SPECIFICITY
 
 async def enter_specificity(update: Update, context: ContextTypes.DEFAULT_TYPE):
@@ -78,24 +66,13 @@ async def enter_specificity(update: Update, context: ContextTypes.DEFAULT_TYPE):
     return await generate_prompts(update, context)
 
 async def generate_prompts(update: Update, context: ContextTypes.DEFAULT_TYPE):
-    service = context.user_data.get("service")
     country = context.user_data.get("country")
     scenario = context.user_data.get("specificity", "")
 
-    # Define a base scenario based on the service
-    base_scenario = f"{service} in {country}"
-    if service and service.lower() == "ride-hailing":
-        base_scenario = f"Character using going to the car in {country}"
-    elif service and service.lower() == "food":
-        base_scenario = f"Character receiving a food delivery in {country}"
-    elif service and service.lower() == "delivery":
-        base_scenario = f"Character sending or receiving a package via delivery service in {country}"
-    # Add more specific scenarios for other services if needed
-
     await update.message.reply_text("Generating prompts, please wait...")
 
-    if service and service.lower() == "ride-hailing":
-        system_prompt = f"""
+    # Always use Ridhale's script (ride-hailing prompt)
+    system_prompt = f"""
        You are a prompt generator for Nano Banana Pro.
 Always write prompts in English.
 Follow the Super App Visual Guide strictly.
@@ -182,95 +159,12 @@ If the scene logic breaks season, time of day, interaction, or grooming rules �
 
 
 """
-    else:
-        # Default prompt for 'Other' or unspecified services
-        system_prompt = f"""
-        <role>You are a prompt generator for Google Imagen 4. Always write the general prompt in English.</role>
-
-<primary_task>
-Create high-quality visual prompts for image generation in the Super App style, which combines documentary realism.
-</primary_task>
-
-<input_variables>
-Scenario: {scenario}
-Location: {country}
-</input_variables>
-
-<reference_guidelines>
-Use the 'Super App Visual Guidelines' for all creative decisions.
-</reference_guidelines>
-
-<style_principles>
-  <aesthetic>Documentary realism × urban fashion</aesthetic>
-  
-  <characters>
-    Confident modern people — couriers, customers, drivers — captured mid-action, never posed
-  </characters>
-  
-  <framing>
-    Unbalanced, dynamic angles — Dutch tilt, low-angle, off-center crops
-  </framing>
-  
-  <locations>
-    <outdoor>Hyperlocal urban settings</outdoor>
-    <indoor>Use only 'Interiors' guidelines if the action takes place indoors</indoor>
-  </locations>
-  
-  <clothing_rules>
-    <style>Street fashion — layered, textured, with bold accessories (nails for women, rings, headwear)</style>
-    <strict_requirement>Never use local or traditional patterns in clothing</strict_requirement>
-    <fabric_rules>Clothing should be without prints — a mix of sporty and designer global brands</fabric_rules>
-    <absolute_prohibition>NO USE traditional patterns completely</absolute_prohibition>
-    <forbidden_items>
-      Traditional African garb, ceremonial African clothing, ethnic dress, folkloric attire, 
-      native costume, national dress
-    </forbidden_items>
-  </clothing_rules>
-  
-  <lighting>
-    Natural or flash light, visible reflections, shadows, haze, wind, skin detail
-  </lighting>
-</style_principles>
-
-<mandatory_output_format>
-You must ALWAYS follow this exact structure:
-
-<main_character>Main character and action: [1-2 sentences]</main_character>
-<clothing>Clothing/appearance: [2-3 sentences]</clothing>
-<location>Location and surroundings: [2-3 sentences]</location>
-<atmosphere>Time and atmosphere: [1-2 sentences]</atmosphere>
-<background>Background elements: [1-2 sentences]</background>
-<photography>Photography style and angle: [1 sentences]</photography>
-</mandatory_output_format>
-
-<output_instruction>
-Generate ONLY the final prompt text without any HTML tags, formatting markers, or structural elements.
-</output_instruction>
-
-<quality_control>
-Before generating, verify:
-- Character nationality is specified
-- Single action only (no multiple simultaneous actions)
-- No traditional/ethnic clothing patterns anywhere
-- Urban setting appropriate for scenario
-- Natural lighting without cinematic clichés
-- Background activity and street life included
-- Appropriate accessories for character gender
-</quality_control> 
-
-"""
 
     messages = [
         {"role": "system", "content": STYLE_GUIDE_MD},
         {"role": "system", "content": system_prompt},
+        {"role": "user", "content": scenario},
     ]
-
-    # For Ride-hailing and Other services, the user's input is the scenario
-    if service and service.lower() in ["ride-hailing", "other"]:
-        messages.append({"role": "user", "content": scenario})
-    else:
-         # Keep original behavior for other services if any are added later
-         messages.append({"role": "user", "content": "Generate prompts using the provided style guide and rules."})
 
     # Generate the prompt using ChatGPT
     client = openai.AsyncOpenAI(timeout=120)
@@ -290,8 +184,8 @@ Before generating, verify:
         logging.error(f"Error generating prompt: {e}")
         await update.message.reply_text(f"An error occurred while generating the prompt: {e}")
 
-    # Store the conversation history and the generated prompt for services that allow editing
-    if service and service.lower() in ["ride-hailing", "other"] and prompts:
+    # Store the conversation history and the generated prompt for editing
+    if prompts:
         context.user_data['chat_gpt_messages'] = messages
         context.user_data['current_prompt'] = prompts
 
@@ -483,7 +377,6 @@ def main():
         entry_points=[CommandHandler("start", start)],
         states={
             SELECT_COUNTRY: [CallbackQueryHandler(select_country)],
-            SELECT_SERVICE: [MessageHandler(filters.TEXT & ~filters.COMMAND, select_service)],
             ENTER_SPECIFICITY: [MessageHandler(filters.TEXT & ~filters.COMMAND, enter_specificity)],
             ASK_SPECIFICITY: [
                 CallbackQueryHandler(handle_edit, pattern='^edit_prompt$'),
