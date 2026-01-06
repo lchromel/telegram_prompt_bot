@@ -257,7 +257,7 @@ Before generating, verify:
     client = openai.AsyncOpenAI(timeout=120)
     try:
         response = await client.chat.completions.create(
-            model="gpt-4.1",
+            model="gpt-5-mini",
             messages=messages
         )
         prompts = response.choices[0].message.content
@@ -420,7 +420,7 @@ Generate ONLY the final prompt text without any HTML tags, formatting markers, o
     client = openai.AsyncOpenAI(timeout=120)
     try:
         response = await client.chat.completions.create(
-            model="gpt-4.1", # Or a more suitable model if needed
+            model="gpt-5-mini", # Or a more suitable model if needed
             messages=editing_messages
         )
         
