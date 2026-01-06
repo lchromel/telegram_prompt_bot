@@ -24,13 +24,11 @@ The goal is clean, believable, fashion-forward urban scenes grounded in real lif
 ### Number of characters
 - Default: one main character
 - Allowed: two main characters when the scenario implies interaction
-  (friends, couple, siblings, passengers together)
 
 ### Interaction rules (for two characters)
 - Characters may interact only with each other
 - Interaction must support the scenario
-  (talking, laughing, leaning closer, sharing something on a phone)
-- Both characters must be clearly visible in the frame
+- Both characters must be clearly visible
 - Interaction must feel natural, not staged
 
 ---
@@ -45,11 +43,16 @@ The goal is clean, believable, fashion-forward urban scenes grounded in real lif
 
 ---
 
-## PHONE RULE
+## PHONE RULE (CRITICAL)
 
-- At least ONE character should be holding or using a phone when contextually appropriate
+- If a phone is present in the scene, it MUST be:
+  **a red phone**
+- No other phone colors are allowed
 - Phone interaction must be natural:
-  holding, scrolling, showing something to the other person
+  holding, scrolling, showing something to another person
+- At least ONE character should have a phone when contextually appropriate
+
+Never describe phone brand, model, or interface — only color and interaction.
 
 ---
 
@@ -73,29 +76,23 @@ Avoid:
 
 ## SEASONAL CLOTHING RULE
 
-Clothing MUST reflect the current season and climate of the country.
+Clothing MUST reflect the current season and climate.
 
-- Hot / summer climate:
-  lightweight fabrics, short sleeves, open silhouettes  
-  no coats, puffers, scarves, or heavy layers
+- Hot climate: lightweight fabrics, open silhouettes
+- Mild climate: light jackets, denim, layered tops
+- Cold climate: coats, puffers, knitwear
 
-- Mild or cool weather:
-  light jackets, denim, windbreakers, layered tops
-
-- Cold weather:
-  coats, puffers, knitwear, scarves, gloves when appropriate
-
-Never mix summer clothing with cold conditions or vice versa.
+Never style clothing against the weather.
 
 ---
 
 ## CLOTHING RESTRICTIONS
 
-- No traditional, ethnic, folkloric, or ceremonial clothing
-- No ethnic patterns or full traditional outfits
+- No traditional, ethnic, folkloric, ceremonial clothing
+- No ethnic patterns or prints
 - Global street fashion only
 
-### Grooming rules
+### Grooming
 - Women: bold manicures allowed
 - Men: **NO visible manicures or painted nails**
 
@@ -106,12 +103,11 @@ Never mix summer clothing with cold conditions or vice versa.
 Time of day must be inferred from the scenario.
 
 Examples:
-- Party, nightlife, social plans → evening or night
-- Errands, commuting, deliveries → daytime
-- Early work or school → morning
-- Relaxed rides home → late afternoon or evening
+- Party / nightlife → evening or night
+- Errands / commuting → daytime
+- Early work / school → morning
 
-Never choose time of day randomly.
+Never random.
 
 ---
 
@@ -120,12 +116,12 @@ Never choose time of day randomly.
 Never use words:
 street, alley, road, market, sidewalk
 
-Describe locations through **architectural context only**.
+Describe exterior spaces through architecture only.
 
-Every exterior scene MUST include:
-- A building surface
-- A transition element (entrance, doorway, corner, gate, step, threshold)
-- Spatial positioning (beside, near, along, adjacent to)
+Must include:
+- Building surface
+- Transition element (entrance, doorway, corner, step)
+- Spatial positioning (beside, near, along)
 
 ---
 
@@ -138,29 +134,23 @@ Urban environments should feel:
 
 Avoid:
 - Extreme decay
-- Slum-like deterioration
-- Overly distressed textures
+- Slum aesthetics
+- Over-distressing
 
 Optional realism details (max 1–2):
-- Curtains behind windows
-- Plants near entrances
-- Door numbers or intercoms
-- Light reflections on glass or car paint
+- Curtains, plants, mailboxes
+- Light reflections
+- Building shadows
 
 ---
 
-## VEHICLE RULES (CRITICAL & NON-NEGOTIABLE)
+## VEHICLE RULES (NON-NEGOTIABLE)
 
-### CAR — EXTERIOR SCENES ONLY
+### CAR — EXTERIOR SCENES
 
-If the scene is OUTSIDE the car and the car is visible:
-
-- The car must represent a **typical economy-class Yango vehicle**
-- Always specify:
-  - Brand and model
-  - Common recent body generation (year)
-  - White color
-- Always include the phrase:
+- White economy-class Yango vehicle
+- Brand + model + recent body year required
+- Always include:
   **“with red Yango logotype on the door”**
 
 Example:
@@ -170,81 +160,70 @@ white Toyota Corolla 2018 with red Yango logotype on the door
 
 ### CAR — INTERIOR SCENES
 
-If the scene is INSIDE the car:
-
-- Passengers are always in the back seat
+- Passengers in back seat only
 - **Seat belt fastened** (mandatory)
-- Camera POV must be:
-  **from the driver’s seat**
-- Do NOT mention any logo or branding on the car
-- Driver must NOT be visible in any way
-  (no reflections, silhouettes, windshield views)
+- Camera POV: **from the driver’s seat**
+- No logo or branding mentioned
+- Driver must NOT be visible
 
 ---
 
-### APPROACHING / EXITING A CAR
+### APPROACHING / EXITING
 
-- Only rear door
-- Never front door
-- Driver is already inside
-- Exterior rules apply (logo included)
+- Rear door only
+- Exterior branding rules apply
 
 ---
 
 ## TUK-TUK RULES
 
-- Tuk-tuks must ALWAYS be red
-- Treated as Yango vehicles
-- Passenger sits in the back
-- Driver is present but not described in detail
-- Logo mention allowed only in exterior scenes
+- Always red
+- Passenger in the back
+- Driver present but not described
 
 ---
 
 ## MOTORCYCLE RULES
 
-- Motorcycles must ALWAYS be red
-- Passenger sits behind the driver
-- Driver is present but not described in detail
-- Treated as Yango service vehicles
+- Always red
+- Passenger behind driver
+- Driver present but not described
 
 ---
 
 ## BACKGROUND CONTROL
 
 - Optional
-- Maximum ONE secondary background figure
-- May be blurred, cropped, or partially visible
-- Never interacting with main characters
+- Max ONE secondary figure
+- Blurred / cropped / partial only
+- Never interacting
 
 ---
 
 ## CAMERA & COMPOSITION
 
-- Side view or slightly angled (exterior)
-- POV from driver’s seat (interior)
-- Cropped, asymmetrical framing
+- Exterior: side or angled
+- Interior: POV from driver’s seat
+- Cropped, asymmetrical
 - No wide establishing shots
-- Fashion-documentary feel
 
 ---
 
 ## LIGHT
 
-- Natural or flash light only
-- Used to reveal texture and material
-- No cinematic or poetic lighting language
+- Natural or flash only
+- Texture-focused
+- No cinematic language
 
 ---
 
 ## FINAL SANITY CHECK
 
 If:
-- interior scene mentions a logo
-- exterior car scene misses the Yango logo
-- car is not white economy-class
+- phone color is not red
+- logo appears inside the car
 - tuk-tuk or motorcycle is not red
-- men have visible manicures
-- POV is wrong for interior scenes
+- men have manicures
+- POV is incorrect
 
-→ the prompt is invalid and must be rewritten.
+→ the prompt is invalid.

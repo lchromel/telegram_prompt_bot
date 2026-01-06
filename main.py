@@ -89,7 +89,6 @@ GENERAL RULES:
 - One or two main characters only
 - Clear, scenario-driven action
 - Fashion is visually dominant
-- Environment supports, never overwhelms
 
 CHARACTERS:
 - Explicitly specify nationality for each character
@@ -98,46 +97,46 @@ CHARACTERS:
 - If two characters are present, both must be visible and interacting naturally
 
 PHONE RULE:
-- At least one character should be holding or using a phone when appropriate
+- If a phone appears in the scene, it must be a **red phone**
+- At least one character should be holding or using a red phone when appropriate
 - Phone interaction must support the scenario
 
 STYLE:
-- Street fashion must be bold and expressive
-- Use strong color contrast, unexpected layering, or one standout accessory
+- Bold, expressive street fashion
+- Strong color contrast, unexpected layering, or one standout accessory
 - Avoid safe or minimal looks
 
 SEASON & TIME LOGIC:
-- Clothing must match the current season and climate
+- Clothing must match the season and climate
 - Time of day must logically follow the scenario
 
 CLOTHING RESTRICTIONS:
-- No traditional, ethnic, folkloric, or ceremonial clothing
+- No traditional or ethnic clothing
 - No ethnic patterns or prints
 - Global street fashion only
-- Accessories must be intentional and limited
+- Accessories must be intentional
 - Women may have bold manicures
 - Men must have natural, unstyled nails only
 
 LOCATION RULES (EXTERIOR):
-- Never use the words: street, alley, road, market, sidewalk
-- Describe the exterior environment through architecture only
-- Always make clear the characters are outside next to a building
+- Never use: street, alley, road, market, sidewalk
+- Describe exterior space through architecture
 - Include a building surface and a transition element
-- Maximum 2–3 architectural details
+- Max 2–3 details
 
 VEHICLE RULES:
 
-IF THE SCENE IS INSIDE A CAR:
-- Passengers are in the back seat
-- Seat belt fastened (mandatory)
+IF INSIDE A CAR:
+- Passengers in back seat
+- Seat belt fastened
 - Camera POV: from the driver’s seat
-- Do NOT mention any logo or branding
-- Driver must NOT be visible
+- No logo or branding
+- Driver not visible
 
-IF THE SCENE IS OUTSIDE A CAR:
-- Specify a white economy-class Yango car
-- Include brand, model, and recent body year
-- Always add:
+IF OUTSIDE A CAR:
+- White economy-class Yango vehicle
+- Brand, model, recent body year required
+- Always include:
   “with red Yango logotype on the door”
 
 IF A TUK-TUK IS PRESENT:
@@ -147,26 +146,24 @@ IF A MOTORCYCLE IS PRESENT:
 - It must be red
 
 LIGHT & ATMOSPHERE:
-- Natural or flash light only
-- Used to show texture and fabric
-- No cinematic or poetic time-of-day language
+- Natural or flash only
+- Texture-focused, not cinematic
 
 BACKGROUND:
 - Optional
-- Maximum one secondary background figure
-- May be blurred or partially visible
-- Never interacting with main characters
+- Max one secondary figure
+- Never interacting
 
 OUTPUT FORMAT (STRICT):
 Main character(s) and action: 1–2 sentences  
 Clothing and appearance: 2–3 sentences  
-Location and surroundings: 2–3 sentences (or interior description if inside vehicle)  
+Location and surroundings / interior: 2–3 sentences  
 Time and atmosphere: 1 sentence  
 Background elements: 0–1 sentence  
 Photography style and angle: 1 sentence  
 
 FINAL CHECK:
-If POV, vehicle color, branding rules, or vehicle type rules are broken — rewrite the prompt.
+If the phone is not red or missing when appropriate — rewrite the prompt.
 
 """
 
