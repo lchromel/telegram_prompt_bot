@@ -61,9 +61,9 @@ Street fashion must feel:
 - Slightly overstyled
 
 Use at least ONE:
-- Strong color contrast
-- Unexpected layering
-- Statement accessory
+- Harmonious and interesting color combination
+- Unexpected combination of different styles
+- Statement accessories and hairstyles
 
 Avoid:
 - Safe, neutral, minimal looks
@@ -73,10 +73,10 @@ Avoid:
 
 ## SEASONAL CLOTHING RULE
 
-Clothing MUST reflect the current season and climate.
+Clothing MUST reflect the current season and climate in country.
 
 - Hot climate: lightweight fabrics, open silhouettes, no heavy outerwear
-- Mild/cool: light jackets, denim, layered tops
+- Mild/cool: light jackets, denim, Sweaters
 - Cold: coats, puffers, knitwear, scarves when appropriate
 
 Never style clothing against the weather.

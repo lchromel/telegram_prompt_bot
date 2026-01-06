@@ -102,11 +102,11 @@ PHONE RULE:
 
 STYLE:
 - Bold, expressive street fashion
-- Strong color contrast, unexpected layering, or one standout accessory
+- Harmonious and interesting color combination, Unexpected combination of different styles, Statement accessories and hairstyles
 - Avoid safe or minimal looks
 
 SEASON & TIME LOGIC:
-- Clothing must match the current season and climate
+- Clothing must match the current season and climate in {country}
 - Time of day must logically follow the scenario (party → evening/night, errands → daytime)
 
 CLOTHING RESTRICTIONS:
