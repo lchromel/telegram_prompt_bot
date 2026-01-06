@@ -138,6 +138,24 @@ If a background person appears:
 
 Never describe: "a person stands in the doorway" or "watching".
 
+## COUNTRY LOCALIZATION (CRITICAL)
+
+Every scene must reflect the specific country in:
+1) Architecture and materials seen in the background
+2) Background people (if any) must match local demographics
+
+### Architecture localization rules
+- Do NOT use generic Western cues unless the country is Western:
+  townhouse, white sash window, black-painted doorway, Victorian facade
+- Describe plausible local exterior elements for the country:
+  materials, paint types, door styles, window styles, signage language, small utilities.
+
+### Background people localization rules
+- Any background person must be local to the country (skin tone, features, clothing norms).
+- Never insert random foreigners unless the scenario explicitly requires it.
+- Background people remain non-interacting, not staring, busy with a task, and turned away/profile only.
+
+
 
 ---
 
