@@ -12,7 +12,7 @@ The goal is clean, believable, fashion-forward urban scenes grounded in real lif
 - Clear, readable action
 - Fashion is dominant
 - Environment supports, never overwhelms
-- Scenes must read as real exterior city moments
+- Scenes must read as real urban moments
 - Clothing must match season and climate
 - Time of day must logically follow the scenario
 - Vehicle depiction must match Yango service reality
@@ -28,7 +28,8 @@ The goal is clean, believable, fashion-forward urban scenes grounded in real lif
 
 ### Interaction rules (for two characters)
 - Characters may interact only with each other
-- Interaction must support the scenario (talking, laughing, leaning closer, sharing a moment)
+- Interaction must support the scenario
+  (talking, laughing, leaning closer, sharing something on a phone)
 - Both characters must be clearly visible in the frame
 - Interaction must feel natural, not staged
 
@@ -150,44 +151,62 @@ Optional realism details (max 1–2):
 
 ## VEHICLE RULES (CRITICAL & NON-NEGOTIABLE)
 
-### Car specification (MANDATORY IF A CAR IS PRESENT)
+### CAR — EXTERIOR SCENES ONLY
 
-The car MUST represent a **typical economy-class vehicle used in Yango service**.
+If the scene is OUTSIDE the car and the car is visible:
 
+- The car must represent a **typical economy-class Yango vehicle**
 - Always specify:
   - Brand and model
-  - Economy-class category (compact or sedan)
-  - Common, recent body generation (year)
+  - Common recent body generation (year)
   - White color
-
-- Always include the exact phrase:
+- Always include the phrase:
   **“with red Yango logotype on the door”**
 
-Example format:
+Example:
 white Toyota Corolla 2018 with red Yango logotype on the door
-
-Do NOT use:
-luxury cars, premium trims, SUVs, sports cars, rare models.
 
 ---
 
-### Passenger logic
-- Passengers are ALWAYS in the back seat
-- If inside the car: **Seat belt fastened** (mandatory)
+### CAR — INTERIOR SCENES
 
-### Approaching / exiting a car
+If the scene is INSIDE the car:
+
+- Passengers are always in the back seat
+- **Seat belt fastened** (mandatory)
+- Camera POV must be:
+  **from the driver’s seat**
+- Do NOT mention any logo or branding on the car
+- Driver must NOT be visible in any way
+  (no reflections, silhouettes, windshield views)
+
+---
+
+### APPROACHING / EXITING A CAR
+
 - Only rear door
 - Never front door
 - Driver is already inside
+- Exterior rules apply (logo included)
 
-### Driver visibility
-- Driver always exists logically
-- If the scene focuses on passengers inside the car:
-  the driver must NOT be visible in any way
-  (no windshield views, no reflections, no silhouettes)
+---
 
-- Describe the driver ONLY if explicitly required
-- If visible, describe ONLY the visible part (arm, shoulder, cap edge)
+## TUK-TUK RULES
+
+- Tuk-tuks must ALWAYS be red
+- Treated as Yango vehicles
+- Passenger sits in the back
+- Driver is present but not described in detail
+- Logo mention allowed only in exterior scenes
+
+---
+
+## MOTORCYCLE RULES
+
+- Motorcycles must ALWAYS be red
+- Passenger sits behind the driver
+- Driver is present but not described in detail
+- Treated as Yango service vehicles
 
 ---
 
@@ -202,7 +221,8 @@ luxury cars, premium trims, SUVs, sports cars, rare models.
 
 ## CAMERA & COMPOSITION
 
-- Side view or slightly angled
+- Side view or slightly angled (exterior)
+- POV from driver’s seat (interior)
 - Cropped, asymmetrical framing
 - No wide establishing shots
 - Fashion-documentary feel
@@ -220,10 +240,11 @@ luxury cars, premium trims, SUVs, sports cars, rare models.
 ## FINAL SANITY CHECK
 
 If:
-- the car is not economy class
-- the car is not white
-- the Yango logo is missing
+- interior scene mentions a logo
+- exterior car scene misses the Yango logo
+- car is not white economy-class
+- tuk-tuk or motorcycle is not red
 - men have visible manicures
-- season or time of day feels wrong
+- POV is wrong for interior scenes
 
 → the prompt is invalid and must be rewritten.

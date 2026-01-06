@@ -118,25 +118,33 @@ CLOTHING RESTRICTIONS:
 - Women may have bold manicures
 - Men must have natural, unstyled nails only
 
-LOCATION RULES:
+LOCATION RULES (EXTERIOR):
 - Never use the words: street, alley, road, market, sidewalk
 - Describe the exterior environment through architecture only
 - Always make clear the characters are outside next to a building
 - Include a building surface and a transition element
 - Maximum 2–3 architectural details
 
-VEHICLE RULES (MANDATORY IF A CAR IS PRESENT):
-- Always specify an economy-class car typical for Yango service
-- Include brand, model, and common recent body year
-- The car must be white
-- Always include the phrase:
+VEHICLE RULES:
+
+IF THE SCENE IS INSIDE A CAR:
+- Passengers are in the back seat
+- Seat belt fastened (mandatory)
+- Camera POV: from the driver’s seat
+- Do NOT mention any logo or branding
+- Driver must NOT be visible
+
+IF THE SCENE IS OUTSIDE A CAR:
+- Specify a white economy-class Yango car
+- Include brand, model, and recent body year
+- Always add:
   “with red Yango logotype on the door”
 
-- Passengers are always in the back seat
-- If inside the car: Seat belt fastened (mandatory)
-- If approaching or exiting: only the rear door
-- Driver exists logically but must NOT be visible when the scene focuses on passengers
-- Describe the driver ONLY if explicitly required and only visible parts
+IF A TUK-TUK IS PRESENT:
+- It must be red
+
+IF A MOTORCYCLE IS PRESENT:
+- It must be red
 
 LIGHT & ATMOSPHERE:
 - Natural or flash light only
@@ -152,13 +160,13 @@ BACKGROUND:
 OUTPUT FORMAT (STRICT):
 Main character(s) and action: 1–2 sentences  
 Clothing and appearance: 2–3 sentences  
-Location and surroundings: 2–3 sentences  
+Location and surroundings: 2–3 sentences (or interior description if inside vehicle)  
 Time and atmosphere: 1 sentence  
 Background elements: 0–1 sentence  
 Photography style and angle: 1 sentence  
 
 FINAL CHECK:
-If the car does not clearly read as a white economy-class Yango vehicle with logo — rewrite the prompt.
+If POV, vehicle color, branding rules, or vehicle type rules are broken — rewrite the prompt.
 
 """
 
