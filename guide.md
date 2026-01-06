@@ -1,29 +1,54 @@
 # SUPER APP VISUAL GUIDE
 Urban Fashion × Documentary Realism
 
-This guide defines non-negotiable visual rules for image generation.
-The goal is clean, readable, fashion-forward urban scenes grounded in real life.
+This guide defines strict visual rules for image generation.
+The goal is clean, believable, fashion-forward urban scenes grounded in real life.
 
 ---
 
 ## CORE PRINCIPLES
 
-- One main character only
-- One clear action
+- One or two main characters only
+- Clear, readable action
 - Fashion is dominant
 - Environment supports, never overwhelms
 - Scenes must read as real exterior city moments
-- Clothing must always match the current season
+- Clothing must match season and weather
+- Time of day must match the scenario logic
 
 ---
 
-## CHARACTER RULES
+## CHARACTERS
 
-- Always specify nationality
-- One action only (present tense)
+### Number of characters
+- Default: one main character
+- Allowed: two main characters when the scenario implies interaction
+  (friends, couple, siblings, passengers together)
+
+### Interaction rules (for two characters)
+- Characters may interact only with each other
+- Interaction must support the scenario (talking, laughing, leaning closer, sharing a moment)
+- Both characters must be visible in the frame
+- Interaction should feel natural, not staged
+
+---
+
+## ACTION RULES
+
+- One clear action per character
+- Present tense
 - No posing
 - No eye contact with the camera
-- Emotion is subtle and internal
+- Emotion is subtle and authentic
+
+---
+
+## PHONE RULE (IMPORTANT)
+
+- At least ONE character should be holding or using a phone when contextually appropriate
+- Phone interaction must be natural:
+  holding, scrolling, showing something to the other person
+- Phone use should support the story, not distract from it
 
 ---
 
@@ -47,25 +72,19 @@ Avoid:
 
 ## SEASONAL CLOTHING RULE (CRITICAL)
 
-Clothing MUST reflect the current season and weather context.
+Clothing MUST reflect the current season and climate of the country.
 
 - Hot / summer climate:
-  lightweight fabrics, short sleeves, open silhouettes, breathable layers
-  (no heavy jackets, coats, scarves, or winter textures)
+  lightweight fabrics, short sleeves, open silhouettes
+  no coats, puffers, scarves, or heavy layers
 
 - Mild or cool weather:
-  light jackets, windbreakers, denim, layered tops
+  light jackets, denim, windbreakers, layered tops
 
 - Cold weather:
-  coats, puffers, knitwear, scarves, gloves where appropriate
+  coats, puffers, knitwear, scarves, gloves when appropriate
 
-Outfits must feel:
-- realistic for the temperature
-- comfortable, not styled against the weather
-- seasonally believable for the country
-
-Never mix:
-summer clothing with cold-weather conditions, or vice versa.
+Never mix summer clothing with cold conditions or vice versa.
 
 ---
 
@@ -75,20 +94,36 @@ summer clothing with cold-weather conditions, or vice versa.
 - No ethnic prints or full traditional outfits
 - Global street fashion only
 
-Women:
-- Bold manicures allowed
-
-Men:
-- No colored manicures
+### Grooming rules
+- Women: bold manicures allowed
+- Men: **NO visible manicures or painted nails**
+  (hands must appear natural and unstyled)
 
 ---
 
-## LOCATION — EXTERIOR LOGIC (CRITICAL)
+## TIME OF DAY LOGIC (NEW — CRITICAL)
+
+Time of day must be inferred from the scenario.
+
+Examples:
+- Going to a party, nightlife, social plans → evening or night
+- Commuting, errands, deliveries → daytime
+- Early work, school-related scenes → morning
+- Relaxed homebound rides → late afternoon or evening
+
+Never choose time of day randomly.
+Time must support the story naturally.
+
+Lighting should reflect this choice realistically, without cinematic language.
+
+---
+
+## LOCATION — EXTERIOR LOGIC
 
 Never use words:
 street, alley, road, market, sidewalk
 
-Locations must be described through **architectural context**.
+Describe locations through **architectural context only**.
 
 Every exterior scene MUST include:
 - A building surface
@@ -96,17 +131,7 @@ Every exterior scene MUST include:
 - Spatial positioning (beside, near, along, adjacent to)
 
 The description must clearly signal:
-“This person is outside, next to a building in a city.”
-
-### Allowed architectural contexts (choose ONE per scene)
-- Residential building entrance with doorbells, mailboxes, tiled steps
-- Apartment facade with balconies and visible curtains
-- Mixed-use building with a small office or shop entrance
-- Corner of a low-rise building with painted plaster and utility boxes
-- Recessed doorway with intercom panel and wall-mounted light
-- Maintained facade with clean paint and minor wear
-
-Avoid repeating the same facade type across scenes.
+“This is outside, next to a building in a city.”
 
 ---
 
@@ -120,12 +145,12 @@ Urban environments should feel:
 Avoid:
 - Extreme decay
 - Slum-like deterioration
-- Overly distressed surfaces
+- Overly distressed textures
 
 Optional realism details (max 1–2):
 - Curtains behind windows
 - Plants near entrances
-- Door numbers or mail slots
+- Door numbers or intercoms
 - Light reflections on glass or car paint
 - Shadows from nearby buildings
 
@@ -134,7 +159,7 @@ Optional realism details (max 1–2):
 ## VEHICLE RULES (NON-NEGOTIABLE)
 
 ### Passenger logic
-- Passenger is ALWAYS in the back seat
+- Passengers are ALWAYS in the back seat
 - If inside the car: **Seat belt fastened** (mandatory)
 
 ### Approaching / exiting a car
@@ -144,7 +169,7 @@ Optional realism details (max 1–2):
 
 ### Driver visibility
 - Driver always exists logically
-- If the scene focuses on the passenger inside the car:
+- If the scene focuses on passengers inside the car:
   the driver must NOT be visible in any way
   (no windshield views, no reflections, no silhouettes)
 
@@ -156,9 +181,9 @@ Optional realism details (max 1–2):
 ## BACKGROUND CONTROL
 
 - Optional
-- Maximum ONE secondary figure
-- Can be blurred, cropped, or partially visible
-- Never interacting with the main character
+- Maximum ONE secondary background figure
+- May be blurred, cropped, or partially visible
+- Never interacting with main characters
 
 Empty backgrounds are allowed and often preferred.
 
@@ -176,17 +201,18 @@ Empty backgrounds are allowed and often preferred.
 ## LIGHT
 
 - Natural or flash light only
-- Used to reveal texture
+- Used to reveal texture and material
 - No cinematic or poetic lighting language
 
 ---
 
 ## FINAL SANITY CHECK
 
-If the scene could work:
-- indoors
-- in a studio
-- without a city
-- in a different season without changing clothes
+If:
+- clothing doesn’t match season
+- time of day doesn’t match scenario
+- men have visible manicures
+- interaction feels staged
+- driver appears unnecessarily
 
-→ the prompt is wrong and must be rewritten.
+→ the prompt is invalid and must be rewritten.

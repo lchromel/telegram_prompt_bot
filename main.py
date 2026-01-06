@@ -109,28 +109,31 @@ Scene: {scenario}
 Country: {country}
 
 GENERAL RULES:
-- One main character only
-- One clear action only
+- One or two main characters only
+- Clear, scenario-driven action
 - Fashion is visually dominant
 - Environment supports, never overwhelms
 
-CHARACTER:
-- Explicitly specify nationality
-- Confident, modern person captured mid-action
+CHARACTERS:
+- Explicitly specify nationality for each character
+- Confident, modern people captured mid-action
 - No posing, no eye contact with the camera
+- If two characters are present, both must be visible and interacting naturally
+
+PHONE RULE:
+- At least one character should be holding or using a phone when appropriate
+- Phone interaction must support the scenario (scrolling, showing, holding)
 
 STYLE:
 - Street fashion must be bold and expressive
 - Use strong color contrast, unexpected layering, or one standout accessory
 - Avoid safe or minimal looks
 
-SEASONAL CLOTHING RULE:
-- Clothing must match the current season and weather
-- Summer: lightweight fabrics, open silhouettes, no heavy outerwear
-- Cool weather: light jackets, denim, layered tops
-- Cold weather: coats, puffers, knitwear, scarves when appropriate
-- Outfits must feel realistic and comfortable for the temperature
-- Never style clothing against the season
+SEASON & TIME LOGIC:
+- Clothing must match the current season and climate
+- Time of day must logically follow the scenario
+  (e.g. party → evening/night, errands → daytime)
+- Never contradict season or scenario with styling or lighting
 
 CLOTHING RESTRICTIONS:
 - No traditional, ethnic, folkloric, or ceremonial clothing
@@ -138,36 +141,36 @@ CLOTHING RESTRICTIONS:
 - Global street fashion only
 - Accessories must be intentional and limited
 - Women may have bold manicures
-- Men must not have colored manicures
+- Men must have natural, unstyled nails only
 
 LOCATION RULES:
 - Never use the words: street, alley, road, market, sidewalk
 - Describe the exterior environment through architecture only
-- Always make clear the character is outside next to a building
+- Always make clear the characters are outside next to a building
 - Include a building surface and a transition element (entrance, doorway, corner, step)
 - Maximum 2–3 architectural details
-- Avoid heavy decay or extreme wear
+- Avoid extreme wear or decay
 
 VEHICLE RULES (IF A CAR IS PRESENT):
-- Passenger is always in the back seat
+- Passengers are always in the back seat
 - If inside the car: Seat belt fastened (mandatory)
 - If approaching or exiting: only the rear door
-- Driver exists logically but must NOT be visible when the scene focuses on the passenger
+- Driver exists logically but must NOT be visible when the scene focuses on passengers
 - Describe the driver ONLY if explicitly required and only visible parts
 
 LIGHT & ATMOSPHERE:
 - Natural or flash light only
-- Used to show texture and fabric
+- Used to reveal texture and fabric
 - No cinematic or poetic time-of-day language
 
 BACKGROUND:
 - Optional
-- Maximum one secondary figure
+- Maximum one secondary background figure
 - May be blurred or partially visible
-- Never interacting with the main character
+- Never interacting with main characters
 
 OUTPUT FORMAT (STRICT):
-Main character and action: 1–2 sentences
+Main character(s) and action: 1–2 sentences
 Clothing and appearance: 2–3 sentences
 Location and surroundings: 2–3 sentences
 Time and atmosphere: 1 sentence
@@ -175,7 +178,8 @@ Background elements: 0–1 sentence
 Photography style and angle: 1 sentence
 
 FINAL CHECK:
-If the clothing does not match the season or climate — rewrite the outfit.
+If the scene logic breaks season, time of day, interaction, or grooming rules — rewrite it.
+
 
 """
     else:
