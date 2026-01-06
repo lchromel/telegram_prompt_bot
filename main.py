@@ -188,6 +188,13 @@ BACKGROUND:
 - Optional
 - Max one secondary figure, never interacting
 
+COUNTRY LOCALIZATION (MANDATORY):
+- Location details must match {country} (architecture, materials, signage language where relevant)
+- Avoid generic Western architecture cues unless {country} is Western
+- If background people appear, they must look local to {country}
+  (no random foreigners unless scenario explicitly requires it)
+
+
 OUTPUT FORMAT (STRICT):
 Main character(s) and action: 1–2 sentences
 Clothing and appearance: 2–3 sentences
