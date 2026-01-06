@@ -109,7 +109,6 @@ STYLE:
 SEASON & TIME LOGIC:
 - Clothing must match the current season and climate
 - Time of day must logically follow the scenario
-- Never contradict season or scenario with styling or lighting
 
 CLOTHING RESTRICTIONS:
 - No traditional, ethnic, folkloric, or ceremonial clothing
@@ -125,13 +124,11 @@ LOCATION RULES:
 - Always make clear the characters are outside next to a building
 - Include a building surface and a transition element
 - Maximum 2–3 architectural details
-- Avoid extreme wear or decay
 
 VEHICLE RULES (MANDATORY IF A CAR IS PRESENT):
-- Always specify the car as:
-  the most popular mass-market model in the given country,
-  white color,
-  latest commonly used body generation (year)
+- Always specify an economy-class car typical for Yango service
+- Include brand, model, and common recent body year
+- The car must be white
 - Always include the phrase:
   “with red Yango logotype on the door”
 
@@ -161,7 +158,7 @@ Background elements: 0–1 sentence
 Photography style and angle: 1 sentence  
 
 FINAL CHECK:
-If the car model, color, year, or Yango logo is missing or incorrect — rewrite the prompt.
+If the car does not clearly read as a white economy-class Yango vehicle with logo — rewrite the prompt.
 
 """
 

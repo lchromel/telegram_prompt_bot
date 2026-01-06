@@ -15,7 +15,7 @@ The goal is clean, believable, fashion-forward urban scenes grounded in real lif
 - Scenes must read as real exterior city moments
 - Clothing must match season and climate
 - Time of day must logically follow the scenario
-- Vehicle depiction must be realistic and localized
+- Vehicle depiction must match Yango service reality
 
 ---
 
@@ -97,7 +97,6 @@ Never mix summer clothing with cold conditions or vice versa.
 ### Grooming rules
 - Women: bold manicures allowed
 - Men: **NO visible manicures or painted nails**
-  (hands must appear natural and unstyled)
 
 ---
 
@@ -112,7 +111,6 @@ Examples:
 - Relaxed rides home → late afternoon or evening
 
 Never choose time of day randomly.
-Lighting must support the scenario naturally.
 
 ---
 
@@ -127,9 +125,6 @@ Every exterior scene MUST include:
 - A building surface
 - A transition element (entrance, doorway, corner, gate, step, threshold)
 - Spatial positioning (beside, near, along, adjacent to)
-
-The scene must clearly read as:
-“Outside, next to a building in a city.”
 
 ---
 
@@ -150,7 +145,6 @@ Optional realism details (max 1–2):
 - Plants near entrances
 - Door numbers or intercoms
 - Light reflections on glass or car paint
-- Shadows from nearby buildings
 
 ---
 
@@ -158,19 +152,22 @@ Optional realism details (max 1–2):
 
 ### Car specification (MANDATORY IF A CAR IS PRESENT)
 
-- ALWAYS specify:
+The car MUST represent a **typical economy-class vehicle used in Yango service**.
+
+- Always specify:
   - Brand and model
-  - Most popular mass-market car for the given country
-  - Latest commonly used body generation (year)
+  - Economy-class category (compact or sedan)
+  - Common, recent body generation (year)
   - White color
 
-- ALWAYS add the phrase:
+- Always include the exact phrase:
   **“with red Yango logotype on the door”**
 
 Example format:
 white Toyota Corolla 2018 with red Yango logotype on the door
 
-No variation, no synonyms, no omissions.
+Do NOT use:
+luxury cars, premium trims, SUVs, sports cars, rare models.
 
 ---
 
@@ -201,8 +198,6 @@ No variation, no synonyms, no omissions.
 - May be blurred, cropped, or partially visible
 - Never interacting with main characters
 
-Empty backgrounds are allowed and often preferred.
-
 ---
 
 ## CAMERA & COMPOSITION
@@ -225,7 +220,7 @@ Empty backgrounds are allowed and often preferred.
 ## FINAL SANITY CHECK
 
 If:
-- the car is not specified clearly
+- the car is not economy class
 - the car is not white
 - the Yango logo is missing
 - men have visible manicures
