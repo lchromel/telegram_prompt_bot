@@ -211,7 +211,7 @@ If the country car mapping, logo rules, POV rules, or red-phone rule is broken â
     client = openai.AsyncOpenAI(timeout=120)
     try:
         response = await client.chat.completions.create(
-            model="gpt-5-mini",
+            model="gpt-4-turbo",
             messages=messages
         )
         prompts = response.choices[0].message.content
@@ -374,7 +374,7 @@ Generate ONLY the final prompt text without any HTML tags, formatting markers, o
     client = openai.AsyncOpenAI(timeout=120)
     try:
         response = await client.chat.completions.create(
-            model="gpt-5-mini", # Or a more suitable model if needed
+            model="gpt-4-turbo", # Or a more suitable model if needed
             messages=editing_messages
         )
         
