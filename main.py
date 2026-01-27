@@ -167,14 +167,14 @@ IF INSIDE A CAR:
 - Use the mapped white economy car for the country (brand + model + year)
 - Passengers in the back seat only
 - Seat belt fastened (mandatory)
-- Camera POV: from the driver’s seat
+- Camera POV: from the back seat, angled to include the driver
 - Do NOT mention any logo/branding
-- Driver must NOT be visible
+- Driver must be visible in frame (profile, hands on the wheel, or shoulder)
 
 IF OUTSIDE A CAR:
 - Use the mapped white economy car for the country (brand + model + year)
-- Always include:
-  “with red Yango logotype on the door”
+- Do NOT mention any logo/branding on the car
+- If the action involves approaching/exiting, the driver must be visible through the windshield or front window
 
 IF A TUK-TUK IS PRESENT:
 - It must be red
@@ -350,6 +350,7 @@ async def continue_chat_gpt_dialogue(update: Update, context: ContextTypes.DEFAU
       <respect_constraints>Keep all Super App style guidelines intact unless specifically asked to modify them</respect_constraints>
       <focus_changes>Only modify elements directly addressed in the user's editing instruction</focus_changes>
       <maintain_quality>Ensure revised prompt maintains visual coherence and prompt effectiveness</maintain_quality>
+      <vehicle_visibility>When a car is involved, the driver must be visible in frame; for interior, POV from the back seat angled to include the driver; for approaching/exiting, the driver should be visible through the front window</vehicle_visibility>
     </editing_guidelines>
             """,
         },

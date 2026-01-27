@@ -227,11 +227,7 @@ white Toyota Corolla 2019
 
 ### CAR — EXTERIOR SCENES (car visible from outside)
 - Use the mapped white economy car for the country (brand + model + year)
-- ALWAYS include the exact phrase:
-  “with red Yango logotype on the door”
-
-Example format:
-white Toyota Corolla 2019 with red Yango logotype on the door
+- Do NOT mention any logo/branding on the car
 
 ---
 
@@ -239,15 +235,16 @@ white Toyota Corolla 2019 with red Yango logotype on the door
 - Still use the mapped white economy car for the country (brand + model + year)
 - Passengers are always in the back seat
 - Seat belt fastened (mandatory)
-- Camera POV: from the driver’s seat
+- Camera POV: from the back seat, angled to include the driver
+- Driver must be visible in frame (profile, hands on the wheel, or shoulder)
 - Do NOT mention any logo/branding on the car
-- Driver must NOT be visible in any way (no reflections, silhouettes, windshield views)
 
 ---
 
 ### APPROACHING / EXITING
 - Rear door only
-- Exterior branding rules apply (logo included)
+- Do NOT mention any logo/branding on the car
+- Driver must be visible through the windshield or front window when relevant
 
 ---
 
@@ -256,23 +253,14 @@ white Toyota Corolla 2019 with red Yango logotype on the door
 - Passenger sits in the back
 - A driver is ALWAYS present (mandatory)
 
-### Driver visibility control
-- If the scene focuses on passenger(s) in the back:
-  the driver must NOT be visible in any way
-  (no reflections, no silhouettes, no windshield views)
-- Describe the driver ONLY if explicitly required by the scenario,
-  and only the visible part (shoulder, arm), no invented details
+
 
 ## MOTORCYCLE RULES
 - Motorcycles must ALWAYS be red
 - A driver is ALWAYS present (mandatory)
 - Passenger sits behind the driver
 
-### Driver visibility control
-- If the scene focuses on the passenger:
-  keep the driver mostly out of frame (cropped or back view)
-- Describe the driver ONLY if explicitly required,
-  and only visible parts (back/shoulder/helmet edge), no face emphasis
+
 
 ---
 
